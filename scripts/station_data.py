@@ -7,7 +7,7 @@ def get_url():
 
 def main():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("--dest", help="Destination location", required=False, default=os.path.realpath(os.path.dirname(__file__)) + "/station_data.csv")
+    parser.add_argument("--dest", help="Destination location", required=False, default="../data/stations/stations_data.csv")
     args= parser.parse_args()
     dest = args.dest
     url = get_url()
