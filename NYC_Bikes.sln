@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33214.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "NYC_Bikes", "NYC_Bikes\NYC_Bikes.dtproj", "{1FB0A8C1-BCAC-4D15-BC5D-25A58BB15A51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FB0A8C1-BCAC-4D15-BC5D-25A58BB15A51}.Development|Default.ActiveCfg = Development
+		{1FB0A8C1-BCAC-4D15-BC5D-25A58BB15A51}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48D98CF9-0620-479B-B6DE-F82C874B7EF4}
+	EndGlobalSection
+EndGlobal
