@@ -7,152 +7,15 @@
   DTS:CreatorName="WIN-7KGAL3F2ICE\Administrator"
   DTS:DTSID="{7B9A24F8-64D5-41CD-AF6B-2EE19EAC644B}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.152"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{512C8F2D-27AB-43B0-B057-D4A09BF6AAC3}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{89370BDF-F2D9-4D41-8FCD-A3031F542C1E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{D784E3FE-2D17-44AA-AC9C-DE6651498FCF}"
-      DTS:ObjectName="Flat File Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="9"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Administrator\source\repos\NYC_Bikes\data\202304-citibike-tripdata.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;ride_id&quot;"
-              DTS:DTSID="{D0E81D70-3AAB-4818-8F9D-15CF381B5220}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;rideable_type&quot;"
-              DTS:DTSID="{33227FB2-E67A-4C67-AEB2-F729FB101D70}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;started_at&quot;"
-              DTS:DTSID="{4E578CF9-3353-4516-B2D6-716F042BC62C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;ended_at&quot;"
-              DTS:DTSID="{0F8E4BA2-7C97-425E-AE0C-465BED8D4ED2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;start_station_name&quot;"
-              DTS:DTSID="{38B43312-1337-44EA-8455-62B793738119}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;start_station_id&quot;"
-              DTS:DTSID="{EFBE57B9-2347-422E-9EEC-7668A8631CAD}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;end_station_name&quot;"
-              DTS:DTSID="{2AC8F8DE-3A60-4AC7-A6BC-290793CA97BB}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;end_station_id&quot;"
-              DTS:DTSID="{44DC61FB-1E18-4F12-8B78-10DF34B656BA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;start_lat&quot;"
-              DTS:DTSID="{21493E39-D409-444D-8902-F7FA80830623}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;start_lng&quot;"
-              DTS:DTSID="{23511E57-37B0-47FA-8CC0-A47B32A5F483}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;end_lat&quot;"
-              DTS:DTSID="{7DA8D07E-FC45-4AFC-AFD4-862230029A1F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;end_lng&quot;"
-              DTS:DTSID="{5B0C49F8-6BA1-4370-B09E-F136AFB0FB8B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;member_casual&quot;"
-              DTS:DTSID="{C15B5F0E-B6D3-4D3C-AE6F-06E01D799489}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
       DTS:CreationName="FLATFILE"
@@ -297,6 +160,8 @@
       DTS:ObjectName="localhost">
       <DTS:ObjectData>
         <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=localhost;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -307,6 +172,8 @@
       DTS:ObjectName="localhost 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=localhost;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -317,6 +184,8 @@
       DTS:ObjectName="localhost 2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=localhost;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -327,7 +196,285 @@
       DTS:ObjectName="localhost.NYCBikes_dwh">
       <DTS:ObjectData>
         <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=localhost;Initial Catalog=NYCBikes_dwh;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Stations File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{638DD05B-D726-491E-A37F-EAF350385B0C}"
+      DTS:ObjectName="Stations File Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::StationsFilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Projects\nyc_bikes\data\stations\stations_data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="name"
+              DTS:DTSID="{CDE69B2E-9F93-4966-A2E1-E0D94F636D6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region_id"
+              DTS:DTSID="{033B7A45-D64A-4CA8-8F01-B9E97C432BE4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lon"
+              DTS:DTSID="{03FA4A57-F956-47DC-B357-A3FD5D174DF1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lat"
+              DTS:DTSID="{851A1334-E496-44BB-BB33-900C52F4E311}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="electric_bike_surcharge_waiver"
+              DTS:DTSID="{DBAC23D9-3173-4B7E-913D-42C5EDE73676}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="external_id"
+              DTS:DTSID="{861520A7-1077-45CE-8C97-1BC73A820D21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="legacy_id"
+              DTS:DTSID="{DC3E22D9-6E31-4F9E-A2A3-3105D5EE7D99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="station_id"
+              DTS:DTSID="{A880AB49-7446-4310-AB7F-9BDACBC94411}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="capacity"
+              DTS:DTSID="{1EC6FE21-CE81-4E6F-B28C-395ABD15C9A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="short_name"
+              DTS:DTSID="{8E14DDE3-6F62-48E4-9763-2E261D17290E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="station_type"
+              DTS:DTSID="{015A8D17-28ED-4F85-9FD3-5460AAD6FE2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="has_kiosk"
+              DTS:DTSID="{496C6EA4-E3A7-4EC7-87C9-EB65439D91ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="eightd_has_key_dispenser"
+              DTS:DTSID="{A0B17F70-6214-4341-92A4-389314CC423F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TripsData]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{3668242D-68B9-4C7F-AE64-77CCD06065E3}"
+      DTS:ObjectName="TripsData">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Projects\nyc_bikes\data\trips\202304-citibike-tripdata.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;ride_id&quot;"
+              DTS:DTSID="{D04A0736-2F1C-437D-8F3B-2FB6F203095A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;rideable_type&quot;"
+              DTS:DTSID="{707D1EEB-BB24-4985-B542-236E47C021DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;started_at&quot;"
+              DTS:DTSID="{99437B09-A4EB-4671-A2FB-D3C286579B63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;ended_at&quot;"
+              DTS:DTSID="{0795F0F6-FDC0-4E51-8EE6-DDF8909EABAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;start_station_name&quot;"
+              DTS:DTSID="{5C9970E3-E649-4E7B-B2DB-0E66D6B526D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;start_station_id&quot;"
+              DTS:DTSID="{BB104D67-0D2A-4872-B4BB-21CF7C46295E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;end_station_name&quot;"
+              DTS:DTSID="{BDA8270E-B0A5-4A0C-BDC4-E9AD134C6C53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;end_station_id&quot;"
+              DTS:DTSID="{A4457690-2544-4B2C-A849-7AE14C782A88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;start_lat&quot;"
+              DTS:DTSID="{F1D40FB0-142F-4D91-A32B-68320E83E644}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;start_lng&quot;"
+              DTS:DTSID="{76C79D94-97AC-4BEF-B852-CEACD9842EEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;end_lat&quot;"
+              DTS:DTSID="{5B3DEC18-9FA6-49DA-A156-8B0160D9C646}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;end_lng&quot;"
+              DTS:DTSID="{AF190124-DA17-493D-9FEF-F450443C48E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;member_casual&quot;"
+              DTS:DTSID="{E6DA561C-BDCE-4FA3-AF29-2369EC9B9712}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -359,7 +506,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\Users\Administrator\source\repos\NYC_Bikes\data\trips" />
+              Folder="C:\Projects\nyc_bikes\data\trips" />
             <FEFEProperty
               FileSpec="*.csv" />
             <FEFEProperty
@@ -372,13 +519,13 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Foreach Loop Container\Data Flow Task"
+          DTS:refId="Package\Foreach Loop Container\Trips Data Flow"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
           DTS:DTSID="{F1AAE797-23C2-484C-A90F-24DCC14880DC}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Data Flow Task"
+          DTS:ObjectName="Trips Data Flow"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -386,7 +533,254 @@
               version="1">
               <components>
                 <component
-                  refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
+                  refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[RideID]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="RideID"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[RideID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[RideableTypeName]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="RideableTypeName"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[RideableTypeName]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[StartTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="StartTime"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[StartTime]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[EndTime]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="EndTime"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[EndTime]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[&quot;start_station_id&quot;]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="&quot;start_station_id&quot;"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[&quot;end_station_id&quot;]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="&quot;end_station_id&quot;"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input].Columns[&quot;RiderType&quot;]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="&quot;RiderType&quot;"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;RiderType&quot;]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[RideID]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[RideID]"
+                          name="RideID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[RideID]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[RideableTypeName]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[RideableTypeName]"
+                          name="RideableTypeName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[RideableTypeName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[StartTime]"
+                          dataType="dbTime"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[StartTime]"
+                          name="StartTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[StartTime]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[EndTime]"
+                          dataType="dbTime"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[EndTime]"
+                          name="EndTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[EndTime]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[start_station_id]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[start_station_id]"
+                          name="start_station_id"
+                          precision="18"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns["start_station_id"]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[end_station_id]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[end_station_id]"
+                          name="end_station_id"
+                          precision="18"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns["end_station_id"]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[RiderType]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Output].Columns[RiderType]"
+                          name="RiderType"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns["RiderType"]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source"
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Flat File Source"
@@ -406,26 +800,26 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
-                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[TripsData]"
+                      connectionManagerRefId="Package.ConnectionManagers[TripsData]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                      refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output]"
                       name="Flat File Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[RideID]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ride_id&quot;]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ride_id&quot;]"
                           length="50"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]"
-                          name="&quot;ride_id&quot;"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[RideID]"
+                          name="RideID"
                           truncationRowDisposition="FailComponent">
                           <properties>
                             <property
@@ -439,15 +833,15 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;rideable_type&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[RideableTypeName]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;rideable_type&quot;]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;rideable_type&quot;]"
                           length="50"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;rideable_type&quot;]"
-                          name="&quot;rideable_type&quot;"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[RideableTypeName]"
+                          name="RideableTypeName"
                           truncationRowDisposition="FailComponent">
                           <properties>
                             <property
@@ -461,15 +855,15 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;started_at&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[StartTime]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;started_at&quot;]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;started_at&quot;]"
                           length="50"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;started_at&quot;]"
-                          name="&quot;started_at&quot;"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[StartTime]"
+                          name="StartTime"
                           truncationRowDisposition="FailComponent">
                           <properties>
                             <property
@@ -483,15 +877,15 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ended_at&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[EndTime]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ended_at&quot;]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ended_at&quot;]"
                           length="50"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ended_at&quot;]"
-                          name="&quot;ended_at&quot;"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[EndTime]"
+                          name="EndTime"
                           truncationRowDisposition="FailComponent">
                           <properties>
                             <property
@@ -505,36 +899,14 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_name&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_name&quot;]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_id&quot;]"
                           length="50"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_name&quot;]"
-                          name="&quot;start_station_name&quot;"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the data is in binary format."
-                              name="UseBinaryFormat">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]"
-                          codePage="1250"
-                          dataType="str"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_id&quot;]"
-                          length="50"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]"
                           name="&quot;start_station_id&quot;"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -549,36 +921,14 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_name&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_name&quot;]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_id&quot;]"
                           length="50"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_name&quot;]"
-                          name="&quot;end_station_name&quot;"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the data is in binary format."
-                              name="UseBinaryFormat">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]"
-                          codePage="1250"
-                          dataType="str"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_id&quot;]"
-                          length="50"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]"
                           name="&quot;end_station_id&quot;"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -593,14 +943,14 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;RiderType&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;RiderType&quot;]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;member_casual&quot;]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;member_casual&quot;]"
                           length="50"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;RiderType&quot;]"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;RiderType&quot;]"
                           name="&quot;RiderType&quot;"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -618,79 +968,79 @@
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ride_id&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ride_id&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;ride_id&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;rideable_type&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;rideable_type&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;rideable_type&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;started_at&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;started_at&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;started_at&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ended_at&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ended_at&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;ended_at&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_name&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_name&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;start_station_name&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_id&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_id&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;start_station_id&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_name&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_name&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;end_station_name&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_id&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_id&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;end_station_id&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lat&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lat&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;start_lat&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lng&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_lng&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;start_lng&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lat&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lat&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;end_lat&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lng&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_lng&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="&quot;end_lng&quot;" />
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;member_casual&quot;]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;member_casual&quot;]"
                           codePage="1250"
                           dataType="str"
                           length="50"
@@ -698,250 +1048,27 @@
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                      refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Error Output]"
                       isErrorOut="true"
                       name="Flat File Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           codePage="1252"
                           dataType="text"
                           description="Flat File Source Error Output Column"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           name="Flat File Source Error Output Column" />
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination"
-                  componentClassID="Microsoft.OLEDBDestination"
-                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                  description="OLE DB Destination"
-                  name="OLE DB Destination"
-                  usesDispositions="true"
-                  version="4">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[dbo].[FactTrip]</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="The SQL command to be executed."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the column code page to use when code page information is unavailable from the data source."
-                      name="DefaultCodePage">1250</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forces the use of the DefaultCodePage property value when describing character data."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the mode used to access the database."
-                      name="AccessMode"
-                      typeConverter="AccessMode">0</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepIdentity">false</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                      name="FastLoadKeepNulls">false</property>
-                    <property
-                      dataType="System.String"
-                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                      name="FastLoadMaxInsertCommitSize">2147483647</property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
-                      connectionManagerRefId="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
-                      description="The OLE DB runtime connection used to access the database."
-                      name="OleDbConnection" />
-                  </connections>
-                  <inputs>
-                    <input
-                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                      errorOrTruncationOperation="Insert"
-                      errorRowDisposition="FailComponent"
-                      hasSideEffects="true"
-                      name="OLE DB Destination Input">
-                      <inputColumns>
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;ride_id&quot;]"
-                          cachedCodepage="1250"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="&quot;ride_id&quot;"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RideID]"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;RiderType&quot;]"
-                          cachedCodepage="1250"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="&quot;RiderType&quot;"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RiderType]"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;RiderType&quot;]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;started_at&quot;]"
-                          cachedCodepage="1250"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="&quot;started_at&quot;"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartTime]"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;started_at&quot;]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;ended_at&quot;]"
-                          cachedCodepage="1250"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="&quot;ended_at&quot;"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndTime]"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ended_at&quot;]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;start_station_id&quot;]"
-                          cachedCodepage="1250"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="&quot;start_station_id&quot;"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartStationKey]"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[&quot;end_station_id&quot;]"
-                          cachedCodepage="1250"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="&quot;end_station_id&quot;"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndStationKey]"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]" />
-                      </inputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TripKey]"
-                          dataType="i8"
-                          name="TripKey" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherKey]"
-                          dataType="i8"
-                          name="WeatherKey" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RideID]"
-                          codePage="1250"
-                          dataType="str"
-                          length="16"
-                          name="RideID" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartDateTime]"
-                          dataType="dbTimeStamp"
-                          name="StartDateTime" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartTime]"
-                          dataType="dbTime2"
-                          name="StartTime" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartDateKey]"
-                          dataType="i8"
-                          name="StartDateKey" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndDateTime]"
-                          dataType="dbTimeStamp"
-                          name="EndDateTime" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndTime]"
-                          dataType="dbTime2"
-                          name="EndTime" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndDateKey]"
-                          dataType="i8"
-                          name="EndDateKey" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartStationName]"
-                          codePage="1250"
-                          dataType="str"
-                          length="100"
-                          name="StartStationName" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StartStationKey]"
-                          dataType="i4"
-                          name="StartStationKey" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndStationName]"
-                          codePage="1250"
-                          dataType="str"
-                          length="100"
-                          name="EndStationName" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndStationKey]"
-                          dataType="i4"
-                          name="EndStationKey" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RiderType]"
-                          codePage="1250"
-                          dataType="str"
-                          length="20"
-                          name="RiderType" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Duration]"
-                          dataType="i4"
-                          name="Duration" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Distance]"
-                          dataType="i4"
-                          name="Distance" />
-                      </externalMetadataColumns>
-                    </input>
-                  </inputs>
-                  <outputs>
-                    <output
-                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
-                      exclusionGroup="1"
-                      isErrorOut="true"
-                      name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -952,10 +1079,10 @@
               </components>
               <paths>
                 <path
-                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
-                  endId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Foreach Loop Container\Trips Data Flow.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input]"
                   name="Flat File Source Output"
-                  startId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+                  startId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -964,31 +1091,581 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{32157BBD-7913-40CD-BE35-DDE2F4EA7E1E}"
-          DTS:ObjectName="{32157BBD-7913-40CD-BE35-DDE2F4EA7E1E}"
+          DTS:DTSID="{99FDA1E4-1196-4979-AE43-D6E4F033A754}"
+          DTS:ObjectName="{99FDA1E4-1196-4979-AE43-D6E4F033A754}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::VarFilePath" />
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Script Task"
+      DTS:refId="Package\Live Station Feed Script Task"
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
-      DTS:DTSID="{6639935E-52F3-498A-B7FB-7A42F8D86E24}"
+      DTS:DTSID="{2034894D-6838-487F-87FA-84DB201FFD9A}"
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Script Task"
-      DTS:ThreadHint="0">
+      DTS:ObjectName="Live Station Feed Script Task"
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
-          Name="ST_5d353000ad9c498aaf49aa38a08c0e57"
+          Name="ST_520e5451f87c41da93d675c101bc9d42"
+          VSTAMajorVersion="15"
+          VSTAMinorVersion="0"
+          Language="CSharp" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Station Data Flow"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2F9478FF-1B15-4FEE-B625-6EED093DC3A6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Station Data Flow"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Station Data Flow\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Station Data Flow\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Station Data Flow\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Station Data Flow\Data Conversion.Inputs[Data Conversion Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Station Data Flow\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Station Data Flow\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Station Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Station Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Station Data Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Station Data Flow\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Station Data Flow\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Stations File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Stations File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[region_id]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[region_id]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[region_id]"
+                      name="region_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[lon]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lon]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[lon]"
+                      name="lon"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[lat]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lat]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[lat]"
+                      name="lat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[electric_bike_surcharge_waiver]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[electric_bike_surcharge_waiver]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[electric_bike_surcharge_waiver]"
+                      name="electric_bike_surcharge_waiver"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[external_id]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[external_id]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[external_id]"
+                      name="external_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[legacy_id]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]"
+                      name="legacy_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_id]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]"
+                      name="station_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[capacity]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[capacity]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[capacity]"
+                      name="capacity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[short_name]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[short_name]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[short_name]"
+                      name="short_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_type]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_type]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_type]"
+                      name="station_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[has_kiosk]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[has_kiosk]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[has_kiosk]"
+                      name="has_kiosk"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_has_key_dispenser]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eightd_has_key_dispenser]"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_has_key_dispenser]"
+                      name="eightd_has_key_dispenser"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[name]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="name" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[region_id]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="region_id" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lon]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="lon" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lat]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="lat" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[electric_bike_surcharge_waiver]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="electric_bike_surcharge_waiver" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[external_id]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="external_id" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[legacy_id]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="legacy_id" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_id]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="station_id" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[capacity]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="capacity" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[short_name]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="short_name" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_type]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="station_type" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[has_kiosk]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="has_kiosk" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eightd_has_key_dispenser]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="eightd_has_key_dispenser" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Station Data Flow.Paths[Flat File Source Output]"
+              endId="Package\Station Data Flow\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Station Data Script"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:DelayValidation="True"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{E4119577-E8CE-42C8-A8F9-6ABCCCF93E89}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Station Data Script"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="Executable">@[$Project::PythonLocation]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="WorkingDirectory">@[$Project::ScriptsDirectory]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\Basia\AppData\Local\Programs\Python\Python311\python.exe"
+          Arguments="station_data.py"
+          WorkingDirectory="C:\Projects\nyc_bikes\scripts\" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Weather API Script Task"
+      DTS:CreationName="Microsoft.ScriptTask"
+      DTS:Description="Script Task"
+      DTS:DTSID="{93852331-9CDB-4236-A90E-0F101F080DEC}"
+      DTS:ExecutableType="Microsoft.ScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Weather API Script Task"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_9abe4c8bbed743d18ac761b7fb86c7fc"
           VSTAMajorVersion="15"
           VSTAMinorVersion="0"
           Language="CSharp" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F7A508AF-0D07-4A75-9EE2-4B82D8C618CE}"
+      DTS:From="Package\Station Data Script"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Station Data Flow" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1000,64 +1677,98 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="131,42"
-          Id="Package\Script Task"
-          TopLeft="614,151" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Foreach Loop Container\Data Flow Task"
+          Size="153,42"
+          Id="Package\Foreach Loop Container\Trips Data Flow"
           TopLeft="20.5,15.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="258,140"
-          Size="258,183"
+          PanelSize="258,141"
+          Size="258,184"
           Id="Package\Foreach Loop Container"
           TopLeft="97,171" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Live Station Feed Script Task"
+          TopLeft="904,120" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Station Data Flow"
+          TopLeft="434,295" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Weather API Script Task"
+          TopLeft="949,260" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Station Data Script"
+          TopLeft="429,186" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="515.75,228">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67"
+              Start="0,0"
+              End="0,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Foreach Loop Container\Data Flow Task">
+    design-time-name="Package\Foreach Loop Container\Trips Data Flow">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="151,42"
-          Id="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
+          Id="Package\Foreach Loop Container\Trips Data Flow\Flat File Source"
           TopLeft="6.5,5.5" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination"
-          TopLeft="110,247" />
+          Size="161,42"
+          Id="Package\Foreach Loop Container\Trips Data Flow\Data Conversion"
+          TopLeft="87,76" />
         <EdgeLayout
-          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
+          Id="Package\Foreach Loop Container\Trips Data Flow.Paths[Flat File Source Output]"
           TopLeft="82,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="113.5,199.5"
+              EndConnector="85.5,28.5"
               Start="0,0"
-              End="113.5,192">
+              End="85.5,21">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,95.75" />
+                    End="0,10.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,95.75"
-                    Point2="0,99.75"
-                    Point3="4,99.75" />
+                    Point1="0,10.25"
+                    Point2="0,14.25"
+                    Point3="4,14.25" />
                   <mssgle:LineSegment
-                    End="109.5,99.75" />
+                    End="81.5,14.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="109.5,99.75"
-                    Point2="113.5,99.75"
-                    Point3="113.5,103.75" />
+                    Point1="81.5,14.25"
+                    Point2="85.5,14.25"
+                    Point3="85.5,18.25" />
                   <mssgle:LineSegment
-                    End="113.5,192" />
+                    End="85.5,21" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1069,18 +1780,55 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Station Data Flow">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Station Data Flow\Flat File Source"
+          TopLeft="178,17" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Station Data Flow\Data Conversion"
+          TopLeft="185,129" />
+        <EdgeLayout
+          Id="Package\Station Data Flow.Paths[Flat File Source Output]"
+          TopLeft="256,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.5,70"
+              Start="0,0"
+              End="9.5,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31"
+                    Point2="0,35"
+                    Point3="4,35" />
+                  <mssgle:LineSegment
+                    End="5.5,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.5,35"
+                    Point2="9.5,35"
+                    Point3="9.5,39" />
+                  <mssgle:LineSegment
+                    End="9.5,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
