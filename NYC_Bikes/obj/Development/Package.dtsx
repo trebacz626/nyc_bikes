@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="81"
-  DTS:VersionGUID="{C3EC8C15-111B-4A41-8687-45CC9F710C2C}">
+  DTS:VersionBuild="90"
+  DTS:VersionGUID="{994075A0-CD49-46F0-8BEB-3A99F9930A5F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -621,6 +621,17 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="7"
+      DTS:DTSID="{B0857946-5EE5-4844-80A5-DF3042401C6C}"
+      DTS:ObjectName="StartDate">
+      <DTS:Property
+        DTS:DataType="7"
+        DTS:Name="ParameterValue">1/4/2023 12:01:00 AM</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -634,6 +645,23 @@
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9C15AB25-22A0-4D7B-8FE3-FCEB654E4201}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
+          SQLTask:SqlStatementSource="DECLARE @StartDate DATE&#xA;DECLARE @EndDate DATE = CAST(GETDATE() AS DATE)&#xA;DECLARE @DateKey BIGINT&#xA;&#xA;-- Check if the table is empty&#xA;IF (SELECT COUNT(*) FROM DimDate) = 0 &#xA;BEGIN&#xA;    -- If table is empty, start from this date&#xA;    SET @StartDate = '2023-04-01' &#xA;    SET @DateKey = 20230401&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;    -- If table is not empty, start the day after the max date in the table&#xA;    SELECT @StartDate = DATEADD(day, 1, MAX([Date]))&#xA;    FROM DimDate&#xA;    SET @DateKey = CAST(CONVERT(VARCHAR(8), @StartDate, 112) AS BIGINT)&#xA;END&#xA;&#xA;-- Add dates to the DimDate table&#xA;WHILE @StartDate &lt;= @EndDate&#xA;BEGIN&#xA;    DECLARE @HolidayName VARCHAR(100)&#xA;    DECLARE @IsWeekend BIT&#xA;    DECLARE @IsHoliday BIT&#xA;&#xA;    SELECT @HolidayName = HolidayName&#xA;    FROM Holidays&#xA;    WHERE MonthNumber = MONTH(@StartDate) AND DayNumber = DAY(@StartDate)&#xA;&#xA;    IF DATEPART(WEEKDAY, @StartDate) IN (1, 7) &#xA;    BEGIN&#xA;        SET @IsWeekend = 1&#xA;    END&#xA;    ELSE &#xA;    BEGIN&#xA;        SET @IsWeekend = 0&#xA;    END&#xA;&#xA;    IF @HolidayName IS NOT NULL&#xA;    BEGIN&#xA;        SET @IsHoliday = 1&#xA;    END&#xA;    ELSE&#xA;    BEGIN&#xA;        SET @IsHoliday = 0&#xA;        SET @HolidayName = NULL&#xA;    END&#xA;&#xA;    INSERT INTO DimDate(DateKey, [Date], [Year], Month, MonthName, Week, DayOfYear, DayOfMonth, DayOfWeek, DayOfWeekName, IsWeekend, IsHoliday, HolidayName, QuarterNumber)&#xA;    VALUES (@DateKey, @StartDate, YEAR(@StartDate), MONTH(@StartDate), DATENAME(MONTH, @StartDate), DATEPART(WEEK, @StartDate),&#xA;            DATEPART(DAYOFYEAR, @StartDate), DAY(@StartDate), DATEPART(WEEKDAY, @StartDate), DATENAME(WEEKDAY, @StartDate), &#xA;            @IsWeekend, @IsHoliday, @HolidayName, DATEPART(QUARTER, @StartDate))&#xA;&#xA;    SET @StartDate = DATEADD(DAY, 1, @StartDate)&#xA;    SET @DateKey = CAST(CONVERT(VARCHAR(8), @StartDate, 112) AS BIGINT)&#xA;END&#xA;"
+          SQLTask:CodePage="1252" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Foreach Loop Container"
       DTS:CreationName="STOCK:FOREACHLOOP"
@@ -1512,13 +1540,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">123</property>
+                          name="Expression">1</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">123</property>
+                          name="FriendlyExpression">1</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1534,13 +1562,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">456</property>
+                          name="Expression">2</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">456</property>
+                          name="FriendlyExpression">2</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2596,7 +2624,7 @@
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
       DTS:ObjectName="Station Data Script"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:PropertyExpression
         DTS:Name="Executable">@[$Project::PythonLocation]</DTS:PropertyExpression>
@@ -2617,7 +2645,7 @@
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Weather API Script Task"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -2651,6 +2679,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="694,193" />
+        <NodeLayout
           Size="153,42"
           Id="Package\Foreach Loop Container\Trips Data Flow"
           TopLeft="20.5,15.5" />
@@ -2672,14 +2704,14 @@
         <NodeLayout
           Size="171,42"
           Id="Package\Station Data Script"
-          TopLeft="429,186" />
+          TopLeft="431,186" />
         <NodeLayout
           Size="194,42"
           Id="Package\Weather API Script Task"
           TopLeft="949,260" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="515.75,228">
+          TopLeft="516.75,228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
