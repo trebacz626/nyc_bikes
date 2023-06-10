@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="56"
-  DTS:VersionGUID="{F97C318B-9B38-46BC-B1D5-3165612FA18E}">
+  DTS:VersionBuild="82"
+  DTS:VersionGUID="{97EC6D65-365A-4E41-8EEF-1A613D34BD20}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -190,7 +190,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="name"
-              DTS:DTSID="{5C860520-38EE-4B56-8FC5-AE5992594717}"
+              DTS:DTSID="{E7D859D2-05AC-48F4-AF63-B15CD0612CF7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -199,7 +199,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="region_id"
-              DTS:DTSID="{3CDB2ED0-F053-4AA5-941A-D32474FE347D}"
+              DTS:DTSID="{1693523B-4A84-48E4-975F-2B6426E5F6B0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -208,7 +208,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lon"
-              DTS:DTSID="{CFF518AB-31D5-4BFA-B3F9-7521DCEDFD2C}"
+              DTS:DTSID="{D099F1ED-49B0-441C-87B2-FA820ABDC21C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -217,7 +217,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lat"
-              DTS:DTSID="{ED2E4808-15F1-4131-A1FC-5BD3E98E0510}"
+              DTS:DTSID="{66F7ED06-717C-4F78-9A2C-217B80FACDB2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -226,7 +226,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="electric_bike_surcharge_waiver"
-              DTS:DTSID="{9F591EC9-6A68-416E-BD59-3333516F62F4}"
+              DTS:DTSID="{455E2EEC-A2BF-485E-AEEA-1E13937AE6F6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -235,7 +235,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="external_id"
-              DTS:DTSID="{E3F53361-D3B6-437B-A14D-554BA3B632E5}"
+              DTS:DTSID="{3829A9A0-3238-4AA9-A22B-297163C60039}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -244,16 +244,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="legacy_id"
-              DTS:DTSID="{493EA9CD-DDBB-406A-9345-92004E1F4ADB}"
+              DTS:DTSID="{70ABA0DC-AEF9-461B-ABB2-B6B155CC54BE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="30"
+              DTS:MaximumWidth="36"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="station_id"
-              DTS:DTSID="{20612968-2B89-4B85-8A75-0BF4D24AAE67}"
+              DTS:DTSID="{43625DCB-8A23-410E-954F-00C6B66B1D68}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -262,7 +262,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="capacity"
-              DTS:DTSID="{31166C67-59B6-4B94-A8D3-EF908466EE38}"
+              DTS:DTSID="{1F41DACD-F59B-4447-81DE-92B31BB98BC1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -271,7 +271,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="short_name"
-              DTS:DTSID="{F58C5B52-52C4-4C46-9687-D8A1D9B9BDFE}"
+              DTS:DTSID="{210E0779-4616-4819-8F44-5C1C44388407}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -280,7 +280,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="station_type"
-              DTS:DTSID="{2EF2DC5B-CE0D-4A17-A763-33ED50738C41}"
+              DTS:DTSID="{A47EDF81-0A16-45CC-8176-F8C5947A1A30}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -289,7 +289,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="has_kiosk"
-              DTS:DTSID="{A85E5311-563A-41EF-97AA-70D30437AE54}"
+              DTS:DTSID="{2FD4EF9F-C85B-476B-8375-3AD23394AC94}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -298,7 +298,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="eightd_has_key_dispenser"
-              DTS:DTSID="{D87CBCD1-DD88-4732-83F4-319ED804FF7B}"
+              DTS:DTSID="{D29AA351-08D0-4033-95F0-38DDFFD16A51}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1321,12 +1321,12 @@
                       cachedName="lon"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[lon]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\Derived Column.Inputs[Derived Column Input].Columns[legacy_id]"
+                      refId="Package\Station Data Flow\Derived Column.Inputs[Derived Column Input].Columns[capacity]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="legacy_id"
-                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]" />
+                      cachedName="capacity"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[capacity]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1476,25 +1476,115 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[LegacyID]"
-                      dataType="i4"
+                      refId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[LegacyID]"
-                      name="LegacyID"
+                      length="50"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]"
+                      name="RegionName"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_I4)#{Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]}</property>
+                          name="Expression">(DT_STR,50,1252)"Name"</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_I4)legacy_id</property>
+                          name="FriendlyExpression">(DT_STR,50,1252)"Name"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ValidFrom]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ValidFrom]"
+                      name="ValidFrom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">123</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">123</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ValidTo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ValidTo]"
+                      name="ValidTo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">456</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">456</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[IsCurrent]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[IsCurrent]"
+                      name="IsCurrent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression"> TRUE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression"> TRUE </property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[Capacity]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[Capacity]"
+                      name="Capacity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I2)#{Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[capacity]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I2)capacity</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1621,7 +1711,7 @@
                       refId="Package\Station Data Flow\Flat File Destination.Inputs[Flat File Destination Input].Columns[station_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="30"
+                      cachedLength="36"
                       cachedName="station_id"
                       externalMetadataColumnId="Package\Station Data Flow\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]" />
@@ -1962,7 +2052,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_id]"
-                      length="30"
+                      length="36"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]"
                       name="station_id"
                       truncationRowDisposition="FailComponent">
@@ -2136,7 +2226,7 @@
                       refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_id]"
                       codePage="1252"
                       dataType="str"
-                      length="30"
+                      length="36"
                       name="station_id" />
                     <externalMetadataColumn
                       refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[capacity]"
@@ -2280,26 +2370,6 @@
                       externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[name]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[capacity]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="capacity"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
-                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[capacity]" />
-                    <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[KioskFlag]"
-                      cachedDataType="bool"
-                      cachedName="KioskFlag"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[KioskFlag]"
-                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[KioskFlag]" />
-                    <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ElectricBikeSurchargeWaiverFlag]"
-                      cachedDataType="bool"
-                      cachedName="ElectricBikeSurchargeWaiverFlag"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
-                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ElectricBikeSurchargeWaiverFlag]" />
-                    <inputColumn
                       refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RegionID]"
                       cachedDataType="i4"
                       cachedName="RegionID"
@@ -2322,21 +2392,11 @@
                       externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[Latitude]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[short_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="7"
-                      cachedName="short_name"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
-                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[short_name]" />
-                    <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[station_type]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="station_type"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationType]"
-                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_type]" />
+                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ElectricBikeSurchargeWaiverFlag]"
+                      cachedDataType="bool"
+                      cachedName="ElectricBikeSurchargeWaiverFlag"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ElectricBikeSurchargeWaiverFlag]" />
                     <inputColumn
                       refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[external_id]"
                       cachedCodepage="1252"
@@ -2346,24 +2406,74 @@
                       externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ExternalID]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[external_id]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LegacyID]"
+                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[capacity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="capacity"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[capacity]" />
+                    <inputColumn
+                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RegionName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="RegionName"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]" />
+                    <inputColumn
+                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[KioskFlag]"
+                      cachedDataType="bool"
+                      cachedName="KioskFlag"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[KioskFlag]"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[KioskFlag]" />
+                    <inputColumn
+                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[station_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="station_type"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationType]"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_type]" />
+                    <inputColumn
+                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[short_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="short_name"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[short_name]" />
+                    <inputColumn
+                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ValidFrom]"
                       cachedDataType="i4"
-                      cachedName="LegacyID"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LegacyID]"
-                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[LegacyID]" />
+                      cachedName="ValidFrom"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ValidFrom]" />
+                    <inputColumn
+                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ValidTo]"
+                      cachedDataType="i4"
+                      cachedName="ValidTo"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidTo]"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ValidTo]" />
+                    <inputColumn
+                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsCurrent]"
+                      cachedDataType="bool"
+                      cachedName="IsCurrent"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[IsCurrent]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKID]"
-                      dataType="i4"
-                      name="SKID" />
                     <externalMetadataColumn
                       refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKID]"
+                      dataType="i4"
+                      name="SKID" />
                     <externalMetadataColumn
                       refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
                       dataType="i4"
@@ -2381,10 +2491,6 @@
                       precision="11"
                       scale="3" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PositionGeography]"
-                      dataType="image"
-                      name="PositionGeography" />
-                    <externalMetadataColumn
                       refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
                       dataType="bool"
                       name="ElectricBikeSurchargeWaiverFlag" />
@@ -2394,10 +2500,6 @@
                       dataType="str"
                       length="36"
                       name="ExternalID" />
-                    <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LegacyID]"
-                      dataType="i4"
-                      name="LegacyID" />
                     <externalMetadataColumn
                       refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
                       dataType="i2"
@@ -2749,9 +2851,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="55.8333333333334,95"
+              EndConnector="55.833333333333,95"
               Start="0,0"
-              End="55.8333333333334,87.5">
+              End="55.833333333333,87.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2762,13 +2864,13 @@
                     Point2="0,38.5714285714286"
                     Point3="4,38.5714285714286" />
                   <mssgle:LineSegment
-                    End="51.8333333333334,38.5714285714286" />
+                    End="51.833333333333,38.5714285714286" />
                   <mssgle:CubicBezierSegment
-                    Point1="51.8333333333334,38.5714285714286"
-                    Point2="55.8333333333334,38.5714285714286"
-                    Point3="55.8333333333334,42.5714285714286" />
+                    Point1="51.833333333333,38.5714285714286"
+                    Point2="55.833333333333,38.5714285714286"
+                    Point3="55.833333333333,42.5714285714286" />
                   <mssgle:LineSegment
-                    End="55.8333333333334,87.5" />
+                    End="55.833333333333,87.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
