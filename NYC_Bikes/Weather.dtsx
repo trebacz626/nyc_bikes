@@ -12,8 +12,8 @@
   DTS:ObjectName="Weather"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="62"
-  DTS:VersionGUID="{23B5CF58-90D6-43BA-A65E-FA2645108A75}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{9F4E8213-6E38-4FA5-BDD2-8AF213F01A65}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -166,16 +166,58 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8DE16B01-5EE6-4CF2-AFE4-F1735022F27A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FromDate">
+      <DTS:VariableValue
+        DTS:DataType="8">1999-01-01</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F3DBD584-6A2A-47E7-9E36-812BD630827E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ToDate">
+      <DTS:VariableValue
+        DTS:DataType="8">1999-01-02</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Download temporary weather csv"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Execute Process Task"
+      DTS:DTSID="{092596ed-f073-481a-bfa3-85603f641ebb}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Download temporary weather csv"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="Arguments">"weather.py --from_date " +  @[User::FromDate]  + " --to_date " +  @[User::ToDate] +   " --dest ..\\tmp\\weather.csv"</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="Executable">@[$Project::PythonLocation]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="WorkingDirectory">@[$Project::ScriptsDirectory]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Users\kajtek-lp-win\AppData\Local\Programs\Python\Python311\python.exe"
+          Arguments="weather.py --from_date 1999-01-01 --to_date 1999-01-02 --dest ..\tmp\weather.csv"
+          WorkingDirectory="C:\Projects\nyc_bikes\scripts\" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load temporary weather csv into database"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{77C7A80D-D10C-4DAE-B501-44EECEB8705F}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Load temporary weather csv into database"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -183,134 +225,25 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="time"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Time]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Time]"
-                      name="Time"
-                      truncationRowDisposition="RedirectRow">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">true</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\DataReaderDest 1"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="Exposes data in a data flow to other applications by using the ADO.NET DataReader interface. For example, send data to a custom application, written in C#, that requires a DataReader interface.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Exposes data in a data flow to other applications by using the ADO.NET DataReader interface. For example, send data to a custom application, written in C#, that requires a DataReader interface."
-              name="DataReaderDest 1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the number of milliseconds before the component times out."
-                  name="ReadTimeout">30000</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies an object that implements the IDataReader interface."
-                  name="DataReader" />
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the component fails when a read time-out occurs."
-                  name="FailOnTimeout">false</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">Microsoft.DataReaderDestinationAdapter</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\DataReaderDest 1.Inputs[DataReader Destination Input]"
-                  hasSideEffects="true"
-                  name="DataReader Destination Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Derived Column"
+              refId="Package\Load temporary weather csv into database\Change snowfall unit"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
+              name="Change snowfall unit"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  refId="Package\Load temporary weather csv into database\Change snowfall unit.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Snowfall]"
+                      refId="Package\Load temporary weather csv into database\Change snowfall unit.Inputs[Derived Column Input].Columns[Snowfall]"
                       cachedDataType="r8"
                       cachedName="Snowfall"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Snowfall]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Snowfall]"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -318,7 +251,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Snowfall]} * 10</property>
+                          name="Expression">#{Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Snowfall]} * 10</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -333,31 +266,31 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  refId="Package\Load temporary weather csv into database\Change snowfall unit.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Load temporary weather csv into database\Change snowfall unit.Inputs[Derived Column Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  refId="Package\Load temporary weather csv into database\Change snowfall unit.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Load temporary weather csv into database\Change snowfall unit.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Load temporary weather csv into database\Change snowfall unit.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load temporary weather csv into database\Change snowfall unit.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load temporary weather csv into database\Change snowfall unit.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load temporary weather csv into database\Change snowfall unit.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -366,12 +299,231 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Flat File Source"
+              refId="Package\Load temporary weather csv into database\Date Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Date Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load temporary weather csv into database\Date Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load temporary weather csv into database\Date Conversion.Inputs[Data Conversion Input].Columns[time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="time"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load temporary weather csv into database\Date Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Output].Columns[Time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Output].Columns[Time]"
+                      name="Time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[time]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">true</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load temporary weather csv into database\Date Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load temporary weather csv into database\Identify new rows"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Identify new rows"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[WeatherHistory]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[WeatherHistory]) [refTable]
+where [refTable].[Time] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Time" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Temperature" dataType="DT_NUMERIC" length="0" precision="3" scale="1" codePage="0"/&gt;&lt;referenceColumn name="Relativehumidity" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DewPoint" dataType="DT_NUMERIC" length="0" precision="3" scale="1" codePage="0"/&gt;&lt;referenceColumn name="ApparentTemperature" dataType="DT_NUMERIC" length="0" precision="3" scale="1" codePage="0"/&gt;&lt;referenceColumn name="Precipitation" dataType="DT_NUMERIC" length="0" precision="5" scale="1" codePage="0"/&gt;&lt;referenceColumn name="RainFall" dataType="DT_NUMERIC" length="0" precision="5" scale="1" codePage="0"/&gt;&lt;referenceColumn name="SnowFall" dataType="DT_NUMERIC" length="0" precision="5" scale="1" codePage="0"/&gt;&lt;referenceColumn name="CloudCover" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WindSpeed" dataType="DT_NUMERIC" length="0" precision="5" scale="1" codePage="0"/&gt;&lt;referenceColumn name="WindGusts" dataType="DT_NUMERIC" length="0" precision="5" scale="1" codePage="0"/&gt;&lt;referenceColumn name="WindDirection" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeatherCode" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeatherCodeName" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="WeatherCodeNameShort" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Output].Columns[Time]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load temporary weather csv into database\Identify new rows.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load temporary weather csv into database\Identify new rows.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load temporary weather csv into database\Identify new rows.Inputs[Lookup Input].Columns[Time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Time"
+                      lineageId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Output].Columns[Time]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Time</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load temporary weather csv into database\Identify new rows.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Load temporary weather csv into database\Identify new rows.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load temporary weather csv into database\Identify new rows.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Load temporary weather csv into database\Identify new rows.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load temporary weather csv into database\Identify new rows.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Load temporary weather csv into database\Identify new rows.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load temporary weather csv into database\Identify new rows.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load temporary weather csv into database\Identify new rows.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load temporary weather csv into database\Identify new rows.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load temporary weather csv into database\Identify new rows.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load temporary weather csv into database\Temporary weather file"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="Flat File Source"
+              name="Temporary weather file"
               usesDispositions="true"
               version="1">
               <properties>
@@ -386,25 +538,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                  refId="Package\Load temporary weather csv into database\Temporary weather file.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Temporary weather csv]"
                   connectionManagerRefId="Package.ConnectionManagers[Temporary weather csv]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[time]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[time]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[time]"
                       length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[time]"
                       name="time"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -419,12 +571,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Temperature]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Temperature]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[temperature_2m (°C)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Temperature]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[temperature_2m (°C)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Temperature]"
                       name="Temperature"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -439,12 +591,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[RelativeHumidity]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[RelativeHumidity]"
                       dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[relativehumidity_2m (%)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[RelativeHumidity]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[relativehumidity_2m (%)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[RelativeHumidity]"
                       name="RelativeHumidity"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -459,12 +611,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DewPoint]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[DewPoint]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dewpoint_2m (°C)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DewPoint]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[dewpoint_2m (°C)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[DewPoint]"
                       name="DewPoint"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -479,12 +631,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ApparentTemperature]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[ApparentTemperature]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[apparent_temperature (°C)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ApparentTemperature]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[apparent_temperature (°C)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[ApparentTemperature]"
                       name="ApparentTemperature"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -499,12 +651,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Precipitation]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Precipitation]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[precipitation (mm)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Precipitation]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[precipitation (mm)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Precipitation]"
                       name="Precipitation"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -519,12 +671,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rain]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Rain]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[rain (mm)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rain]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[rain (mm)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Rain]"
                       name="Rain"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -539,12 +691,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Snowfall]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Snowfall]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[snowfall (cm)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Snowfall]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[snowfall (cm)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Snowfall]"
                       name="Snowfall"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -559,12 +711,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherCode]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WeatherCode]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[weathercode (wmo code)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherCode]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[weathercode (wmo code)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WeatherCode]"
                       name="WeatherCode"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -579,12 +731,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[CloudCover]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[CloudCover]"
                       dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cloudcover (%)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[CloudCover]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[cloudcover (%)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[CloudCover]"
                       name="CloudCover"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -599,12 +751,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WindSpeed]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindSpeed]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[windspeed_10m (km h)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WindSpeed]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[windspeed_10m (km h)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindSpeed]"
                       name="WindSpeed"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -619,12 +771,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WindDirection]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindDirection]"
                       dataType="i8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[winddirection_10m (°)]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WindDirection]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[winddirection_10m (°)]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindDirection]"
                       name="WindDirection"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -639,12 +791,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WindGusts]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindGusts]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[windgusts_10m (km h) ]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WindGusts]"
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[windgusts_10m (km h) ]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindGusts]"
                       name="WindGusts"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -662,81 +814,81 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[time]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[time]"
                       dataType="dbTimeStamp2"
                       name="time" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[temperature_2m (°C)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[temperature_2m (°C)]"
                       dataType="r8"
                       name="temperature_2m (°C)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[relativehumidity_2m (%)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[relativehumidity_2m (%)]"
                       dataType="i8"
                       name="relativehumidity_2m (%)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[dewpoint_2m (°C)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[dewpoint_2m (°C)]"
                       dataType="r8"
                       name="dewpoint_2m (°C)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[apparent_temperature (°C)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[apparent_temperature (°C)]"
                       dataType="r8"
                       name="apparent_temperature (°C)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[precipitation (mm)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[precipitation (mm)]"
                       dataType="r8"
                       name="precipitation (mm)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[rain (mm)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[rain (mm)]"
                       dataType="r8"
                       name="rain (mm)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[snowfall (cm)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[snowfall (cm)]"
                       dataType="r8"
                       name="snowfall (cm)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[weathercode (wmo code)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[weathercode (wmo code)]"
                       dataType="i4"
                       name="weathercode (wmo code)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cloudcover (%)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[cloudcover (%)]"
                       dataType="i8"
                       name="cloudcover (%)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[windspeed_10m (km h)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[windspeed_10m (km h)]"
                       dataType="r8"
                       name="windspeed_10m (km h)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[winddirection_10m (°)]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[winddirection_10m (°)]"
                       dataType="i8"
                       name="winddirection_10m (°)" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[windgusts_10m (km h) ]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].ExternalColumns[windgusts_10m (km h) ]"
                       dataType="r8"
                       name="windgusts_10m (km h) " />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1252"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -745,11 +897,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lookup"
+              refId="Package\Load temporary weather csv into database\Weather codes lookup"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup"
+              name="Weather codes lookup"
               usesDispositions="true"
               version="6">
               <properties>
@@ -801,7 +953,7 @@ where [refTable].[Code] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherCode]};</property>
+                  name="ParameterMap">#{Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WeatherCode]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -813,7 +965,7 @@ where [refTable].[Code] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Lookup.Connections[OleDbConnection]"
+                  refId="Package\Load temporary weather csv into database\Weather codes lookup.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
                   description="Connection manager used to access lookup data."
@@ -821,14 +973,14 @@ where [refTable].[Code] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
+                  refId="Package\Load temporary weather csv into database\Weather codes lookup.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Lookup.Inputs[Lookup Input].Columns[WeatherCode]"
+                      refId="Package\Load temporary weather csv into database\Weather codes lookup.Inputs[Lookup Input].Columns[WeatherCode]"
                       cachedDataType="i4"
                       cachedName="WeatherCode"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherCode]">
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WeatherCode]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -846,20 +998,20 @@ where [refTable].[Code] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]"
+                  refId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Load temporary weather csv into database\Weather codes lookup.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[WeatherCodeName]"
+                      refId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Match Output].Columns[WeatherCodeName]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Copy Column"
                       length="200"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[WeatherCodeName]"
+                      lineageId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Match Output].Columns[WeatherCodeName]"
                       name="WeatherCodeName"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -870,12 +1022,12 @@ where [refTable].[Code] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[WeatherTypeName]"
+                      refId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Match Output].Columns[WeatherTypeName]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Copy Column"
                       length="200"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[WeatherTypeName]"
+                      lineageId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Match Output].Columns[WeatherTypeName]"
                       name="WeatherTypeName"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -889,30 +1041,30 @@ where [refTable].[Code] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup No Match Output]"
+                  refId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Load temporary weather csv into database\Weather codes lookup.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output]"
+                  refId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Load temporary weather csv into database\Weather codes lookup.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -921,11 +1073,11 @@ where [refTable].[Code] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Load temporary weather csv into database\Weather history table"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="Weather history table"
               usesDispositions="true"
               version="4">
               <properties>
@@ -978,7 +1130,7 @@ where [refTable].[Code] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Load temporary weather csv into database\Weather history table.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
                   description="The OLE DB runtime connection used to access the database."
@@ -986,185 +1138,185 @@ where [refTable].[Code] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Temperature]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[Temperature]"
                       cachedDataType="r8"
                       cachedName="Temperature"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Temperature]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Temperature]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[Temperature]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Temperature]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RelativeHumidity]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[RelativeHumidity]"
                       cachedDataType="i8"
                       cachedName="RelativeHumidity"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Relativehumidity]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[RelativeHumidity]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[Relativehumidity]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[RelativeHumidity]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DewPoint]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[DewPoint]"
                       cachedDataType="r8"
                       cachedName="DewPoint"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DewPoint]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[DewPoint]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[DewPoint]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[DewPoint]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ApparentTemperature]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[ApparentTemperature]"
                       cachedDataType="r8"
                       cachedName="ApparentTemperature"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ApparentTemperature]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ApparentTemperature]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[ApparentTemperature]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[ApparentTemperature]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Precipitation]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[Precipitation]"
                       cachedDataType="r8"
                       cachedName="Precipitation"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Precipitation]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Precipitation]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[Precipitation]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Precipitation]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Snowfall]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[Snowfall]"
                       cachedDataType="r8"
                       cachedName="Snowfall"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SnowFall]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Snowfall]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[SnowFall]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Snowfall]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WeatherCode]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[WeatherCode]"
                       cachedDataType="i4"
                       cachedName="WeatherCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCode]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WeatherCode]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCode]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WeatherCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CloudCover]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[CloudCover]"
                       cachedDataType="i8"
                       cachedName="CloudCover"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CloudCover]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[CloudCover]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[CloudCover]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[CloudCover]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WindSpeed]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[WindSpeed]"
                       cachedDataType="r8"
                       cachedName="WindSpeed"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WindSpeed]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WindSpeed]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WindSpeed]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindSpeed]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WindDirection]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[WindDirection]"
                       cachedDataType="i8"
                       cachedName="WindDirection"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WindDirection]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WindDirection]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WindDirection]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindDirection]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WindGusts]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[WindGusts]"
                       cachedDataType="r8"
                       cachedName="WindGusts"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WindGusts]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WindGusts]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WindGusts]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindGusts]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WeatherCodeName]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[WeatherCodeName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="200"
                       cachedName="WeatherCodeName"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCodeName]"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[WeatherCodeName]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCodeName]"
+                      lineageId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Match Output].Columns[WeatherCodeName]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rain]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[Rain]"
                       cachedDataType="r8"
                       cachedName="Rain"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RainFall]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rain]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[RainFall]"
+                      lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[Rain]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WeatherTypeName]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[WeatherTypeName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="200"
                       cachedName="WeatherTypeName"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCodeNameShort]"
-                      lineageId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output].Columns[WeatherTypeName]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCodeNameShort]"
+                      lineageId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Match Output].Columns[WeatherTypeName]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Time]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].Columns[Time]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Time"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
-                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Time]" />
+                      externalMetadataColumnId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
+                      lineageId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Output].Columns[Time]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
                       dataType="dbTimeStamp"
                       name="Time" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Temperature]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[Temperature]"
                       dataType="numeric"
                       name="Temperature"
                       precision="3"
                       scale="1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Relativehumidity]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[Relativehumidity]"
                       dataType="i2"
                       name="Relativehumidity" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DewPoint]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[DewPoint]"
                       dataType="numeric"
                       name="DewPoint"
                       precision="3"
                       scale="1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ApparentTemperature]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[ApparentTemperature]"
                       dataType="numeric"
                       name="ApparentTemperature"
                       precision="3"
                       scale="1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Precipitation]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[Precipitation]"
                       dataType="numeric"
                       name="Precipitation"
                       precision="5"
                       scale="1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RainFall]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[RainFall]"
                       dataType="numeric"
                       name="RainFall"
                       precision="5"
                       scale="1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SnowFall]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[SnowFall]"
                       dataType="numeric"
                       name="SnowFall"
                       precision="5"
                       scale="1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CloudCover]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[CloudCover]"
                       dataType="i2"
                       name="CloudCover" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WindSpeed]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WindSpeed]"
                       dataType="numeric"
                       name="WindSpeed"
                       precision="5"
                       scale="1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WindGusts]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WindGusts]"
                       dataType="numeric"
                       name="WindGusts"
                       precision="5"
                       scale="1" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WindDirection]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WindDirection]"
                       dataType="i2"
                       name="WindDirection" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCode]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCode]"
                       dataType="i2"
                       name="WeatherCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCodeName]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCodeName]"
                       codePage="1252"
                       dataType="str"
                       length="200"
                       name="WeatherCodeName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCodeNameShort]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCodeNameShort]"
                       codePage="1252"
                       dataType="str"
                       length="200"
@@ -1174,22 +1326,22 @@ where [refTable].[Code] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load temporary weather csv into database\Weather history table.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load temporary weather csv into database\Weather history table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load temporary weather csv into database\Weather history table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load temporary weather csv into database\Weather history table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1200,55 +1352,32 @@ where [refTable].[Code] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-              endId="Package\Data Flow Task\DataReaderDest 1.Inputs[DataReader Destination Input]"
-              name="Data Conversion Error Output"
-              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              refId="Package\Load temporary weather csv into database.Paths[Data Conversion Output]"
+              endId="Package\Load temporary weather csv into database\Change snowfall unit.Inputs[Derived Column Input]"
               name="Data Conversion Output"
-              startId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+              startId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task\Lookup.Inputs[Lookup Input]"
+              refId="Package\Load temporary weather csv into database.Paths[Derived Column Output]"
+              endId="Package\Load temporary weather csv into database\Identify new rows.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\Load temporary weather csv into database\Change snowfall unit.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+              refId="Package\Load temporary weather csv into database.Paths[Flat File Source Output]"
+              endId="Package\Load temporary weather csv into database\Date Conversion.Inputs[Data Conversion Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Load temporary weather csv into database.Paths[Lookup Match Output]"
+              endId="Package\Load temporary weather csv into database\Weather history table.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup.Outputs[Lookup Match Output]" />
+              startId="Package\Load temporary weather csv into database\Weather codes lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Load temporary weather csv into database.Paths[Lookup No Match Output]"
+              endId="Package\Load temporary weather csv into database\Weather codes lookup.Inputs[Lookup Input]"
+              name="Lookup No Match Output"
+              startId="Package\Load temporary weather csv into database\Identify new rows.Outputs[Lookup No Match Output]" />
           </paths>
         </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Execute Process Task"
-      DTS:CreationName="Microsoft.ExecuteProcess"
-      DTS:Description="Execute Process Task"
-      DTS:DTSID="{092596ed-f073-481a-bfa3-85603f641ebb}"
-      DTS:ExecutableType="Microsoft.ExecuteProcess"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute Process Task"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:PropertyExpression
-        DTS:Name="Arguments">"weather.py --from_date 1999-01-01 --to_date 1999-01-02 --dest ..\\tmp\\weather.csv"</DTS:PropertyExpression>
-      <DTS:PropertyExpression
-        DTS:Name="Executable">@[$Project::PythonLocation]</DTS:PropertyExpression>
-      <DTS:PropertyExpression
-        DTS:Name="WorkingDirectory">@[$Project::ScriptsDirectory]</DTS:PropertyExpression>
-      <DTS:ObjectData>
-        <ExecuteProcessData
-          Executable="C:\Users\kajtek-lp-win\AppData\Local\Programs\Python\Python311\python.exe"
-          Arguments="weather.py --from_date 1999-01-01 --to_date 1999-01-02 --dest ..\tmp\weather.csv"
-          WorkingDirectory="C:\Projects\nyc_bikes\scripts\" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1257,10 +1386,10 @@ where [refTable].[Code] = ?</property>
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{4F56B1E7-E6E5-4B4D-B23A-D1E37551D72C}"
-      DTS:From="Package\Execute Process Task"
+      DTS:From="Package\Download temporary weather csv"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Data Flow Task" />
+      DTS:To="Package\Load temporary weather csv into database" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1275,27 +1404,39 @@ where [refTable].[Code] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task"
+          Size="286,42"
+          Id="Package\Load temporary weather csv into database"
           TopLeft="466,272" />
         <NodeLayout
-          Size="188,42"
-          Id="Package\Execute Process Task"
+          Size="242,42"
+          Id="Package\Download temporary weather csv"
           TopLeft="447,171" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="542.25,213">
+          TopLeft="568,213">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59"
+              EndConnector="41,59"
               Start="0,0"
-              End="0,51.5">
+              End="41,51.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.5" />
+                    End="0,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
+                  <mssgle:LineSegment
+                    End="37,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37,29.5"
+                    Point2="41,29.5"
+                    Point3="41,33.5" />
+                  <mssgle:LineSegment
+                    End="41,51.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1308,84 +1449,80 @@ where [refTable].[Code] = ?</property>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Load temporary weather csv into database">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="177,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="520.5,469.5" />
+          Size="183,42"
+          Id="Package\Load temporary weather csv into database\Weather history table"
+          TopLeft="317.5,640.5" />
         <NodeLayout
-          Size="170,42"
-          Id="Package\Data Flow Task\DataReaderDest 1"
-          TopLeft="829,304" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Data Flow Task\Flat File Source"
+          Size="191,42"
+          Id="Package\Load temporary weather csv into database\Temporary weather file"
           TopLeft="329.5,180.5" />
         <NodeLayout
-          Size="115,42"
-          Id="Package\Data Flow Task\Lookup"
-          TopLeft="554,382" />
+          Size="188,42"
+          Id="Package\Load temporary weather csv into database\Weather codes lookup"
+          TopLeft="343,506" />
         <NodeLayout
           Size="161,42"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="466,256" />
+          Id="Package\Load temporary weather csv into database\Date Conversion"
+          TopLeft="345,257" />
         <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="337,328" />
+          Size="181,42"
+          Id="Package\Load temporary weather csv into database\Change snowfall unit"
+          TopLeft="337,332" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="610.25,424">
+          Id="Package\Load temporary weather csv into database.Paths[Lookup Match Output]"
+          TopLeft="437,548">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.5"
+              EndConnector="-28,92.5"
               Start="0,0"
-              End="0,38">
+              End="-28,85">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38" />
+                    End="0,42.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.25"
+                    Point2="0,46.25"
+                    Point3="-4,46.25" />
+                  <mssgle:LineSegment
+                    End="-24,46.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-24,46.25"
+                    Point2="-28,46.25"
+                    Point3="-28,50.25" />
+                  <mssgle:LineSegment
+                    End="-28,85" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,13.1953125,96.3827734375,11.609375"
+              BoundingBox="-62.19138671875,51.25,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="407.5,222.5">
+          Id="Package\Load temporary weather csv into database.Paths[Flat File Source Output]"
+          TopLeft="425.25,222.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="139,33.5"
+              EndConnector="0,34.5"
               Start="0,0"
-              End="139,26">
+              End="0,27">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.75"
-                    Point2="0,16.75"
-                    Point3="4,16.75" />
-                  <mssgle:LineSegment
-                    End="135,16.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="135,16.75"
-                    Point2="139,16.75"
-                    Point3="139,20.75" />
-                  <mssgle:LineSegment
-                    End="139,26" />
+                    End="0,27" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1395,31 +1532,45 @@ where [refTable].[Code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="495,349">
+          Id="Package\Load temporary weather csv into database.Paths[Data Conversion Output]"
+          TopLeft="426.5,299">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="59,54"
+              EndConnector="0,33"
               Start="0,0"
-              End="51.5,54">
+              End="0,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="25.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25.5,0"
-                    Point2="29.5,0"
-                    Point3="29.5,4" />
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Load temporary weather csv into database\Identify new rows"
+          TopLeft="350,414" />
+        <EdgeLayout
+          Id="Package\Load temporary weather csv into database.Paths[Derived Column Output]"
+          TopLeft="429.75,374">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="29.5,50" />
-                  <mssgle:CubicBezierSegment
-                    Point1="29.5,50"
-                    Point2="29.5,54"
-                    Point3="33.5,54" />
-                  <mssgle:LineSegment
-                    End="51.5,54" />
+                    End="0,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1429,72 +1580,26 @@ where [refTable].[Code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="546.5,298">
+          Id="Package\Load temporary weather csv into database.Paths[Lookup No Match Output]"
+          TopLeft="434.5,456">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-130.5,30"
+              EndConnector="0,50"
               Start="0,0"
-              End="-130.5,22.5">
+              End="0,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11"
-                    Point2="0,15"
-                    Point3="-4,15" />
-                  <mssgle:LineSegment
-                    End="-126.5,15" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-126.5,15"
-                    Point2="-130.5,15"
-                    Point3="-130.5,19" />
-                  <mssgle:LineSegment
-                    End="-130.5,22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Error Output]"
-          TopLeft="627,277">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="202,48"
-              Start="0,0"
-              End="194.5,48">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="97,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="97,0"
-                    Point2="101,0"
-                    Point3="101,4" />
-                  <mssgle:LineSegment
-                    End="101,44" />
-                  <mssgle:CubicBezierSegment
-                    Point1="101,44"
-                    Point2="101,48"
-                    Point3="105,48" />
-                  <mssgle:LineSegment
-                    End="194.5,48" />
+                    End="0,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="34.91361328125,-17.43359375,132.1727734375,11.43359375"
+              BoundingBox="-55.80638671875,15.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1502,7 +1607,7 @@ where [refTable].[Code] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Load temporary weather csv into database\Weather history table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1515,7 +1620,7 @@ where [refTable].[Code] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup">
+    design-time-name="Package\Load temporary weather csv into database\Weather codes lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -1531,6 +1636,29 @@ where [refTable].[Code] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load temporary weather csv into database\Identify new rows">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[WeatherHistory]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
