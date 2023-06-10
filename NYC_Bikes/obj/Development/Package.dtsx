@@ -11,8 +11,9 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="90"
-  DTS:VersionGUID="{994075A0-CD49-46F0-8BEB-3A99F9930A5F}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="92"
+  DTS:VersionGUID="{BFD36BBB-8E8A-4184-BC29-9FD13249A475}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1276,7 +1277,7 @@
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Live Station Feed Script Task"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -2624,7 +2625,7 @@
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
       DTS:ObjectName="Station Data Script"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:PropertyExpression
         DTS:Name="Executable">@[$Project::PythonLocation]</DTS:PropertyExpression>
@@ -2645,7 +2646,7 @@
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Weather API Script Task"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -2798,7 +2799,11 @@
         <NodeLayout
           Size="176,42"
           Id="Package\Station Data Flow\Flat File Destination"
-          TopLeft="475,288" />
+          TopLeft="476,377" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Station Data Flow\OLE DB Destination"
+          TopLeft="213.333333333333,360" />
         <NodeLayout
           Size="158,42"
           Id="Package\Station Data Flow\Derived Column"
@@ -2838,46 +2843,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Station Data Flow.Paths[Derived Column Error Output]"
-          TopLeft="296,265">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="267,23"
-              Start="0,0"
-              End="267,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,5.33834586466165" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,5.33834586466165"
-                    Point2="0,9.33834586466165"
-                    Point3="4,9.33834586466165" />
-                  <mssgle:LineSegment
-                    End="263,9.33834586466165" />
-                  <mssgle:CubicBezierSegment
-                    Point1="263,9.33834586466165"
-                    Point2="267,9.33834586466165"
-                    Point3="267,13.3383458646617" />
-                  <mssgle:LineSegment
-                    End="267,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="68.53861328125,14.3383458646617,129.9227734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Station Data Flow\OLE DB Destination"
-          TopLeft="213.333333333333,360" />
-        <EdgeLayout
           Id="Package\Station Data Flow.Paths[Derived Column Output]"
           TopLeft="246,265">
           <EdgeLayout.Curve>
@@ -2909,6 +2874,42 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Station Data Flow.Paths[Derived Column Error Output]"
+          TopLeft="296,265">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="268,112"
+              Start="0,0"
+              End="268,104.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.4736842105263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.4736842105263"
+                    Point2="0,45.4736842105263"
+                    Point3="4,45.4736842105263" />
+                  <mssgle:LineSegment
+                    End="264,45.4736842105263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="264,45.4736842105263"
+                    Point2="268,45.4736842105263"
+                    Point3="268,49.4736842105263" />
+                  <mssgle:LineSegment
+                    End="268,104.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="69.03861328125,50.4736842105263,129.9227734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

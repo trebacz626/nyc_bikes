@@ -2,14 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>NYC_Bikes</Name>
-    <LastWriteTime>2023-06-10T13:19:44.1196131Z</LastWriteTime>
-    <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    <LastWriteTime>2023-06-10T15:34:06.120411Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+    <Salt>LQqmsGq2</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAADU7KKJB88P4jc0dMZ/dYfZc5E0IhrFmD6R+g+nao+FOwAAAAAOgAAAAAIAACAAAABBMmvUhpHuCyDbf6HOnGzrzkz9ctQ7nPLiG3HLTFuI+zAAAADqT8F0BZUcEMnY9f3Pr9/dn0yzUjp5lftbfflb/YgjEKZtA3yZc1vzY7JKO0+3vuZAAAAAndmsDEFiTU5CYYqm1elezJ86lfxCn/aTkj/ByR3qUdT+U/z9es6rwxDcJatS8UZHwfjKF8SCHAsF5h0x/Vs5yA==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2023-06-10T14:24:14.5406582Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+      <LastWriteTime>2023-06-10T15:34:06.0572314Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>IYCGMSpX</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAABEZgVKjvOgoISUfuVUKbg/FoOfTwcxugqRG9e9r0M4xQAAAAAOgAAAAAIAACAAAACOVgjtr+L8K6F7clmjMRDquhwemwm7tZMQXcaPNRyAUTAAAAAJfteBvKIhmt49d3ocegN85TYvlvIl2IVE2DrtRRwAZJ3jqtWcyus/KvP11DhFDpFAAAAAHwfAQzxDkNxKJr/9Jmcf6HFN71IARlYihyiXbovBdwB04QnrvjuD+6rs92qwaNigu0Yx6ukaGlmoJVwyyKJQGQ==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>
