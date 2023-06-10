@@ -11,8 +11,9 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="56"
-  DTS:VersionGUID="{F97C318B-9B38-46BC-B1D5-3165612FA18E}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{50C49640-8FA5-492E-A50A-9FF8E2C098F7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1248,7 +1249,7 @@
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Live Station Feed Script Task"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
@@ -2494,7 +2495,7 @@
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
       DTS:ObjectName="Station Data Script"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:PropertyExpression
         DTS:Name="Executable">@[$Project::PythonLocation]</DTS:PropertyExpression>
@@ -2502,7 +2503,7 @@
         DTS:Name="WorkingDirectory">@[$Project::ScriptsDirectory]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <ExecuteProcessData
-          Executable="C:\Users\Basia\AppData\Local\Programs\Python\Python311\python.exe"
+          Executable="C:\Users\kajtek-lp-win\AppData\Local\Programs\Python\Python311\python.exe"
           Arguments="station_data.py"
           WorkingDirectory="C:\Projects\nyc_bikes\scripts\" />
       </DTS:ObjectData>
@@ -2658,6 +2659,14 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="177,42"
+          Id="Package\Station Data Flow\OLE DB Destination"
+          TopLeft="213.333333333333,360" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Station Data Flow\Derived Column"
+          TopLeft="192,223" />
+        <NodeLayout
           Size="156,42"
           Id="Package\Station Data Flow\Flat File Source"
           TopLeft="178,17" />
@@ -2665,10 +2674,6 @@
           Size="176,42"
           Id="Package\Station Data Flow\Flat File Destination"
           TopLeft="475,288" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Station Data Flow\Derived Column"
-          TopLeft="192,223" />
         <EdgeLayout
           Id="Package\Station Data Flow.Paths[Flat File Source Output]"
           TopLeft="256,59">
@@ -2700,7 +2705,45 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Station Data Flow.Paths[Derived Column Output]"
+          TopLeft="246,265">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55.8333333333334,95"
+              Start="0,0"
+              End="55.8333333333334,87.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5714285714286" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.5714285714286"
+                    Point2="0,38.5714285714286"
+                    Point3="4,38.5714285714286" />
+                  <mssgle:LineSegment
+                    End="51.8333333333334,38.5714285714286" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.8333333333334,38.5714285714286"
+                    Point2="55.8333333333334,38.5714285714286"
+                    Point3="55.8333333333334,42.5714285714286" />
+                  <mssgle:LineSegment
+                    End="55.8333333333334,87.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2737,44 +2780,6 @@
             <mssgm:EdgeLabel
               BoundingBox="68.53861328125,14.3383458646617,129.9227734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Station Data Flow\OLE DB Destination"
-          TopLeft="213.333333333333,360" />
-        <EdgeLayout
-          Id="Package\Station Data Flow.Paths[Derived Column Output]"
-          TopLeft="246,265">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="55.8333333333334,95"
-              Start="0,0"
-              End="55.8333333333334,87.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5714285714286" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.5714285714286"
-                    Point2="0,38.5714285714286"
-                    Point3="4,38.5714285714286" />
-                  <mssgle:LineSegment
-                    End="51.8333333333334,38.5714285714286" />
-                  <mssgle:CubicBezierSegment
-                    Point1="51.8333333333334,38.5714285714286"
-                    Point2="55.8333333333334,38.5714285714286"
-                    Point3="55.8333333333334,42.5714285714286" />
-                  <mssgle:LineSegment
-                    End="55.8333333333334,87.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -12,11 +12,11 @@
   <DataSourceViews />
   <DeploymentModelSpecificContent>
     <Manifest>
-      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithPassword" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{9a83ce7c-3ff6-4e80-ac08-6fe0a30b3873}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">NYC_Bikes</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionComments">
@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">WIN-7KGAL3F2ICE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMrQlhz09KUuQcr2DpsQ7ogAAAAACAAAAAAAQZgAAAAEAACAAAACcd0uxbyglNnIXAk+cjPLCkI588l5TX8BpnRLtQ4nrlQAAAAAOgAAAAAIAACAAAAA5XmCIm0ftx2i6QKkDtbq9cgj2N31FDbj++xZeIJB/U5AAAADc0ErW+3jIZ0AQBUtS8tZKWbPlk5sXw7ZcCIJLU3+ESjNyrYbPgY2UCpcYBAkZPvgWey0008nRqaWMuuUwECMpy/nWvoEuN0FUKDu+XolCwMPENZpngym3A0HQR3buUsGWMPlWEE2eUDkYD6UY/lgQbLdbSlFdlF6Jwl5/E78x8HUwHXvRv4m71yIdI/bHN75AAAAA07DpwwN+unDAPpKac5qn+ifvE3B5fkgowhxpIhbSclUYoTvHMlZIRBW2dQGsVh6BjcwI+rcLLyoVH2HZGoK97Q==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="hzNyS2UIdh4=" SSIS:IV="ZU2cHrnxMGlhoEuio5peYA==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">2w0ezPoZw4bddVwYMJH+z7SvZI1eu7I+WSnIqqyBxFGin4We4dVXtBtFDzAZLaSF0znNl3itpS71Rk6kJDVeKiDJB597y0aicOucsoENh5nyHKCI4b+Dc9TWQXp3r5gypoYve3BLRgxfHA+yVmKQPi1ulcKAencQojPQSBJqfRUJ3DbH9SydM4Zj7eHVYXHt</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -43,14 +43,14 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">59</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">58</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C2411BCF-43FD-48E1-8C82-549F1150DE23}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{50C49640-8FA5-492E-A50A-9FF8E2C098F7}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">2</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
                 <SSIS:Parameter SSIS:Name="CM.Flat File Connection Manager 1.AlwaysCheckForRowDelimiters">
@@ -1179,14 +1179,14 @@
                 <SSIS:Property SSIS:Name="Name">Weather</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">58</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">62</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{931BB08F-A9E9-4F84-8DF2-55F1F686A37D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{23B5CF58-90D6-43BA-A65E-FA2645108A75}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">2</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
                 <SSIS:Parameter SSIS:Name="CM.localhost.ConnectByProxy">
