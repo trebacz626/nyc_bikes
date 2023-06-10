@@ -2,19 +2,25 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>NYC_Bikes</Name>
-    <LastWriteTime>2023-06-10T13:29:47.437372Z</LastWriteTime>
-    <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    <LastWriteTime>2023-06-10T15:48:21.1217114Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+    <Salt>iMIwT3oG</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMrQlhz09KUuQcr2DpsQ7ogAAAAACAAAAAAAQZgAAAAEAACAAAAAsVkMEzch4iaAvuSSShQs57l0y0qqHuizw9ESTvA83RwAAAAAOgAAAAAIAACAAAABzxs8jP+gIlG0QcHAcCkiRT0T02wjPbQ0Y2y8/lZkx7TAAAADj0vjC5LTlqXdJixWs7gepyzbwOOj/F7Sh6ouHBJjl2tvLk3ENybq4quifS8VKE7dAAAAArOgw+WsixBpNz/uSzPxpuKTQcYqM18yPcaK86VE2yl8m8D+pGBAQhvPkpsV/wk2ihZXHR8Kk2YA4JXTkjdikOg==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2023-06-10T13:29:47.4393712Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+      <LastWriteTime>2023-06-10T15:48:21.1237129Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>eLE3pikr</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMrQlhz09KUuQcr2DpsQ7ogAAAAACAAAAAAAQZgAAAAEAACAAAADV8oQpEyM8nWAt3MHFQRxtR5Fj+a0Z1114RHuFzNhDtQAAAAAOgAAAAAIAACAAAAAahXkqN3DQPTT9D0bXTtaylh5GWIeEkfUqPp6NvSwSvzAAAACu5kuS38YT2hE/aGIgkXBIEIHPBnSjTcgOzkFl1lTPUu2p/YKBmcJxtrl523GdVthAAAAAEbm8Fm8cFp2IcUYGc92WR39lBpIL1UapoOzW2225Gd1ocOYDdmeFfEeU/8scTfS5a+JDvwXkNV4K6C3UJ8T7Tw==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Weather.dtsx</Name>
-      <LastWriteTime>2023-06-10T13:29:02.0803303Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+      <LastWriteTime>2023-06-10T16:24:55.542495Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>RaBJbYhQ</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMrQlhz09KUuQcr2DpsQ7ogAAAAACAAAAAAAQZgAAAAEAACAAAAA9f8sQHM2pLwlUf9pIpkZwbqFlne+GNa81q3wBgicgaQAAAAAOgAAAAAIAACAAAAC8o9833hedoiOqRtKJ8jUyANNaCrGXPPwLvKi2k160KzAAAAACQegVwo7VNXcbRG/zqJLf8bumsjfjkrj/Z29Q4JiMEHYkoRx5HklRHEi9lecLs6RAAAAAmHbkuzwiEZczdPnx+PPd4UQmvd1br3HJCXX179ExweE6d6nyXqzhjKjNPMTV2PI0RE0PQ9gFuXnBr3Jg4w+JBQ==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>
