@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{74009022-7A48-40A4-943F-540DCA157034}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{04C8EDD5-9BC9-483A-8AD5-2A215D389907}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -754,38 +754,6 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
-    <DTS:Executable
-      DTS:refId="Package\Create Staging Trip Table"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{86B9E903-299D-4E17-A9FA-5B08751B7E72}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Create Staging Trip Table"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{39575DDD-93E0-49C5-8336-CDF0AC85BF87}"
-          SQLTask:SqlStatementSource="IF OBJECT_ID('dbo.FactTripStaging', 'U') IS NOT NULL&#xA;  DROP TABLE dbo.FactTripStaging;&#xA;GO&#xA;&#xA;CREATE TABLE dbo.FactTripStaging(&#xA;&#x9;[WeatherKey] [bigint] NOT NULL,&#xA;&#x9;[RideID] [char](16) NOT NULL,&#xA;&#x9;[StartDateTime] [datetime] NOT NULL,&#xA;&#x9;[StartTime] [time](0) NOT NULL,&#xA;&#x9;[StartDateKey] [bigint] NOT NULL,&#xA;&#x9;[EndDateTime] [datetime] NOT NULL,&#xA;&#x9;[EndTime] [time](0) NOT NULL,&#xA;&#x9;[EndDateKey] [bigint] NOT NULL,&#xA;&#x9;[StartStationName] [varchar](100) NOT NULL,&#xA;&#x9;[StartStationKey] [int] NOT NULL,&#xA;&#x9;[EndStationName] [varchar](100) NOT NULL,&#xA;&#x9;[EndStationKey] [int] NOT NULL,&#xA;&#x9;[RiderType] [varchar](20) NOT NULL,&#xA;&#x9;[Duration] [int] NOT NULL,&#xA;&#x9;[Distance] [int] NULL,&#xA;&#x9;[RideableTypeName] [varchar](20) NOT NULL,&#xA;    [Temperature] [decimal](3, 1) NOT NULL,&#xA;&#x9;[Relativehumidity] [smallint] NOT NULL,&#xA;&#x9;[DewPoint] [decimal](3, 1) NOT NULL,&#xA;&#x9;[ApparentTemperature] [decimal](3, 1) NOT NULL,&#xA;&#x9;[Precipitation] [decimal](5, 1) NOT NULL,&#xA;&#x9;[RainFall] [decimal](5, 1) NOT NULL,&#xA;&#x9;[SnowFall] [decimal](5, 1) NOT NULL,&#xA;&#x9;[CloudCover] [smallint] NOT NULL,&#xA;&#x9;[WindSpeed] [decimal](5, 1) NOT NULL,&#xA;&#x9;[WindGusts] [decimal](5, 1) NOT NULL,&#xA;&#x9;[WindDirection] [smallint] NOT NULL,&#xA;&#x9;[WeatherCode] [smallint] NOT NULL,&#xA;&#x9;[WeatherCodeName] [varchar](100) NOT NULL,&#xA;&#x9;[WeatherCodeShort] [smallint] NOT NULL,&#xA;&#x9;[WeatherCodeNameShort] [varchar](100) NOT NULL&#xA;);&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Creater and Assign Weather to Distance Staging Trip Data"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{F765EE25-C9F6-4FD1-A001-B848478BFE60}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Creater and Assign Weather to Distance Staging Trip Data"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{39575DDD-93E0-49C5-8336-CDF0AC85BF87}"
-          SQLTask:SqlStatementSource="-- Create a table variable to hold the WeatherKeys and associated trip data.&#xA;DECLARE @WeatherKeysTable TABLE (WeatherKey BIGINT, RideID CHAR(16), StartDateTime DATETIME, StartTime TIME, StartDateKey BIGINT, &#xA;                                 EndDateTime DATETIME, EndTime TIME, EndDateKey BIGINT, StartStationName VARCHAR(100), StartStationKey INT, &#xA;                                 EndStationName VARCHAR(100), EndStationKey INT, RiderType VARCHAR(20), Duration INT, Distance INT, &#xA;                                 RideableTypeName VARCHAR(20));&#xA;&#xA;-- Insert into DimWeatherState table and capture the IDs&#xA;INSERT INTO DimWeatherState (Temperature, Relativehumidity, DewPoint, ApparentTemperature, Precipitation, RainFall, SnowFall, &#xA;                             CloudCover, WindSpeed, WindGusts, WindDirection, WeatherCode, WeatherCodeName, WeatherCodeShort, &#xA;                             WeatherCodeNameShort)&#xA;OUTPUT INSERTED.WeatherKey, FactTripStaging.RideID, FactTripStaging.StartDateTime, FactTripStaging.StartTime, FactTripStaging.StartDateKey,&#xA;       FactTripStaging.EndDateTime, FactTripStaging.EndTime, FactTripStaging.EndDateKey, FactTripStaging.StartStationName, FactTripStaging.StartStationKey,&#xA;       FactTripStaging.EndStationName, FactTripStaging.EndStationKey, FactTripStaging.RiderType, FactTripStaging.Duration, FactTripStaging.Distance,&#xA;       FactTripStaging.RideableTypeName INTO @WeatherKeysTable&#xA;SELECT Temperature, Relativehumidity, DewPoint, ApparentTemperature, Precipitation, RainFall, SnowFall, &#xA;       CloudCover, WindSpeed, WindGusts, WindDirection, WeatherCode, WeatherCodeName, WeatherCodeShort, &#xA;       WeatherCodeNameShort FROM FactTripStaging;&#xA;&#xA;-- Insert into FactTrip table using the WeatherKeys and associated trip data captured into the @WeatherKeysTable variable&#xA;INSERT INTO FactTrip (WeatherKey, RideID, StartDateTime, StartTime, StartDateKey, EndDateTime, EndTime, EndDateKey, StartStationName, &#xA;                      StartStationKey, EndStationName, EndStationKey, RiderType, Duration, Distance, RideableTypeName)&#xA;SELECT WeatherKey, RideID, StartDateTime, StartTime, StartDateKey, EndDateTime, EndTime, EndDateKey, StartStationName, StartStationKey,&#xA;       EndStationName, EndStationKey, RiderType, Duration, Distance, RideableTypeName FROM @WeatherKeysTable;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
@@ -2028,6 +1996,149 @@ where [refTable].[StationKey] = ?</property>
                       refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Is Trip in Database"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Is Trip in Database"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[FactTrip]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[FactTrip]) [refTable]
+where [refTable].[RideID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="TripKey" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeatherKey" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RideID" dataType="DT_STR" length="16" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StartDateTime" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StartTime" dataType="DT_DBTIME2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StartDateKey" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EndDateTime" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EndTime" dataType="DT_DBTIME2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EndDateKey" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StartStationName" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StartStationKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EndStationName" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EndStationKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RiderType" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Duration" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Distance" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RideableTypeName" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["ride_id"]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Is Trip in Database.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Is Trip in Database.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Is Trip in Database.Inputs[Lookup Input].Columns[&quot;ride_id&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="18"
+                      cachedName="&quot;ride_id&quot;"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">RideID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Is Trip in Database.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Data Flow Task\Is Trip in Database.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Is Trip in Database.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Data Flow Task\Is Trip in Database.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Is Trip in Database.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Data Flow Task\Is Trip in Database.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Is Trip in Database.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Is Trip in Database.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Is Trip in Database.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Is Trip in Database.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4437,19 +4548,19 @@ where [refTable].[Time] = ?</property>
           <paths>
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task\Remove quotes.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
               endId="Package\Data Flow Task\StartStationLookup.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output2]"
+              refId="Package\Data Flow Task.Paths[Derived Column Output1]"
               endId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
               name="Derived Column Output"
               startId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output2]"
+              endId="Package\Data Flow Task\Is Trip in Database.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Remove quotes.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
               endId="Package\Data Flow Task\Remove quotes.Inputs[Derived Column Input]"
@@ -4491,6 +4602,11 @@ where [refTable].[Time] = ?</property>
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\EndStationLookup.Outputs[Lookup No Match Output]" />
             <path
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output2]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Task\Is Trip in Database.Outputs[Lookup No Match Output]" />
+            <path
               refId="Package\Data Flow Task.Paths[Output 0]"
               endId="Package\Data Flow Task\WeatherHistoryLookup.Inputs[Lookup Input]"
               name="Output 0"
@@ -4500,24 +4616,6 @@ where [refTable].[Time] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
-  <DTS:PrecedenceConstraints>
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
-      DTS:CreationName=""
-      DTS:DTSID="{CB51B030-4B1A-4F2F-9691-60326908892A}"
-      DTS:From="Package\Create Staging Trip Table"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\Data Flow Task" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
-      DTS:CreationName=""
-      DTS:DTSID="{AD9CB8C8-E80D-49F0-BD50-8375CE07330B}"
-      DTS:From="Package\Data Flow Task"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Creater and Assign Weather to Distance Staging Trip Data" />
-  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -4529,75 +4627,11 @@ where [refTable].[Time] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="205,42"
-          Id="Package\Create Staging Trip Table"
-          TopLeft="324,59" />
-        <NodeLayout
-          Size="364,42"
-          Id="Package\Creater and Assign Weather to Distance Staging Trip Data"
-          TopLeft="235,238" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
           TopLeft="341,150" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="426.5,101">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-8,49"
-              Start="0,0"
-              End="-8,41.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.5"
-                    Point2="0,24.5"
-                    Point3="-4,24.5" />
-                  <mssgle:LineSegment
-                    End="-4,24.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4,24.5"
-                    Point2="-8,24.5"
-                    Point3="-8,28.5" />
-                  <mssgle:LineSegment
-                    End="-8,41.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="417.75,192">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46"
-              Start="0,0"
-              End="0,38.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4653,7 +4687,7 @@ where [refTable].[Time] = ?</property>
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Derived Column"
-          TopLeft="246,211" />
+          TopLeft="124,242" />
         <NodeLayout
           Size="191,42"
           Id="Package\Data Flow Task\WeatherHistoryLookup"
@@ -4943,7 +4977,7 @@ where [refTable].[Time] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
+          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
           TopLeft="320.5,678">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4977,31 +5011,69 @@ where [refTable].[Time] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="325,253">
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="203,284">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="45.5,58"
+              EndConnector="167.5,27"
               Start="0,0"
-              End="45.5,50.5">
+              End="167.5,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25" />
+                    End="0,9.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25"
-                    Point2="0,29"
-                    Point3="4,29" />
+                    Point1="0,9.5"
+                    Point2="0,13.5"
+                    Point3="4,13.5" />
                   <mssgle:LineSegment
-                    End="41.5,29" />
+                    End="163.5,13.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="41.5,29"
-                    Point2="45.5,29"
-                    Point3="45.5,33" />
+                    Point1="163.5,13.5"
+                    Point2="167.5,13.5"
+                    Point3="167.5,17.5" />
                   <mssgle:LineSegment
-                    End="45.5,50.5" />
+                    End="167.5,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\Is Trip in Database"
+          TopLeft="454,194" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
+          TopLeft="312,158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="227.5,36"
+              Start="0,0"
+              End="227.5,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="4,18" />
+                  <mssgle:LineSegment
+                    End="223.5,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="223.5,18"
+                    Point2="227.5,18"
+                    Point3="227.5,22" />
+                  <mssgle:LineSegment
+                    End="227.5,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5011,37 +5083,39 @@ where [refTable].[Time] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="312,158">
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
+          TopLeft="454,215">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="13,53"
+              EndConnector="-172,48"
               Start="0,0"
-              End="13,45.5">
+              End="-164.5,48">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.5" />
+                    End="-82,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.5"
-                    Point2="0,26.5"
-                    Point3="4,26.5" />
+                    Point1="-82,0"
+                    Point2="-86,0"
+                    Point3="-86,4" />
                   <mssgle:LineSegment
-                    End="9,26.5" />
+                    End="-86,44" />
                   <mssgle:CubicBezierSegment
-                    Point1="9,26.5"
-                    Point2="13,26.5"
-                    Point3="13,30.5" />
+                    Point1="-86,44"
+                    Point2="-86,48"
+                    Point3="-90,48" />
                   <mssgle:LineSegment
-                    End="13,45.5" />
+                    End="-164.5,48" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-141.80638671875,-17.609375,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5169,6 +5243,29 @@ where [refTable].[Time] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Is Trip in Database">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FactTrip]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

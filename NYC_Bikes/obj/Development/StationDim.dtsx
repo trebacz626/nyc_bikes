@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{114EB663-7944-4135-A5E1-0ABE817954E4}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{883A19A4-D024-4A3B-B9DB-785BA622ED2A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -459,7 +459,7 @@ where [refTable].[Date] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Output].Columns[ValidFrom]};</property>
+                  name="ParameterMap">#{Package\Station Data Flow\Date setting.Outputs[Derived Column Output].Columns[ValidFrom]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -486,7 +486,7 @@ where [refTable].[Date] = ?</property>
                       refId="Package\Station Data Flow\Date lookup.Inputs[Lookup Input].Columns[ValidFrom]"
                       cachedDataType="dbDate"
                       cachedName="ValidFrom"
-                      lineageId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Output].Columns[ValidFrom]">
+                      lineageId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output].Columns[ValidFrom]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -553,6 +553,123 @@ where [refTable].[Date] = ?</property>
                       refId="Package\Station Data Flow\Date lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Station Data Flow\Date lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Station Data Flow\Date setting"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Date setting"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Station Data Flow\Date setting.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Station Data Flow\Date setting.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output].Columns[ValidFrom]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output].Columns[ValidFrom]"
+                      name="ValidFrom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBDATE)[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output].Columns[IsCurrent]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output].Columns[IsCurrent]"
+                      name="IsCurrent"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression"> TRUE </property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression"> TRUE </property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output].Columns[ValidTo]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output].Columns[ValidTo]"
+                      name="ValidTo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBDATE)@[$Project::WorldEndDte]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)@[$Project::WorldEndDte]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Station Data Flow\Date setting.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Station Data Flow\Date setting.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Station Data Flow\Date setting.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Station Data Flow\Date setting.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Station Data Flow\Date setting.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Station Data Flow\Date setting.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -852,101 +969,6 @@ where [refTable].[Date] = ?</property>
                       refId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Station Data Flow\Derived Column 1"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column 1"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Station Data Flow\Derived Column 1.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Station Data Flow\Derived Column 1.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Output].Columns[ValidFrom]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Output].Columns[ValidFrom]"
-                      name="ValidFrom"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_DBDATE)[GETDATE]()</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBDATE)GETDATE()</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Output].Columns[IsCurrent]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Output].Columns[IsCurrent]"
-                      name="IsCurrent"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression"> TRUE </property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression"> TRUE </property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Station Data Flow\Derived Column 1.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2049,7 +2071,7 @@ where [refTable].[StationKey] = ?</property>
                       cachedDataType="bool"
                       cachedName="IsCurrent"
                       externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
-                      lineageId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Output].Columns[IsCurrent]" />
+                      lineageId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output].Columns[IsCurrent]" />
                     <inputColumn
                       refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[DateKey]"
                       cachedDataType="i8"
@@ -2470,7 +2492,7 @@ where [refTable].[StationKey] = ?</property>
               refId="Package\Station Data Flow.Paths[Derived Column Output1]"
               endId="Package\Station Data Flow\Date lookup.Inputs[Lookup Input]"
               name="Derived Column Output"
-              startId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Output]" />
+              startId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output]" />
             <path
               refId="Package\Station Data Flow.Paths[Flat File Source Output]"
               endId="Package\Station Data Flow\Derived Column.Inputs[Derived Column Input]"
@@ -2488,7 +2510,7 @@ where [refTable].[StationKey] = ?</property>
               startId="Package\Station Data Flow\Date lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Station Data Flow.Paths[Lookup No Match Output]"
-              endId="Package\Station Data Flow\Derived Column 1.Inputs[Derived Column Input]"
+              endId="Package\Station Data Flow\Date setting.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
               startId="Package\Station Data Flow\Lookup.Outputs[Lookup No Match Output]" />
           </paths>
@@ -2683,8 +2705,8 @@ where [refTable].[StationKey] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="167,42"
-          Id="Package\Station Data Flow\Derived Column 1"
+          Size="138,42"
+          Id="Package\Station Data Flow\Date setting"
           TopLeft="298,385" />
         <NodeLayout
           Size="176,42"
@@ -2720,9 +2742,9 @@ where [refTable].[StationKey] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="211.166666666667,42"
+              EndConnector="196.666666666667,42"
               Start="0,0"
-              End="211.166666666667,34.5">
+              End="196.666666666667,34.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2733,20 +2755,20 @@ where [refTable].[StationKey] = ?</property>
                     Point2="0,17.1457975986278"
                     Point3="4,17.1457975986278" />
                   <mssgle:LineSegment
-                    End="207.166666666667,17.1457975986278" />
+                    End="192.666666666667,17.1457975986278" />
                   <mssgle:CubicBezierSegment
-                    Point1="207.166666666667,17.1457975986278"
-                    Point2="211.166666666667,17.1457975986278"
-                    Point3="211.166666666667,21.1457975986278" />
+                    Point1="192.666666666667,17.1457975986278"
+                    Point2="196.666666666667,17.1457975986278"
+                    Point3="196.666666666667,21.1457975986278" />
                   <mssgle:LineSegment
-                    End="211.166666666667,34.5" />
+                    End="196.666666666667,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="49.7769466145835,22.1457975986278,111.6127734375,11.609375"
+              BoundingBox="42.5269466145833,22.1457975986278,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2841,20 +2863,18 @@ where [refTable].[StationKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Station Data Flow.Paths[Derived Column Output1]"
-          TopLeft="381.5,427">
+          TopLeft="367,427">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="23.5,60"
+              EndConnector="38,60"
               Start="0,0"
-              End="23.5,52.5">
+              End="38,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2865,21 +2885,19 @@ where [refTable].[StationKey] = ?</property>
                     Point2="0,30"
                     Point3="4,30" />
                   <mssgle:LineSegment
-                    End="19.5,30" />
+                    End="34,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="19.5,30"
-                    Point2="23.5,30"
-                    Point3="23.5,34" />
+                    Point1="34,30"
+                    Point2="38,30"
+                    Point3="38,34" />
                   <mssgle:LineSegment
-                    End="23.5,52.5" />
+                    End="38,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2913,9 +2931,7 @@ where [refTable].[StationKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout

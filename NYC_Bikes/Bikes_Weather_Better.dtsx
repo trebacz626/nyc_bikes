@@ -12,8 +12,8 @@
   DTS:ObjectName="Bikes_Weather_Better"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="122"
-  DTS:VersionGUID="{5389FA9B-D6C2-4E4E-A4F8-F63B27D6A8BC}">
+  DTS:VersionBuild="123"
+  DTS:VersionGUID="{E1E4BAE6-CF38-4EAE-BC98-AA9D5FC8CCE8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1816,11 +1816,6 @@ where [refTable].[Time] = ?</property>
                       cachedScale="1"
                       lineageId="Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindGusts]" />
                     <inputColumn
-                      refId="Package\Load temporary weather csv into database\Select distinct.Inputs[Aggregate Input 1].Columns[Time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Time"
-                      lineageId="Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Output].Columns[Time]" />
-                    <inputColumn
                       refId="Package\Load temporary weather csv into database\Select distinct.Inputs[Aggregate Input 1].Columns[WeatherCodeName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -2159,7 +2154,7 @@ where [refTable].[Time] = ?</property>
                       dataType="numeric"
                       lineageId="Package\Load temporary weather csv into database\Select distinct.Outputs[Aggregate Output 1].Columns[WindGusts]"
                       name="WindGusts"
-                      precision="5"
+                      precision="6"
                       scale="1">
                       <properties>
                         <property
@@ -2167,32 +2162,6 @@ where [refTable].[Time] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
                           name="AggregationColumnId">#{Package\Load temporary weather csv into database\Temporary weather file.Outputs[Flat File Source Output].Columns[WindGusts]}</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the type of aggregation."
-                          name="AggregationType"
-                          typeConverter="AggregationType">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
-                          name="IsBig">1</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the string comparison options."
-                          name="AggregationComparisonFlags">0</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load temporary weather csv into database\Select distinct.Outputs[Aggregate Output 1].Columns[Time]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Load temporary weather csv into database\Select distinct.Outputs[Aggregate Output 1].Columns[Time]"
-                      name="Time">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Load temporary weather csv into database\Date Conversion.Outputs[Data Conversion Output].Columns[Time]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -2734,7 +2703,7 @@ where [refTable].[Code] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Code" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Definition" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Type" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Code" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Definition" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Type" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -3951,7 +3920,7 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
                       refId="Package\Load temporary weather csv into database\Weather state table.Inputs[OLE DB Destination Input].Columns[WindGusts]"
                       cachedDataType="numeric"
                       cachedName="WindGusts"
-                      cachedPrecision="5"
+                      cachedPrecision="6"
                       cachedScale="1"
                       externalMetadataColumnId="Package\Load temporary weather csv into database\Weather state table.Inputs[OLE DB Destination Input].ExternalColumns[WindGusts]"
                       lineageId="Package\Load temporary weather csv into database\Select distinct.Outputs[Aggregate Output 1].Columns[WindGusts]" />
@@ -4190,9 +4159,17 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="165,42"
+          Id="Package\Clear Unmatched"
+          TopLeft="445,375" />
+        <NodeLayout
           Size="242,42"
           Id="Package\Download temporary weather csv"
           TopLeft="408,80" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Fill Unmatched"
+          TopLeft="468,293" />
         <NodeLayout
           Size="286,42"
           Id="Package\Load temporary weather csv into database"
@@ -4231,10 +4208,6 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Fill Unmatched"
-          TopLeft="468,293" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="560,233">
@@ -4269,10 +4242,6 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Clear Unmatched"
-          TopLeft="445,375" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="544,335">
@@ -4311,6 +4280,147 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
     </LayoutInfo>
   </Package>
   <TaskHost
+    design-time-name="Package\Fill Unmatched">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Fill Unmatched\OLE DB Destination"
+          TopLeft="245,317" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Fill Unmatched\OLE DB Source"
+          TopLeft="307,51" />
+        <NodeLayout
+          Size="188,43"
+          Id="Package\Fill Unmatched\Lookup"
+          TopLeft="277,231" />
+        <EdgeLayout
+          Id="Package\Fill Unmatched.Paths[OLE DB Source Output]"
+          TopLeft="385.5,93">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14.5,138"
+              Start="0,0"
+              End="-14.5,130.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,65"
+                    Point2="0,69"
+                    Point3="-4,69" />
+                  <mssgle:LineSegment
+                    End="-10.5,69" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10.5,69"
+                    Point2="-14.5,69"
+                    Point3="-14.5,73" />
+                  <mssgle:LineSegment
+                    End="-14.5,130.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fill Unmatched.Paths[Lookup Match Output]"
+          TopLeft="371,274">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-37.5,43"
+              Start="0,0"
+              End="-37.5,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.5"
+                    Point2="0,21.5"
+                    Point3="-4,21.5" />
+                  <mssgle:LineSegment
+                    End="-33.5,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33.5,21.5"
+                    Point2="-37.5,21.5"
+                    Point3="-37.5,25.5" />
+                  <mssgle:LineSegment
+                    End="-37.5,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.94138671875,26.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill Unmatched\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill Unmatched\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fill Unmatched\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimWeatherState]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Load temporary weather csv into database">
     <LayoutInfo>
       <GraphLayout
@@ -4320,9 +4430,13 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
           Id="Package\Load temporary weather csv into database\Multicast"
           TopLeft="701,641" />
         <NodeLayout
-          Size="240,42"
-          Id="Package\Load temporary weather csv into database\Weather history table unmatched"
-          TopLeft="704,864.991202346041" />
+          Size="181,42"
+          Id="Package\Load temporary weather csv into database\Change snowfall unit"
+          TopLeft="337,332" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Load temporary weather csv into database\Date Conversion"
+          TopLeft="345,257" />
         <NodeLayout
           Size="188,42"
           Id="Package\Load temporary weather csv into database\Weather codes lookup"
@@ -4336,6 +4450,10 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
           Id="Package\Load temporary weather csv into database\Identify new rows"
           TopLeft="350,414" />
         <NodeLayout
+          Size="174,42"
+          Id="Package\Load temporary weather csv into database\Weather state table"
+          TopLeft="514,805" />
+        <NodeLayout
           Size="183,42"
           Id="Package\Load temporary weather csv into database\Weather history table"
           TopLeft="294.5,741.5" />
@@ -4344,21 +4462,47 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
           Id="Package\Load temporary weather csv into database\Select distinct"
           TopLeft="593,715" />
         <NodeLayout
-          Size="161,42"
-          Id="Package\Load temporary weather csv into database\Date Conversion"
-          TopLeft="345,257" />
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Load temporary weather csv into database\Weather state table"
-          TopLeft="514,805" />
+          Size="240,42"
+          Id="Package\Load temporary weather csv into database\Weather history table unmatched"
+          TopLeft="704,864.991202346041" />
         <NodeLayout
           Size="191,42"
           Id="Package\Load temporary weather csv into database\Temporary weather file"
           TopLeft="329.5,180.5" />
-        <NodeLayout
-          Size="181,42"
-          Id="Package\Load temporary weather csv into database\Change snowfall unit"
-          TopLeft="337,332" />
+        <EdgeLayout
+          Id="Package\Load temporary weather csv into database.Paths[Multicast Output 2]"
+          TopLeft="781.666666666667,683">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="42.3333333333334,181.991202346041"
+              Start="0,0"
+              End="42.3333333333334,174.491202346041">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.19866034654" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,70.19866034654"
+                    Point2="0,74.19866034654"
+                    Point3="4,74.19866034654" />
+                  <mssgle:LineSegment
+                    End="38.3333333333334,74.19866034654" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.3333333333334,74.19866034654"
+                    Point2="42.3333333333334,74.19866034654"
+                    Point3="42.3333333333334,78.19866034654" />
+                  <mssgle:LineSegment
+                    End="42.3333333333334,174.491202346041" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load temporary weather csv into database.Paths[Multicast Output 1]"
           TopLeft="743.333333333333,683">
@@ -4625,43 +4769,32 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load temporary weather csv into database.Paths[Multicast Output 2]"
-          TopLeft="781.666666666667,683">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="42.3333333333334,181.991202346041"
-              Start="0,0"
-              End="42.3333333333334,174.491202346041">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,70.19866034654" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,70.19866034654"
-                    Point2="0,74.19866034654"
-                    Point3="4,74.19866034654" />
-                  <mssgle:LineSegment
-                    End="38.3333333333334,74.19866034654" />
-                  <mssgle:CubicBezierSegment
-                    Point1="38.3333333333334,74.19866034654"
-                    Point2="42.3333333333334,74.19866034654"
-                    Point3="42.3333333333334,78.19866034654" />
-                  <mssgle:LineSegment
-                    End="42.3333333333334,174.491202346041" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load temporary weather csv into database\Weather codes lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[WeatherCodes]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load temporary weather csv into database\Weather state lookup">
     <Properties>
@@ -4674,6 +4807,29 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[DimWeatherState]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load temporary weather csv into database\Identify new rows">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[WeatherHistory]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -4699,52 +4855,6 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load temporary weather csv into database\Weather codes lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[WeatherCodes]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load temporary weather csv into database\Identify new rows">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[WeatherHistory]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load temporary weather csv into database\Weather history table">
     <Properties>
       <Property>
@@ -4759,145 +4869,6 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load temporary weather csv into database\Weather history table unmatched">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Fill Unmatched">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Fill Unmatched\OLE DB Source"
-          TopLeft="307,51" />
-        <NodeLayout
-          Size="188,43"
-          Id="Package\Fill Unmatched\Lookup"
-          TopLeft="277,231" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Fill Unmatched\OLE DB Destination"
-          TopLeft="245,317" />
-        <EdgeLayout
-          Id="Package\Fill Unmatched.Paths[Lookup Match Output]"
-          TopLeft="371,274">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-37.5,43"
-              Start="0,0"
-              End="-37.5,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.5"
-                    Point2="0,21.5"
-                    Point3="-4,21.5" />
-                  <mssgle:LineSegment
-                    End="-33.5,21.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-33.5,21.5"
-                    Point2="-37.5,21.5"
-                    Point3="-37.5,25.5" />
-                  <mssgle:LineSegment
-                    End="-37.5,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-66.94138671875,26.5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fill Unmatched.Paths[OLE DB Source Output]"
-          TopLeft="385.5,93">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-14.5,138"
-              Start="0,0"
-              End="-14.5,130.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,65" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,65"
-                    Point2="0,69"
-                    Point3="-4,69" />
-                  <mssgle:LineSegment
-                    End="-10.5,69" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-10.5,69"
-                    Point2="-14.5,69"
-                    Point3="-14.5,73" />
-                  <mssgle:LineSegment
-                    End="-14.5,130.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fill Unmatched\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fill Unmatched\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimWeatherState]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fill Unmatched\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
