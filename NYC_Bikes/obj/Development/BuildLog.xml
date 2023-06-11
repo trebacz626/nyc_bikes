@@ -2,10 +2,10 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>NYC_Bikes</Name>
-    <LastWriteTime>2023-06-11T09:46:39.0922487Z</LastWriteTime>
+    <LastWriteTime>2023-06-11T10:33:55.8118352Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-    <Salt>2UrszVJM</Salt>
-    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAACr/5S+onkjWaJzVGITlZQKMZGDBDQkcrxLZHPd+zyYZQAAAAAOgAAAAAIAACAAAABJD7YL55u0886jjvuaU/RpMCzPZcO8E2mPjsM5M8/XRzAAAAD2v9JNH5LllWJqlZaYoLR9TGeG720fnsIWfs/xrzTYNohxJvDyF1tcyoq8QB+ZKHJAAAAAl+7YBZmdCg19x7vpUCQQxpsUTAKnROgWMzihk6rPyWiX32U/CQEBs5BUP6TEOzQntxFH2fIfleeauTi+Zv/MLw==</LastKnownProtectedHashedPassword>
+    <Salt>XdE5pnEw</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAAAISrrYCubqes677G+pwhi8/77+VPAOJRhc0gb91Mg2VgAAAAAOgAAAAAIAACAAAAC9MEoLuEyOCU4+rP9NC7HOgqoXx8g1NxKceQAKf8K5ODAAAAAOG/HLMHDDXpHJtSNmUYht4q2OLRcC0akWW0gNXa4tuZOTklKCNQA/q5YM0iqkRPJAAAAAOxGL80w0nOdseS/Yy/LH0347dZvVPgPyzKqLVVvOgZNMrGe8AJ01MLRbhJlSiFnkmFbdIjF17VC9LtJNuH99vA==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
@@ -13,35 +13,35 @@
       <LastWriteTime>2023-06-10T18:49:22.3042815Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
       <Salt>+9U4B7W7</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAAC2V//PVME4OCIFdB4Mrk1i9mPQ0VxgAbKxc4wUDeWdiAAAAAAOgAAAAAIAACAAAACnI63ySvD+Qh0kdQ2ATUGcGkjn4dR6eWLYmOppiHY3hjAAAAAfrvOI9A5noKhOwn5CypaBQ+Xoc0O+7b3C04OEsFey+9iCXUdoYH05yIFro/WHGsxAAAAA32uzzTv1O+c1Vxf+uAASmTe6KVO4Wkl+ETvgwKPVx2tCZ/DVI4puCErAcaVofz+T/hODjMQq1BCpZ0CdjdWnsQ==</LastKnownProtectedHashedPassword>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAAAE9g1PbbKPPSm1ueUhoES8KOxcfOuVsEvsJ5kNdkpGygAAAAAOgAAAAAIAACAAAACAb7t3b/VhlvR6bxMzL4yFXmB9sLnuYM3bswIHWrTmHDAAAADXPBHiXxAoBhOo8eBUFTcUAwfqc9BnOqrPT5gA2QbTVPXqGMT7qFax34NytUaFJchAAAAAvNJoOWH2htZ51uZUDgoQChU1KUs8VBCsVk2EHiRjbFM+/YYzx9tWD0isLC3za5liTMKBxqoPyM9pf/qmVhHhIw==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>StationDim.dtsx</Name>
       <LastWriteTime>2023-06-11T05:39:22.310394Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
       <Salt>ShRwfT0b</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAABKmD+tA/K4g2c0fy1g9Yn27VY0yJVincI37rBR8olRiwAAAAAOgAAAAAIAACAAAACxSrXQI77AvOak0nr4EXtlbXD4amwk3dNvYqA8yKkzajAAAADTpBtAQ2h5/r9QMqLkxs8lRZPpRWJSVdkCKod6rZZi6P7WZ3mhr0Jp/nfrHdWpb5BAAAAAdfPVHCBGwqckSNd8N/V3bF5J4OcyHk9u1jYDy/HzzJt8Z/NCMUfNTzzSBp991xqbYpGdM/9Pggj/nLFlGg9rsg==</LastKnownProtectedHashedPassword>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAAB2a4M9uR6kkPnvJzHqe+gSEvz5COOjaEfHN1onC/3CvgAAAAAOgAAAAAIAACAAAACuIQlbX833Q9exJDWNIx3aqYbauamtkFRHBV4DySc4ozAAAABTOaagZZnH+xpnE4P3XSDInH/pvA2RFpl/g3MnbA+Tw6NgBUpJOm9nCH91qlfYB9JAAAAAwwzrLW8kW09G1z+JM2KGzznZARbMfNx+O9OSfrYLBB0E/vNgxJLd0YodiMHSKV/PL5/Q2/rot8LJONKUyGD9Pg==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Bikes_Weather.dtsx</Name>
-      <LastWriteTime>2023-06-11T06:01:23.3794112Z</LastWriteTime>
+      <LastWriteTime>2023-06-11T09:53:37.2470483Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>gPcGbJiy</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAABzKcHT9P7wy3GjAWZ5fKa9FXOSQQGEd4L5peeouZyQdAAAAAAOgAAAAAIAACAAAAB38iSV9U76H09ecHVPPXBj9mbB8DasVXcBHMbjS7srXzAAAABf+gOgQSB0ybJxg4Fr4ssgQUe/APDEJu60oG3sU4oPM+oEOmveEmKqvdereRYLlzdAAAAA/uetMqaZYR29hWH/1/NcPdWA/Cxf7oovDMy6T18seaMjXxorh3j6Ef5O2YRJswmC3HZuBSy6XRlKsz3DIhZ4qA==</LastKnownProtectedHashedPassword>
+      <Salt>8uY2nu8b</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAAA4iRSVnl2aZ26FEVTpVt/iuGwwYo7Ac8v4U17ct00WVgAAAAAOgAAAAAIAACAAAAAkV6otubDTrDY55qHK3PW8Wl+62ZcKv2G/vOaQaZIIZzAAAADWLnUd7/KoE7Ut8+HuPBVSEXw6XoalmwRWE5C+PW4/bH4i6li6fH39Tf73jw1ulyRAAAAA8FBwCGUe2rppJy8Ivu1tlCC9eJ37CKcyrDKFWIoLWeSPzAGX9urJXvwXaHjFoeTEMyVT7pjkpo1jWwqMQqTV2Q==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Trip.dtsx</Name>
-      <LastWriteTime>2023-06-11T09:50:04.7676276Z</LastWriteTime>
+      <LastWriteTime>2023-06-11T10:36:48.948918Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>/RHKukZJ</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAABJsAItHuUFDlGxJfwjVKTiPUrv9UXDvmB2yJ+MwJeSggAAAAAOgAAAAAIAACAAAADhUzRhJSuIcf0fbDl3Qqgram9E2C1sot0tR/J+OIw+UzAAAAB94VBWxsQfThu1WSbR1deqbel2+3YepDMPojuVx0C9bQ0lEklwR10zXypzubfwLjJAAAAAXHk1Ux/1dgS094sJ0D1xWZhG6orJihg/QT0LAejDjT0WLmCUgtaq1hQ+X4czivoQFzETLqAC+25bDUqWr2cU6Q==</LastKnownProtectedHashedPassword>
+      <Salt>S3Ze8OLI</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAAAwSmrK6H4ys0TAg919Xx57Ooy4z7boFMtSgh88LshJbAAAAAAOgAAAAAIAACAAAABsW8Iwul9NLnPNIyrdqs7BtxreOmqMG7zCVauXPGY/8jAAAAA+p+WIc5OCW3aVxec7a1IxZWRv47HFQptbXe9Zc47C8V9uRd7EPG1S+iGKaExBGdJAAAAAs8rYgaXoFJPpdmOHB9phafcRhCKVym+0ukT6QLstiqcBXpMGvblTH/SH7+/B5Ysqj6uULTtUYuSWkcEV58ypAQ==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Bikes_Weather_Better.dtsx</Name>
-      <LastWriteTime>2023-06-11T09:22:28.9595609Z</LastWriteTime>
+      <LastWriteTime>2023-06-11T09:53:20.4758477Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>dB/rpkjv</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAAAE89UCt9qPqhG6RV3/+Ay3dtsg/DnoKxHGbKGmDHHDkAAAAAAOgAAAAAIAACAAAADlcVDFqGnaX8wv7cqCOtKoRxUBVCaWN5dtH+D06SXpgDAAAABjXp3sMmAhZxEijCPQplQNNcSHdursYUUYJ8Dgb5xAyX44Xf6ygrAioykVAo0pfgNAAAAAX2Jr0fY30LnGNu6/uHJ81BPVqFercA/iZf4QxfEZoHZr5LMZMDffkg/BMMhJvxQ5Rbe/48AFW+9QLwsaBcbcZw==</LastKnownProtectedHashedPassword>
+      <Salt>AK2/y7Ly</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAf7qVmUd3qEKu6gDqzCz8SAAAAAACAAAAAAAQZgAAAAEAACAAAAD0huRSDmLOOE9BQvMGnSJmn5C6aUQ+rbTmLJhrnln8IwAAAAAOgAAAAAIAACAAAABqLOIu4HM0QigrFleHfAYQRNseTu/itNrEU6h1vu6UmzAAAAAfwXwC9vaJ46dFj9g32UVW6jtyqCy7zIilKl5rXKWV13K2Oqzwsf3Tnx9A83mxcctAAAAAY6ysZl7a1skYxlpMb6SWf+sLhZ1BBAmw77psMiw/NDsjzq1fQxgFjo60fv5R45axaA5CcGQw3doBy0weeq2iZg==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>

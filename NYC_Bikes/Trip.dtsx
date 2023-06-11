@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{56499FD2-F737-4046-A223-828CF2A5C0C2}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{5C9624A5-CA13-4351-99F5-A097513FDC9A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -364,16 +364,17 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Trips Data Unmatched]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{15DBC445-C250-4B30-B629-685BAC575EDA}"
+      DTS:DTSID="{C9E06AC4-0B7B-4E65-88B2-67D853D69796}"
       DTS:ObjectName="Trips Data Unmatched">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
           DTS:LocaleID="1045"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
+          DTS:CodePage="1250"
           DTS:ConnectionString="C:\Projects\nyc_bikes\logs\trips\TripsDataUnmatched.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
@@ -383,7 +384,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;ride_id&quot;"
-              DTS:DTSID="{C23F4B5F-0BAE-429A-B90A-49D76B92CFAB}"
+              DTS:DTSID="{F1A123F4-E806-455C-B298-2616047EC050}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -392,7 +393,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;rideable_type&quot;"
-              DTS:DTSID="{9E4D606B-62E2-417F-8442-992F2D0BFF5F}"
+              DTS:DTSID="{230464A3-285D-4805-81C3-7D115C920EFD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -401,7 +402,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;start_station_id&quot;"
-              DTS:DTSID="{FB52A427-5181-4BCC-BEE6-21DC2E1DC156}"
+              DTS:DTSID="{81EA3E12-CD5A-432E-B012-6A2AB5DDD912}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -410,7 +411,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;end_station_id&quot;"
-              DTS:DTSID="{FEAF7E3C-2791-49F9-8005-27B428A293F3}"
+              DTS:DTSID="{7AF574DE-4FFE-499C-89FD-46AAF30DF8AF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -419,7 +420,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;member_casual&quot;"
-              DTS:DTSID="{CBC23875-E945-4F38-B509-01760DF22294}"
+              DTS:DTSID="{7F9763A4-585F-4434-9985-24B1686AE36E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -428,7 +429,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;started_at&quot;"
-              DTS:DTSID="{A1AC8E0F-B5D6-4FC9-87AF-1B7A2B5ACA63}"
+              DTS:DTSID="{580CD568-A741-4BEB-B648-DD30AC615747}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -437,7 +438,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;ended_at&quot;"
-              DTS:DTSID="{8E5E67AD-1296-41C2-9627-FCC9D94F2E11}"
+              DTS:DTSID="{8ACC9E7F-E4BC-49BA-9152-44160F36E13B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -445,7 +446,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="StartedAtDateTime"
-              DTS:DTSID="{4BE94DE9-7441-400B-9F34-A06123E66844}"
+              DTS:DTSID="{6480AFDD-D284-43A3-82E6-FD63005834DD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -453,7 +454,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="EndedAtDateTime"
-              DTS:DTSID="{764E7746-EA98-4F56-B0B3-3284B083E36D}"
+              DTS:DTSID="{E159C303-0DD2-4186-AB57-6AFE949E3655}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -461,7 +462,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="StartedAtDate"
-              DTS:DTSID="{AD867EB5-37B8-4E70-B8EF-EF18AF2B1451}"
+              DTS:DTSID="{E39B6429-FD5D-446A-844B-D68117DBA071}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -469,7 +470,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="EndedAtDate"
-              DTS:DTSID="{B9B57552-B4E1-4383-97A7-BF08483DC910}"
+              DTS:DTSID="{1E79B099-186A-4100-9984-568FB2864E6A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -477,7 +478,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="StartedAtHour"
-              DTS:DTSID="{3DE672DF-C937-4100-940C-F4227B073347}"
+              DTS:DTSID="{F5B9DC84-10B3-456E-B81B-D4536F0E40B7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -485,23 +486,23 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="EndedAtHour"
-              DTS:DTSID="{895FD7F8-1234-4946-A7EE-88BA0981A94B}"
+              DTS:DTSID="{89335359-1E26-4ED5-9B5E-2771488C0AD9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="134"
+              DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="StartTime"
-              DTS:DTSID="{D21E6C5F-56A4-4C7D-B8B1-D5F878B375C2}"
+              DTS:DTSID="{10964B0F-DF28-425C-AF52-7829186533D4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="134"
+              DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="EndTime"
-              DTS:DTSID="{25FDEF77-4302-4506-8B7E-38C094570011}"
+              DTS:DTSID="{8F80842C-0435-43E7-8F5D-E4CCB6377F32}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -511,7 +512,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="StartStationLongitude"
-              DTS:DTSID="{C7187641-4496-4A6B-834E-B46AEF79A571}"
+              DTS:DTSID="{A066B9FD-94F7-4C82-86E2-4817277E4E6C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -521,16 +522,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="StartStationLatitude"
-              DTS:DTSID="{5189B89D-B6C9-40BC-8F4E-F9042D06825C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="7"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="StartStationKey"
-              DTS:DTSID="{0BFAE615-2414-4F96-8E27-162BAB277A60}"
+              DTS:DTSID="{D5931FCB-A010-4439-8460-B4CE557F7708}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -539,7 +531,15 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="StartStationName"
-              DTS:DTSID="{689FC0F5-278C-41BE-820D-62606A282804}"
+              DTS:DTSID="{2EE01F98-DFE8-4D98-9DB6-71AD8E46BC5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StartStationKey"
+              DTS:DTSID="{948E50B5-5DAC-46D7-A72E-FD6E681CDF2D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -549,7 +549,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="EndStationLongitude"
-              DTS:DTSID="{1871D9DA-7497-44CB-BEBB-499977386267}"
+              DTS:DTSID="{8DD9CEFE-CAE3-42CC-B084-BA6D6C2BB539}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -559,16 +559,7 @@
               DTS:DataScale="3"
               DTS:TextQualified="True"
               DTS:ObjectName="EndStationLatitude"
-              DTS:DTSID="{3B02E626-893F-4E50-A2FD-7F607C695DCA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="7"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EndStationKey"
-              DTS:DTSID="{1E03A16B-7123-4B37-B8AF-40A1E810E59E}"
+              DTS:DTSID="{4A9DC889-9A13-444D-A491-28CD37548576}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -577,7 +568,15 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EndStationName"
-              DTS:DTSID="{186053B7-2D49-43A5-A8DD-D63A50BC2A02}"
+              DTS:DTSID="{C9AD3274-262D-46A0-AA65-9BDC0D66CDE5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndStationKey"
+              DTS:DTSID="{FF833542-D322-47ED-A808-735B4F0CF8DF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -585,7 +584,7 @@
               DTS:DataType="20"
               DTS:TextQualified="True"
               DTS:ObjectName="StartDateKey"
-              DTS:DTSID="{F3BC58D0-E96B-4BBA-8B93-71B96C09D7F7}"
+              DTS:DTSID="{A05CA4B3-A3E0-4153-B17D-9F26F52CEA40}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -593,7 +592,7 @@
               DTS:DataType="20"
               DTS:TextQualified="True"
               DTS:ObjectName="EndDateKey"
-              DTS:DTSID="{A0EC17F7-D2EA-4F57-B49C-7FE148C598BB}"
+              DTS:DTSID="{E9A5562E-8B09-4C2D-ADF3-1B0BD10CD61B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -601,7 +600,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Duration"
-              DTS:DTSID="{5E1990FF-0A94-4864-9614-61F56CE1B06A}"
+              DTS:DTSID="{CE047604-B92B-46F2-93C2-FB9F2777CB65}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -609,7 +608,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Distance"
-              DTS:DTSID="{15A29648-ED4D-42F0-A710-6DBD887516AB}"
+              DTS:DTSID="{0921C88A-1D0D-4C5A-9F19-D5FE5BCD864D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -941,13 +940,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIMESTAMP)[DATEADD]("hour",[DATEDIFF]("hour",(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["started_at"]},(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["started_at"]}) + ([DATEPART]("minute",(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["started_at"]}) &gt;= 30 ? 1 : 0),(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["started_at"]})</property>
+                          name="Expression">(DT_DBTIMESTAMP)[DATEADD]("hh",[DATEPART]("hh",(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["started_at"]}),(DT_DBDATE)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["started_at"]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIMESTAMP)DATEADD("hour",DATEDIFF("hour",(DT_DBTIMESTAMP)["started_at"],(DT_DBTIMESTAMP)["started_at"]) + (DATEPART("minute",(DT_DBTIMESTAMP)["started_at"]) &gt;= 30 ? 1 : 0),(DT_DBTIMESTAMP)["started_at"])</property>
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)DATEADD("hh",DATEPART("hh",(DT_DBTIMESTAMP)["started_at"]),(DT_DBDATE)["started_at"])</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -963,13 +962,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIMESTAMP)[DATEADD]("hour",[DATEDIFF]("hour",(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["ended_at"]},(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["ended_at"]}) + ([DATEPART]("minute",(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["ended_at"]}) &gt;= 30 ? 1 : 0),(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["ended_at"]})</property>
+                          name="Expression">(DT_DBTIMESTAMP)[DATEADD]("hh",[DATEPART]("hh",(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["ended_at"]}),(DT_DBDATE)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns["ended_at"]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBTIMESTAMP)DATEADD("hour",DATEDIFF("hour",(DT_DBTIMESTAMP)["ended_at"],(DT_DBTIMESTAMP)["ended_at"]) + (DATEPART("minute",(DT_DBTIMESTAMP)["ended_at"]) &gt;= 30 ? 1 : 0),(DT_DBTIMESTAMP)["ended_at"])</property>
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)DATEADD("hh",DATEPART("hh",(DT_DBTIMESTAMP)["ended_at"]),(DT_DBDATE)["ended_at"])</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1738,321 +1737,6 @@ where [refTable].[StationKey] = ?</property>
                   <externalMetadataColumns />
                 </output>
               </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Flat File Destination"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1045"
-              name="Flat File Destination"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Trips Data Unmatched]"
-                  connectionManagerRefId="Package.ConnectionManagers[Trips Data Unmatched]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[&quot;ride_id&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="18"
-                      cachedName="&quot;ride_id&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;ride_id&quot;]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ride_id&quot;]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[&quot;rideable_type&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="&quot;rideable_type&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;rideable_type&quot;]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;rideable_type&quot;]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[&quot;start_station_id&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;start_station_id&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;start_station_id&quot;]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[&quot;end_station_id&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;end_station_id&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;end_station_id&quot;]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[&quot;member_casual&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="&quot;member_casual&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;member_casual&quot;]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;member_casual&quot;]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[&quot;started_at&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;started_at&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;started_at&quot;]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;started_at&quot;]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[&quot;ended_at&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;ended_at&quot;"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;ended_at&quot;]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;ended_at&quot;]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[StartedAtDateTime]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="StartedAtDateTime"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartedAtDateTime]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[StartedAtDateTime]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[EndedAtDateTime]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="EndedAtDateTime"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndedAtDateTime]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[EndedAtDateTime]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[StartedAtDate]"
-                      cachedDataType="dbDate"
-                      cachedName="StartedAtDate"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartedAtDate]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[StartedAtDate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[EndedAtDate]"
-                      cachedDataType="dbDate"
-                      cachedName="EndedAtDate"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndedAtDate]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[EndedAtDate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[StartedAtHour]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="StartedAtHour"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartedAtHour]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[StartedAtHour]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[EndedAtHour]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="EndedAtHour"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndedAtHour]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[EndedAtHour]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[StartTime]"
-                      cachedDataType="dbTime"
-                      cachedName="StartTime"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartTime]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[StartTime]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[EndTime]"
-                      cachedDataType="dbTime"
-                      cachedName="EndTime"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndTime]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[EndTime]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[StartStationLongitude]"
-                      cachedDataType="numeric"
-                      cachedName="StartStationLongitude"
-                      cachedPrecision="11"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartStationLongitude]"
-                      lineageId="Package\Data Flow Task\StartStationLookup.Outputs[Lookup Match Output].Columns[StartStationLongitude]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[StartStationLatitude]"
-                      cachedDataType="numeric"
-                      cachedName="StartStationLatitude"
-                      cachedPrecision="11"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartStationLatitude]"
-                      lineageId="Package\Data Flow Task\StartStationLookup.Outputs[Lookup Match Output].Columns[StartStationLatitude]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[StartStationKey]"
-                      cachedDataType="i4"
-                      cachedName="StartStationKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartStationKey]"
-                      lineageId="Package\Data Flow Task\StartStationLookup.Outputs[Lookup Match Output].Columns[StartStationKey]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[StartStationName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="StartStationName"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartStationName]"
-                      lineageId="Package\Data Flow Task\StartStationLookup.Outputs[Lookup Match Output].Columns[StartStationName]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;ride_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="18"
-                      name="&quot;ride_id&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;rideable_type&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      name="&quot;rideable_type&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;start_station_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="&quot;start_station_id&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;end_station_id&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="&quot;end_station_id&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;member_casual&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="20"
-                      name="&quot;member_casual&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;started_at&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="&quot;started_at&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[&quot;ended_at&quot;]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="&quot;ended_at&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartedAtDateTime]"
-                      dataType="dbTimeStamp"
-                      name="StartedAtDateTime" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndedAtDateTime]"
-                      dataType="dbTimeStamp"
-                      name="EndedAtDateTime" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartedAtDate]"
-                      dataType="dbDate"
-                      name="StartedAtDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndedAtDate]"
-                      dataType="dbDate"
-                      name="EndedAtDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartedAtHour]"
-                      dataType="dbTimeStamp"
-                      name="StartedAtHour" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndedAtHour]"
-                      dataType="dbTimeStamp"
-                      name="EndedAtHour" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartTime]"
-                      dataType="dbTime"
-                      name="StartTime" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndTime]"
-                      dataType="dbTime"
-                      name="EndTime" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartStationLongitude]"
-                      dataType="numeric"
-                      name="StartStationLongitude"
-                      precision="11"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartStationLatitude]"
-                      dataType="numeric"
-                      name="StartStationLatitude"
-                      precision="11"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartStationKey]"
-                      codePage="1252"
-                      dataType="str"
-                      length="7"
-                      name="StartStationKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartStationName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="StartStationName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndStationLongitude]"
-                      dataType="numeric"
-                      name="EndStationLongitude"
-                      precision="11"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndStationLatitude]"
-                      dataType="numeric"
-                      name="EndStationLatitude"
-                      precision="11"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndStationKey]"
-                      codePage="1252"
-                      dataType="str"
-                      length="7"
-                      name="EndStationKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndStationName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="EndStationName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[StartDateKey]"
-                      dataType="i8"
-                      name="StartDateKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndDateKey]"
-                      dataType="i8"
-                      name="EndDateKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Duration]"
-                      dataType="i4"
-                      name="Duration" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Distance]"
-                      dataType="i4"
-                      name="Distance" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
             </component>
             <component
               refId="Package\Data Flow Task\Flat File Source"
@@ -4411,7 +4095,7 @@ where [refTable].[Time] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">1</property>
+                  typeConverter="LookupNoMatchBehavior">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -4479,6 +4163,7 @@ where [refTable].[Time] = ?</property>
                 <output
                   refId="Package\Data Flow Task\WeatherHistoryLookup.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\WeatherHistoryLookup.Inputs[Lookup Input]">
@@ -4806,11 +4491,6 @@ where [refTable].[Time] = ?</property>
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\EndStationLookup.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output2]"
-              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Data Flow Task\WeatherHistoryLookup.Outputs[Lookup No Match Output]" />
-            <path
               refId="Package\Data Flow Task.Paths[Output 0]"
               endId="Package\Data Flow Task\WeatherHistoryLookup.Inputs[Lookup Input]"
               name="Output 0"
@@ -4927,29 +4607,17 @@ where [refTable].[Time] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="167,42"
-          Id="Package\Data Flow Task\Script Component"
-          TopLeft="342,733" />
-        <NodeLayout
-          Size="167,42"
-          Id="Package\Data Flow Task\Derived Column 1"
-          TopLeft="237,636" />
-        <NodeLayout
           Size="169,42"
           Id="Package\Data Flow Task\EndStationLookup"
           TopLeft="252,422" />
         <NodeLayout
-          Size="191,42"
-          Id="Package\Data Flow Task\WeatherHistoryLookup"
-          TopLeft="347,812" />
+          Size="189,42"
+          Id="Package\Data Flow Task\Start Station not exists"
+          TopLeft="554,409" />
         <NodeLayout
-          Size="162,42"
-          Id="Package\Data Flow Task\StartDateLookup"
-          TopLeft="253,496" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="219,50" />
+          Size="167,42"
+          Id="Package\Data Flow Task\Derived Column 1"
+          TopLeft="237,636" />
         <NodeLayout
           Size="156,42"
           Id="Package\Data Flow Task\Remove quotes"
@@ -4959,143 +4627,37 @@ where [refTable].[Time] = ?</property>
           Id="Package\Data Flow Task\StartStationLookup"
           TopLeft="284,311" />
         <NodeLayout
+          Size="162,42"
+          Id="Package\Data Flow Task\StartDateLookup"
+          TopLeft="253,496" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Data Flow Task\End Station Not exists"
+          TopLeft="528,485" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Data Flow Task\Script Component"
+          TopLeft="342,733" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Data Flow Task\WeatherHistoryLookup"
+          TopLeft="347,812" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Data Flow Task\OLE DB Fact Trip"
+          TopLeft="235,900" />
+        <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\EndDateLookup"
           TopLeft="264,562" />
         <NodeLayout
+          Size="156,42"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="219,50" />
+        <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="246,211" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="425.5,775">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17,37"
-              Start="0,0"
-              End="17,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.5"
-                    Point2="0,18.5"
-                    Point3="4,18.5" />
-                  <mssgle:LineSegment
-                    End="13,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13,18.5"
-                    Point2="17,18.5"
-                    Point3="17,22.5" />
-                  <mssgle:LineSegment
-                    End="17,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output3]"
-          TopLeft="343,604">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-22.5,32"
-              Start="0,0"
-              End="-22.5,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12"
-                    Point2="0,16"
-                    Point3="-4,16" />
-                  <mssgle:LineSegment
-                    End="-18.5,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5,16"
-                    Point2="-22.5,16"
-                    Point3="-22.5,20" />
-                  <mssgle:LineSegment
-                    End="-22.5,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-59.44138671875,21,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
-          TopLeft="334,538">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9,24"
-              Start="0,0"
-              End="9,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8"
-                    Point2="0,12"
-                    Point3="4,12" />
-                  <mssgle:LineSegment
-                    End="5,12" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5,12"
-                    Point2="9,12"
-                    Point3="9,16" />
-                  <mssgle:LineSegment
-                    End="9,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-43.69138671875,17,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
-          TopLeft="335.25,464">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
           TopLeft="339.75,353">
@@ -5256,50 +4818,40 @@ where [refTable].[Time] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Data Flow Task\Start Station not exists"
-          TopLeft="554,409" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="398,353">
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="425.5,775">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="250.5,56"
+              EndConnector="17,37"
               Start="0,0"
-              End="250.5,48.5">
+              End="17,29.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.7079037800687" />
+                    End="0,14.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.7079037800687"
-                    Point2="0,22.7079037800687"
-                    Point3="4,22.7079037800687" />
+                    Point1="0,14.5"
+                    Point2="0,18.5"
+                    Point3="4,18.5" />
                   <mssgle:LineSegment
-                    End="246.5,22.7079037800687" />
+                    End="13,18.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="246.5,22.7079037800687"
-                    Point2="250.5,22.7079037800687"
-                    Point3="250.5,26.7079037800687" />
+                    Point1="13,18.5"
+                    Point2="17,18.5"
+                    Point3="17,22.5" />
                   <mssgle:LineSegment
-                    End="250.5,48.5" />
+                    End="17,29.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="69.44361328125,27.7079037800687,111.6127734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="187,42"
-          Id="Package\Data Flow Task\End Station Not exists"
-          TopLeft="528,485" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
           TopLeft="421,443">
@@ -5336,83 +4888,171 @@ where [refTable].[Time] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Data Flow Task\OLE DB Fact Trip"
-          TopLeft="235,900" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output4]"
-          TopLeft="412,854">
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
+          TopLeft="398,353">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-94.5,46"
+              EndConnector="250.5,56"
               Start="0,0"
-              End="-94.5,38.5">
+              End="250.5,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.6292834890966" />
+                    End="0,18.7079037800687" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.6292834890966"
-                    Point2="0,18.6292834890966"
-                    Point3="-4,18.6292834890966" />
+                    Point1="0,18.7079037800687"
+                    Point2="0,22.7079037800687"
+                    Point3="4,22.7079037800687" />
                   <mssgle:LineSegment
-                    End="-90.5,18.6292834890966" />
+                    End="246.5,22.7079037800687" />
                   <mssgle:CubicBezierSegment
-                    Point1="-90.5,18.6292834890966"
-                    Point2="-94.5,18.6292834890966"
-                    Point3="-94.5,22.6292834890966" />
+                    Point1="246.5,22.7079037800687"
+                    Point2="250.5,22.7079037800687"
+                    Point3="250.5,26.7079037800687" />
                   <mssgle:LineSegment
-                    End="-94.5,38.5" />
+                    End="250.5,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-95.44138671875,23.6292834890966,96.3827734375,11.609375"
+              BoundingBox="69.44361328125,27.7079037800687,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Data Flow Task\Flat File Destination"
-          TopLeft="587,920" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
-          TopLeft="473,854">
+          Id="Package\Data Flow Task.Paths[Lookup Match Output4]"
+          TopLeft="442.5,854">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="202,66"
+              EndConnector="-125,46"
               Start="0,0"
-              End="202,58.5">
+              End="-125,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.7289719626168" />
+                    End="0,19" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.7289719626168"
-                    Point2="0,26.7289719626168"
-                    Point3="4,26.7289719626168" />
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="-4,23" />
                   <mssgle:LineSegment
-                    End="198,26.7289719626168" />
+                    End="-121,23" />
                   <mssgle:CubicBezierSegment
-                    Point1="198,26.7289719626168"
-                    Point2="202,26.7289719626168"
-                    Point3="202,30.7289719626168" />
+                    Point1="-121,23"
+                    Point2="-125,23"
+                    Point3="-125,27" />
                   <mssgle:LineSegment
-                    End="202,58.5" />
+                    End="-125,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="45.19361328125,31.7289719626168,111.6127734375,11.609375"
+              BoundingBox="-110.69138671875,28,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output3]"
+          TopLeft="343,604">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-22.5,32"
+              Start="0,0"
+              End="-22.5,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12"
+                    Point2="0,16"
+                    Point3="-4,16" />
+                  <mssgle:LineSegment
+                    End="-18.5,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,16"
+                    Point2="-22.5,16"
+                    Point3="-22.5,20" />
+                  <mssgle:LineSegment
+                    End="-22.5,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-59.44138671875,21,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
+          TopLeft="334,538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9,24"
+              Start="0,0"
+              End="9,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8"
+                    Point2="0,12"
+                    Point3="4,12" />
+                  <mssgle:LineSegment
+                    End="5,12" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5,12"
+                    Point2="9,12"
+                    Point3="9,16" />
+                  <mssgle:LineSegment
+                    End="9,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-43.69138671875,17,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
+          TopLeft="335.25,464">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,6.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5425,12 +5065,58 @@ where [refTable].[Time] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[DimStations]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\StartStationLookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimStations]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\StartDateLookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -5466,48 +5152,15 @@ where [refTable].[Time] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\StartDateLookup">
+    design-time-name="Package\Data Flow Task\OLE DB Fact Trip">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\StartStationLookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimStations]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5531,19 +5184,6 @@ where [refTable].[Time] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Fact Trip">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
