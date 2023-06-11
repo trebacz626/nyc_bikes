@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{45BA0F33-6492-4E54-9584-F0875A9AA068}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{114EB663-7944-4135-A5E1-0ABE817954E4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -352,7 +352,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
-          SQLTask:SqlStatementSource="IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NOT NULL&#xA;    DROP TABLE [dbo].[DimStationsUpdate]&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[DimStationsUpdate](&#xA;    [Name] [varchar](100) NOT NULL,&#xA;    [RegionID] [int] NOT NULL,&#xA;    [Longitude] [numeric](11, 3) NOT NULL,&#xA;    [Latitude] [numeric](11, 3) NOT NULL,&#xA;    [ElectricBikeSurchargeWaiverFlag] [bit] NOT NULL,&#xA;    [ExternalID] [char](36) NOT NULL,&#xA;    [Capacity] [smallint] NOT NULL,&#xA;    [StationType] [varchar](30) NOT NULL,&#xA;    [RegionName] [varchar](50) NOT NULL,&#xA;    [KioskFlag] [bit] NOT NULL,&#xA;    [StationKey] [varchar](7) NOT NULL,&#xA;    [ValidFrom] [bigint] NOT NULL,&#xA;    [ValidTo] [bigint] NULL,&#xA;    [IsCurrent] [bit] NOT NULL&#xA;)&#xA;GO&#xA;"
+          SQLTask:SqlStatementSource="IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DimStationsUpdate]&#xA;GO&#xA;&#xA;&#xA;IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NULL&#xA;CREATE TABLE [dbo].[DimStationsUpdate](&#xA;    [Name] [varchar](100) NOT NULL,&#xA;    [RegionID] [int] NOT NULL,&#xA;    [Longitude] [numeric](11, 3) NOT NULL,&#xA;    [Latitude] [numeric](11, 3) NOT NULL,&#xA;    [ElectricBikeSurchargeWaiverFlag] [bit] NOT NULL,&#xA;    [ExternalID] [char](36) NOT NULL,&#xA;    [Capacity] [smallint] NOT NULL,&#xA;    [StationType] [varchar](30) NOT NULL,&#xA;    [RegionName] [varchar](50) NOT NULL,&#xA;    [KioskFlag] [bit] NOT NULL,&#xA;    [StationKey] [varchar](7) NOT NULL,&#xA;    [ValidFrom] [bigint] NOT NULL,&#xA;    [ValidTo] [bigint] NULL,&#xA;    [IsCurrent] [bit] NOT NULL,&#xA;    [StationID][char](36) NOT NULL&#xA;)&#xA;GO&#xA;"
           SQLTask:CodePage="1252" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2841,7 +2841,9 @@ where [refTable].[StationKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2875,7 +2877,9 @@ where [refTable].[StationKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2909,7 +2913,9 @@ where [refTable].[StationKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2970,7 +2976,7 @@ where [refTable].[StationKey] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3006,7 +3012,7 @@ where [refTable].[StationKey] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
