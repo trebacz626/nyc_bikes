@@ -16,16 +16,13 @@ def combine_json_to_csv(folder_path, output_filename):
             if 'data' in data and 'stations' in data['data']:
                 # convert the json to a DataFrame and add it to all_data list
                 stations_df = pd.json_normalize(data['data']['stations'])
+                date = filename.split("_")[2]
+                time = filename.split("_")[3].replace("-", ":").split(".")[0]
+                stations_df['time_of_scrap'] = f"{date} {time}"
                 all_data.append(stations_df)
 
     # concatenate all the dataframes in the list
     all_data = pd.concat(all_data, ignore_index=True)
-
-    print("Length before dropping duplicates: ", len(all_data))
-    # drop duplicates
-    all_data = all_data.drop_duplicates(subset=['station_id', 'last_reported'])
-    print("Length after dropping duplicates: ", len(all_data))
-
     # save the DataFrame to a CSV file
     all_data.to_csv(output_filename, index=False)
 

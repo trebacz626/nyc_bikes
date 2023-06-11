@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{F74CBAEB-354C-45CB-889A-89ADD85D594C}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{55AA7A27-FBE5-4D7D-BF0D-E1BBCA16E82F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -54,7 +54,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="name"
-              DTS:DTSID="{E7D859D2-05AC-48F4-AF63-B15CD0612CF7}"
+              DTS:DTSID="{0F4BF5CA-332A-4AAA-866C-C1F53D467400}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +63,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="region_id"
-              DTS:DTSID="{1693523B-4A84-48E4-975F-2B6426E5F6B0}"
+              DTS:DTSID="{41A0CB3F-3ADA-4C6A-B044-2DFFA919A575}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -72,7 +72,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lon"
-              DTS:DTSID="{D099F1ED-49B0-441C-87B2-FA820ABDC21C}"
+              DTS:DTSID="{35C86C88-51BE-4B61-A104-36FB86ED260A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -81,7 +81,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lat"
-              DTS:DTSID="{66F7ED06-717C-4F78-9A2C-217B80FACDB2}"
+              DTS:DTSID="{45CB0940-ED24-4028-B3BD-55654DA01E7C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -90,7 +90,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="electric_bike_surcharge_waiver"
-              DTS:DTSID="{455E2EEC-A2BF-485E-AEEA-1E13937AE6F6}"
+              DTS:DTSID="{D50DB1B2-BBC3-473B-A661-EAEEB0080729}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -99,16 +99,16 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="external_id"
-              DTS:DTSID="{3829A9A0-3238-4AA9-A22B-297163C60039}"
+              DTS:DTSID="{190ACE19-907E-4601-9E4C-5B958BAC47A5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="36"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="legacy_id"
-              DTS:DTSID="{70ABA0DC-AEF9-461B-ABB2-B6B155CC54BE}"
+              DTS:DTSID="{9908E35A-57F9-421A-95A2-F3602A5E4110}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -117,7 +117,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="station_id"
-              DTS:DTSID="{43625DCB-8A23-410E-954F-00C6B66B1D68}"
+              DTS:DTSID="{FD63C415-95B4-4ADE-A6D7-24A9643D9014}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -126,7 +126,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="capacity"
-              DTS:DTSID="{1F41DACD-F59B-4447-81DE-92B31BB98BC1}"
+              DTS:DTSID="{3E4FC724-51B8-4E79-8CA9-20F8AF47D406}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -135,7 +135,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="short_name"
-              DTS:DTSID="{210E0779-4616-4819-8F44-5C1C44388407}"
+              DTS:DTSID="{5C6B6E4A-9686-4C7A-9E15-4A629FE6E0A1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -144,7 +144,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="station_type"
-              DTS:DTSID="{A47EDF81-0A16-45CC-8176-F8C5947A1A30}"
+              DTS:DTSID="{3BA83E4D-CF34-46AB-A8BE-31231DA47E00}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -153,7 +153,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="has_kiosk"
-              DTS:DTSID="{2FD4EF9F-C85B-476B-8375-3AD23394AC94}"
+              DTS:DTSID="{4641FF2E-F125-4916-9371-8068C0DA2EA5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -162,7 +162,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="eightd_has_key_dispenser"
-              DTS:DTSID="{D29AA351-08D0-4033-95F0-38DDFFD16A51}"
+              DTS:DTSID="{57DA9F62-1595-40A6-BF63-15F8BE039825}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -369,7 +369,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
-          SQLTask:SqlStatementSource="INSERT INTO [DimStations]&#xA;(&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    [ValidFrom],&#xA;    [ValidTo],&#xA;    [IsCurrent]&#xA;)&#xA;SELECT&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    [ValidFrom],&#xA;    [ValidTo],&#xA;    [IsCurrent]&#xA;FROM [DimStationsUpdate];&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO [DimStations]&#xA;(&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    [ValidFrom],&#xA;    [ValidTo],&#xA;    [IsCurrent],&#xA;    [StationID]&#xA;)&#xA;SELECT&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    [ValidFrom],&#xA;    [ValidTo],&#xA;    [IsCurrent],&#xA;    [StationID]&#xA;FROM [DimStationsUpdate];&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1124,7 +1124,7 @@ where [refTable].[Date] = ?</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[legacy_id]"
-                      length="50"
+                      length="36"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]"
                       name="legacy_id"
                       truncationRowDisposition="FailComponent">
@@ -1314,7 +1314,7 @@ where [refTable].[Date] = ?</property>
                       refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[legacy_id]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="36"
                       name="legacy_id" />
                     <externalMetadataColumn
                       refId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_id]"
@@ -1587,7 +1587,7 @@ where [refTable].[StationKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Name" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="RegionID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Longitude" dataType="DT_NUMERIC" length="0" precision="11" scale="3" codePage="0"/&gt;&lt;referenceColumn name="Latitude" dataType="DT_NUMERIC" length="0" precision="11" scale="3" codePage="0"/&gt;&lt;referenceColumn name="ElectricBikeSurchargeWaiverFlag" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ExternalID" dataType="DT_STR" length="36" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Capacity" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StationType" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="RegionName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="KioskFlag" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StationKey" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ValidFrom" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ValidTo" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsCurrent" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SKID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Name" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="RegionID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Longitude" dataType="DT_NUMERIC" length="0" precision="11" scale="3" codePage="0"/&gt;&lt;referenceColumn name="Latitude" dataType="DT_NUMERIC" length="0" precision="11" scale="3" codePage="0"/&gt;&lt;referenceColumn name="ElectricBikeSurchargeWaiverFlag" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ExternalID" dataType="DT_STR" length="36" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Capacity" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StationType" dataType="DT_STR" length="30" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="RegionName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="KioskFlag" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StationKey" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ValidFrom" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ValidTo" dataType="DT_I8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsCurrent" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SKID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StationID" dataType="DT_STR" length="36" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -1891,11 +1891,11 @@ where [refTable].[StationKey] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Station Data Flow\OLE DB Destination"
+              refId="Package\Station Data Flow\OLE DB DimStation"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="OLE DB DimStation"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1948,7 +1948,7 @@ where [refTable].[StationKey] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Station Data Flow\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Station Data Flow\OLE DB DimStation.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1956,204 +1956,218 @@ where [refTable].[StationKey] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[name]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="name"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[name]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RegionID]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[RegionID]"
                       cachedDataType="i4"
                       cachedName="RegionID"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionID]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[Longitude]"
                       cachedDataType="numeric"
                       cachedName="Longitude"
                       cachedPrecision="11"
                       cachedScale="3"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[Longitude]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[Latitude]"
                       cachedDataType="numeric"
                       cachedName="Latitude"
                       cachedPrecision="11"
                       cachedScale="3"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[Latitude]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ElectricBikeSurchargeWaiverFlag]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[ElectricBikeSurchargeWaiverFlag]"
                       cachedDataType="bool"
                       cachedName="ElectricBikeSurchargeWaiverFlag"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ElectricBikeSurchargeWaiverFlag]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[external_id]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[external_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="36"
                       cachedName="external_id"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ExternalID]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[ExternalID]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[external_id]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[capacity]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[capacity]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="capacity"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[capacity]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RegionName]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[RegionName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="RegionName"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[KioskFlag]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[KioskFlag]"
                       cachedDataType="bool"
                       cachedName="KioskFlag"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[KioskFlag]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[KioskFlag]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[KioskFlag]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[station_type]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[station_type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="station_type"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationType]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[StationType]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_type]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[short_name]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[short_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="7"
                       cachedName="short_name"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[short_name]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsCurrent]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[IsCurrent]"
                       cachedDataType="bool"
                       cachedName="IsCurrent"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
                       lineageId="Package\Station Data Flow\Derived Column 1.Outputs[Derived Column Output].Columns[IsCurrent]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[DateKey]"
                       cachedDataType="i8"
                       cachedName="DateKey"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
                       lineageId="Package\Station Data Flow\Date lookup.Outputs[Lookup Match Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[station_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="36"
+                      cachedName="station_id"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[StationID]"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="Name" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKID]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[SKID]"
                       dataType="i4"
                       name="SKID" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
                       dataType="i4"
                       name="RegionID" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                       dataType="numeric"
                       name="Longitude"
                       precision="11"
                       scale="3" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       dataType="numeric"
                       name="Latitude"
                       precision="11"
                       scale="3" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
                       dataType="bool"
                       name="ElectricBikeSurchargeWaiverFlag" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ExternalID]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[ExternalID]"
                       codePage="1252"
                       dataType="str"
                       length="36"
                       name="ExternalID" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
                       dataType="i2"
                       name="Capacity" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationType]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[StationType]"
                       codePage="1252"
                       dataType="str"
                       length="30"
                       name="StationType" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="RegionName" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[KioskFlag]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[KioskFlag]"
                       dataType="bool"
                       name="KioskFlag" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
                       codePage="1252"
                       dataType="str"
                       length="7"
                       name="StationKey" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
                       dataType="i8"
                       name="ValidFrom" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidTo]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[ValidTo]"
                       dataType="i8"
                       name="ValidTo" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
                       dataType="bool"
                       name="IsCurrent" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[StationID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="36"
+                      name="StationID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Station Data Flow\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Station Data Flow\OLE DB DimStation.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Station Data Flow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Station Data Flow\OLE DB DimStation.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Station Data Flow\OLE DB DimStation.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Station Data Flow\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Station Data Flow\OLE DB DimStation.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2162,11 +2176,11 @@ where [refTable].[StationKey] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Station Data Flow\OLE DB Destination 1"
+              refId="Package\Station Data Flow\OLE DB DimStationUpdate"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination 1"
+              name="OLE DB DimStationUpdate"
               usesDispositions="true"
               version="4">
               <properties>
@@ -2219,7 +2233,7 @@ where [refTable].[StationKey] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Station Data Flow\OLE DB Destination 1.Connections[OleDbConnection]"
+                  refId="Package\Station Data Flow\OLE DB DimStationUpdate.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2227,198 +2241,212 @@ where [refTable].[StationKey] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+                  refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[name]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="name"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[name]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[KioskFlag]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[KioskFlag]"
                       cachedDataType="bool"
                       cachedName="KioskFlag"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[KioskFlag]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[KioskFlag]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[KioskFlag]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[ElectricBikeSurchargeWaiverFlag]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[ElectricBikeSurchargeWaiverFlag]"
                       cachedDataType="bool"
                       cachedName="ElectricBikeSurchargeWaiverFlag"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ElectricBikeSurchargeWaiverFlag]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[RegionID]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[RegionID]"
                       cachedDataType="i4"
                       cachedName="RegionID"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionID]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[Longitude]"
                       cachedDataType="numeric"
                       cachedName="Longitude"
                       cachedPrecision="11"
                       cachedScale="3"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[Longitude]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[Latitude]"
                       cachedDataType="numeric"
                       cachedName="Latitude"
                       cachedPrecision="11"
                       cachedScale="3"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[Latitude]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[RegionName]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[RegionName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="RegionName"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[IsCurrent]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[IsCurrent]"
                       cachedDataType="bool"
                       cachedName="IsCurrent"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[IsCurrent]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Capacity]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[Capacity]"
                       cachedDataType="i2"
                       cachedName="Capacity"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
                       lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[Capacity]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[external_id]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[external_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="36"
                       cachedName="external_id"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ExternalID]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[ExternalID]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[external_id]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[station_type]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[station_type]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="station_type"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[StationType]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[StationType]"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_type]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Dst_StationKey]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[Dst_StationKey]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="7"
                       cachedName="Dst_StationKey"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
                       lineageId="Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_StationKey]" />
                     <inputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Dst_ValidFrom]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[Dst_ValidFrom]"
                       cachedDataType="i8"
                       cachedName="Dst_ValidFrom"
-                      externalMetadataColumnId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
                       lineageId="Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_ValidFrom]" />
+                    <inputColumn
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[station_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="36"
+                      cachedName="station_id"
+                      externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[StationID]"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="Name" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
                       dataType="i4"
                       name="RegionID" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                       dataType="numeric"
                       name="Longitude"
                       precision="11"
                       scale="3" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       dataType="numeric"
                       name="Latitude"
                       precision="11"
                       scale="3" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[ElectricBikeSurchargeWaiverFlag]"
                       dataType="bool"
                       name="ElectricBikeSurchargeWaiverFlag" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ExternalID]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[ExternalID]"
                       codePage="1252"
                       dataType="str"
                       length="36"
                       name="ExternalID" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
                       dataType="i2"
                       name="Capacity" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[StationType]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[StationType]"
                       codePage="1252"
                       dataType="str"
                       length="30"
                       name="StationType" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="RegionName" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[KioskFlag]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[KioskFlag]"
                       dataType="bool"
                       name="KioskFlag" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
                       codePage="1252"
                       dataType="str"
                       length="7"
                       name="StationKey" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[ValidFrom]"
                       dataType="i8"
                       name="ValidFrom" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[ValidTo]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[ValidTo]"
                       dataType="i8"
                       name="ValidTo" />
                     <externalMetadataColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
                       dataType="bool"
                       name="IsCurrent" />
+                    <externalMetadataColumn
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[StationID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="36"
+                      name="StationID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Station Data Flow\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Station Data Flow\OLE DB DimStationUpdate.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Station Data Flow\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Station Data Flow\OLE DB DimStationUpdate.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Station Data Flow\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Station Data Flow\OLE DB DimStationUpdate.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Station Data Flow\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Station Data Flow\OLE DB DimStationUpdate.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2430,7 +2458,7 @@ where [refTable].[StationKey] = ?</property>
           <paths>
             <path
               refId="Package\Station Data Flow.Paths[Changed]"
-              endId="Package\Station Data Flow\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+              endId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input]"
               name="Changed"
               startId="Package\Station Data Flow\Has chaned.Outputs[Changed]" />
             <path
@@ -2455,7 +2483,7 @@ where [refTable].[StationKey] = ?</property>
               startId="Package\Station Data Flow\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Station Data Flow.Paths[Lookup Match Output1]"
-              endId="Package\Station Data Flow\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
               startId="Package\Station Data Flow\Date lookup.Outputs[Lookup Match Output]" />
             <path
@@ -2659,12 +2687,8 @@ where [refTable].[StationKey] = ?</property>
           Id="Package\Station Data Flow\Derived Column 1"
           TopLeft="298,385" />
         <NodeLayout
-          Size="186,42"
-          Id="Package\Station Data Flow\OLE DB Destination 1"
-          TopLeft="72,573" />
-        <NodeLayout
-          Size="177,55"
-          Id="Package\Station Data Flow\OLE DB Destination"
+          Size="176,42"
+          Id="Package\Station Data Flow\OLE DB DimStation"
           TopLeft="463.333333333333,570" />
         <NodeLayout
           Size="156,42"
@@ -2674,6 +2698,10 @@ where [refTable].[StationKey] = ?</property>
           Size="115,42"
           Id="Package\Station Data Flow\Lookup"
           TopLeft="95,301" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\Station Data Flow\OLE DB DimStationUpdate"
+          TopLeft="72,573" />
         <NodeLayout
           Size="138,42"
           Id="Package\Station Data Flow\Has chaned"
@@ -2686,6 +2714,102 @@ where [refTable].[StationKey] = ?</property>
           Size="158,42"
           Id="Package\Station Data Flow\Derived Column"
           TopLeft="209,223" />
+        <EdgeLayout
+          Id="Package\Station Data Flow.Paths[Lookup No Match Output]"
+          TopLeft="170.333333333333,343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="211.166666666667,42"
+              Start="0,0"
+              End="211.166666666667,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.1457975986278" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.1457975986278"
+                    Point2="0,17.1457975986278"
+                    Point3="4,17.1457975986278" />
+                  <mssgle:LineSegment
+                    End="207.166666666667,17.1457975986278" />
+                  <mssgle:CubicBezierSegment
+                    Point1="207.166666666667,17.1457975986278"
+                    Point2="211.166666666667,17.1457975986278"
+                    Point3="211.166666666667,21.1457975986278" />
+                  <mssgle:LineSegment
+                    End="211.166666666667,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="49.7769466145835,22.1457975986278,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Station Data Flow.Paths[Lookup Match Output1]"
+          TopLeft="405,529">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="146.333333333333,41"
+              Start="0,0"
+              End="146.333333333333,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="4,20.5" />
+                  <mssgle:LineSegment
+                    End="142.333333333333,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="142.333333333333,20.5"
+                    Point2="146.333333333333,20.5"
+                    Point3="146.333333333333,24.5" />
+                  <mssgle:LineSegment
+                    End="146.333333333333,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="24.9752799479165,25.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Station Data Flow.Paths[Lookup Match Output]"
+          TopLeft="137.333333333333,343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,18.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Station Data Flow.Paths[Flat File Source Output]"
           TopLeft="273,59">
@@ -2717,9 +2841,7 @@ where [refTable].[StationKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2753,9 +2875,7 @@ where [refTable].[StationKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2789,9 +2909,7 @@ where [refTable].[StationKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2800,9 +2918,9 @@ where [refTable].[StationKey] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="25,131"
+              EndConnector="38,131"
               Start="0,0"
-              End="25,123.5">
+              End="38,123.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2813,116 +2931,20 @@ where [refTable].[StationKey] = ?</property>
                     Point2="0,65.5"
                     Point3="4,65.5" />
                   <mssgle:LineSegment
-                    End="21,65.5" />
+                    End="34,65.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="21,65.5"
-                    Point2="25,65.5"
-                    Point3="25,69.5" />
+                    Point1="34,65.5"
+                    Point2="38,65.5"
+                    Point3="38,69.5" />
                   <mssgle:LineSegment
-                    End="25,123.5" />
+                    End="38,123.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-7.3755078125,70.5,39.751015625,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Station Data Flow.Paths[Lookup No Match Output]"
-          TopLeft="170.333333333333,343">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="211.166666666667,42"
-              Start="0,0"
-              End="211.166666666667,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.1457975986278" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.1457975986278"
-                    Point2="0,17.1457975986278"
-                    Point3="4,17.1457975986278" />
-                  <mssgle:LineSegment
-                    End="207.166666666667,17.1457975986278" />
-                  <mssgle:CubicBezierSegment
-                    Point1="207.166666666667,17.1457975986278"
-                    Point2="211.166666666667,17.1457975986278"
-                    Point3="211.166666666667,21.1457975986278" />
-                  <mssgle:LineSegment
-                    End="211.166666666667,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="49.7769466145833,22.1457975986278,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Station Data Flow.Paths[Lookup Match Output1]"
-          TopLeft="405,529">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="146.833333333333,41"
-              Start="0,0"
-              End="146.833333333333,33.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5"
-                    Point2="0,20.5"
-                    Point3="4,20.5" />
-                  <mssgle:LineSegment
-                    End="142.833333333333,20.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="142.833333333333,20.5"
-                    Point2="146.833333333333,20.5"
-                    Point3="146.833333333333,24.5" />
-                  <mssgle:LineSegment
-                    End="146.833333333333,33.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="25.2252799479165,25.5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Station Data Flow.Paths[Lookup Match Output]"
-          TopLeft="137.333333333333,343">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,57"
-              Start="0,0"
-              End="0,49.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,49.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,18.9453125,96.3827734375,11.609375"
+              BoundingBox="-0.8755078125,70.5,39.751015625,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2930,20 +2952,7 @@ where [refTable].[StationKey] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Station Data Flow\OLE DB Destination 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Station Data Flow\OLE DB Destination">
+    design-time-name="Package\Station Data Flow\OLE DB DimStation">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2975,6 +2984,19 @@ where [refTable].[StationKey] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Station Data Flow\OLE DB DimStationUpdate">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

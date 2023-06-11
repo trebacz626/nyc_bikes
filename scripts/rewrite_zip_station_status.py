@@ -22,4 +22,4 @@ def extract_and_rename(zip_path, extract_path):
 
 
 # usage
-extract_and_rename('./data/station_status/raw_status.zip', './data/station_status/renamed/')
+extract_and_rename('../data/station_status/raw_status.zip', '../data/station_status/renamed/')
