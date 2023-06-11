@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="96"
-  DTS:VersionGUID="{E49BE3A0-EAEB-447C-974F-8858A9E03CEB}">
+  DTS:VersionBuild="104"
+  DTS:VersionGUID="{82D32DB4-2CFA-4087-8F8A-4D39155D253A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -622,17 +622,6 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:PackageParameters>
-    <DTS:PackageParameter
-      DTS:CreationName=""
-      DTS:DataType="7"
-      DTS:DTSID="{B0857946-5EE5-4844-80A5-DF3042401C6C}"
-      DTS:ObjectName="StartDate">
-      <DTS:Property
-        DTS:DataType="7"
-        DTS:Name="ParameterValue">1/4/2023 12:01:00 AM</DTS:Property>
-    </DTS:PackageParameter>
-  </DTS:PackageParameters>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -659,8 +648,21 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
-          SQLTask:SqlStatementSource="DECLARE @StartDate DATE&#xA;DECLARE @EndDate DATE = CAST(GETDATE() AS DATE)&#xA;DECLARE @DateKey BIGINT&#xA;&#xA;-- Check if the table is empty&#xA;IF (SELECT COUNT(*) FROM DimDate) = 0 &#xA;BEGIN&#xA;    -- If table is empty, start from this date&#xA;    SET @StartDate = '2023-04-01' &#xA;    SET @DateKey = 20230401&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;    -- If table is not empty, start the day after the max date in the table&#xA;    SELECT @StartDate = DATEADD(day, 1, MAX([Date]))&#xA;    FROM DimDate&#xA;    SET @DateKey = CAST(CONVERT(VARCHAR(8), @StartDate, 112) AS BIGINT)&#xA;END&#xA;&#xA;-- Add dates to the DimDate table&#xA;WHILE @StartDate &lt;= @EndDate&#xA;BEGIN&#xA;    DECLARE @HolidayName VARCHAR(100)&#xA;    DECLARE @IsWeekend BIT&#xA;    DECLARE @IsHoliday BIT&#xA;&#xA;    SELECT @HolidayName = HolidayName&#xA;    FROM Holidays&#xA;    WHERE MonthNumber = MONTH(@StartDate) AND DayNumber = DAY(@StartDate)&#xA;&#xA;    IF DATEPART(WEEKDAY, @StartDate) IN (1, 7) &#xA;    BEGIN&#xA;        SET @IsWeekend = 1&#xA;    END&#xA;    ELSE &#xA;    BEGIN&#xA;        SET @IsWeekend = 0&#xA;    END&#xA;&#xA;    IF @HolidayName IS NOT NULL&#xA;    BEGIN&#xA;        SET @IsHoliday = 1&#xA;    END&#xA;    ELSE&#xA;    BEGIN&#xA;        SET @IsHoliday = 0&#xA;        SET @HolidayName = NULL&#xA;    END&#xA;&#xA;    INSERT INTO DimDate(DateKey, [Date], [Year], Month, MonthName, Week, DayOfYear, DayOfMonth, DayOfWeek, DayOfWeekName, IsWeekend, IsHoliday, HolidayName, QuarterNumber)&#xA;    VALUES (@DateKey, @StartDate, YEAR(@StartDate), MONTH(@StartDate), DATENAME(MONTH, @StartDate), DATEPART(WEEK, @StartDate),&#xA;            DATEPART(DAYOFYEAR, @StartDate), DAY(@StartDate), DATEPART(WEEKDAY, @StartDate), DATENAME(WEEKDAY, @StartDate), &#xA;            @IsWeekend, @IsHoliday, @HolidayName, DATEPART(QUARTER, @StartDate))&#xA;&#xA;    SET @StartDate = DATEADD(DAY, 1, @StartDate)&#xA;    SET @DateKey = CAST(CONVERT(VARCHAR(8), @StartDate, 112) AS BIGINT)&#xA;END&#xA;"
-          SQLTask:CodePage="1252" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DECLARE @StartDate DATE&#xA;DECLARE @EndDate DATE&#xA;DECLARE @DateKey BIGINT&#xA;&#xA;&#xA;    SET @StartDate = CAST(? AS DATE)&#xA;    SET @EndDate = CAST(? AS DATE)&#xA;    SET @DateKey = CAST(CONVERT(VARCHAR(8), @StartDate, 112) AS BIGINT)&#xA;&#xA;-- Add dates to the DimDate table&#xA;WHILE @StartDate &lt;= @EndDate&#xA;BEGIN&#xA;    DECLARE @HolidayName VARCHAR(100)&#xA;    DECLARE @IsWeekend BIT&#xA;    DECLARE @IsHoliday BIT&#xA;&#xA;    SELECT @HolidayName = HolidayName&#xA;    FROM Holidays&#xA;    WHERE MonthNumber = MONTH(@StartDate) AND DayNumber = DAY(@StartDate)&#xA;&#xA;    IF DATEPART(WEEKDAY, @StartDate) IN (1, 7) &#xA;    BEGIN&#xA;        SET @IsWeekend = 1&#xA;    END&#xA;    ELSE &#xA;    BEGIN&#xA;        SET @IsWeekend = 0&#xA;    END&#xA;&#xA;    IF @HolidayName IS NOT NULL&#xA;    BEGIN&#xA;        SET @IsHoliday = 1&#xA;    END&#xA;    ELSE&#xA;    BEGIN&#xA;        SET @IsHoliday = 0&#xA;        SET @HolidayName = NULL&#xA;    END&#xA;&#xA;    INSERT INTO DimDate(DateKey, [Date], [Year], Month, MonthName, Week, DayOfYear, DayOfMonth, DayOfWeek, DayOfWeekName, IsWeekend, IsHoliday, HolidayName, QuarterNumber)&#xA;    VALUES (@DateKey, @StartDate, YEAR(@StartDate), MONTH(@StartDate), DATENAME(MONTH, @StartDate), DATEPART(WEEK, @StartDate),&#xA;            DATEPART(DAYOFYEAR, @StartDate), DAY(@StartDate), DATEPART(WEEKDAY, @StartDate), DATENAME(WEEKDAY, @StartDate), &#xA;            @IsWeekend, @IsHoliday, @HolidayName, DATEPART(QUARTER, @StartDate))&#xA;&#xA;    SET @StartDate = DATEADD(DAY, 1, @StartDate)&#xA;    SET @DateKey = CAST(CONVERT(VARCHAR(8), @StartDate, 112) AS BIGINT)&#xA;END&#xA;"
+          SQLTask:CodePage="1252" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="$Project::WorldStartDate"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="$Project::WorldEndDte"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1263,8 +1265,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{99FDA1E4-1196-4979-AE43-D6E4F033A754}"
-          DTS:ObjectName="{99FDA1E4-1196-4979-AE43-D6E4F033A754}"
+          DTS:DTSID="{5BF58956-9C5B-4BB3-8916-B59569BA968A}"
+          DTS:ObjectName="{5BF58956-9C5B-4BB3-8916-B59569BA968A}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::VarFilePath" />
       </DTS:ForEachVariableMappings>
@@ -1285,7 +1287,7 @@
         <NodeLayout
           Size="141,42"
           Id="Package\CreateDates"
-          TopLeft="694,193" />
+          TopLeft="444,156" />
         <NodeLayout
           Size="153,42"
           Id="Package\Foreach Loop Container\Trips Data Flow"
@@ -1304,7 +1306,7 @@
     design-time-name="Package\Foreach Loop Container\Trips Data Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="161,42"
           Id="Package\Foreach Loop Container\Trips Data Flow\Data Conversion"
@@ -1344,9 +1346,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

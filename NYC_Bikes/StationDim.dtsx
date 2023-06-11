@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{883A19A4-D024-4A3B-B9DB-785BA622ED2A}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{F2FECD24-2E69-4C6C-ACA7-10D591FB7C08}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -340,13 +340,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
+      DTS:refId="Package\Create DimStationUpdate"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{2CCA5FCA-F92F-426D-A40A-D8F7B04B3776}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
+      DTS:ObjectName="Create DimStationUpdate"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -354,6 +354,22 @@
           SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
           SQLTask:SqlStatementSource="IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DimStationsUpdate]&#xA;GO&#xA;&#xA;&#xA;IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NULL&#xA;CREATE TABLE [dbo].[DimStationsUpdate](&#xA;    [Name] [varchar](100) NOT NULL,&#xA;    [RegionID] [int] NOT NULL,&#xA;    [Longitude] [numeric](11, 3) NOT NULL,&#xA;    [Latitude] [numeric](11, 3) NOT NULL,&#xA;    [ElectricBikeSurchargeWaiverFlag] [bit] NOT NULL,&#xA;    [ExternalID] [char](36) NOT NULL,&#xA;    [Capacity] [smallint] NOT NULL,&#xA;    [StationType] [varchar](30) NOT NULL,&#xA;    [RegionName] [varchar](50) NOT NULL,&#xA;    [KioskFlag] [bit] NOT NULL,&#xA;    [StationKey] [varchar](7) NOT NULL,&#xA;    [ValidFrom] [bigint] NOT NULL,&#xA;    [ValidTo] [bigint] NULL,&#xA;    [IsCurrent] [bit] NOT NULL,&#xA;    [StationID][char](36) NOT NULL&#xA;)&#xA;GO&#xA;"
           SQLTask:CodePage="1252" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Create RegionTable"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{A0803448-60F2-4DB5-8AD8-EFD33CED8520}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create RegionTable"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
+          SQLTask:SqlStatementSource="IF OBJECT_ID('[dbo].[RegionData]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[RegionData]&#xA;GO&#xA;&#xA;IF OBJECT_ID('[dbo].[RegionData]', 'U') IS NULL&#xA;CREATE TABLE [dbo].[RegionData](&#xA;    [RegionID] [int] NOT NULL,&#xA;    [RegionName] [varchar](50) NOT NULL&#xA;)&#xA;GO&#xA;&#xA;INSERT INTO [dbo].[RegionData] (RegionID, RegionName)&#xA;VALUES (70, 'JC District'),&#xA;       (71, 'NYC District'),&#xA;       (158, '8D'),&#xA;       (185, 'Bronx'),&#xA;       (189, 'IC HQ'),&#xA;       (190, 'testzone'),&#xA;       (311, 'Hoboken District'),&#xA;       (-1, 'No Region')&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -391,6 +407,7 @@
     <DTS:Executable
       DTS:refId="Package\Station Data Flow"
       DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{d4eb9c2b-6e99-4fa9-bd8f-e0f398eefa13}"
       DTS:ExecutableType="Microsoft.Pipeline"
@@ -732,6 +749,13 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="capacity"
                       lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[capacity]" />
+                    <inputColumn
+                      refId="Package\Station Data Flow\Derived Column.Inputs[Derived Column Input].Columns[lat]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="lat"
+                      lineageId="Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[lat]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -871,37 +895,13 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_NUMERIC,11,3)[REPLACE](#{Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[lon]},".",",")</property>
+                          name="Expression">(DT_NUMERIC,11,3)[REPLACE](#{Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[lat]},".",",")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_NUMERIC,11,3)REPLACE(lon,".",",")</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]"
-                      name="RegionName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)"Name"</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)"Name"</property>
+                          name="FriendlyExpression">(DT_NUMERIC,11,3)REPLACE(lat,".",",")</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -1446,7 +1446,7 @@ where [refTable].[Date] = ?</property>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="RegionName"
-                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]" />
+                      lineageId="Package\Station Data Flow\RegionName.Outputs[Lookup Match Output].Columns[RegionName]" />
                     <inputColumn
                       refId="Package\Station Data Flow\Has chaned.Inputs[Conditional Split Input].Columns[Capacity]"
                       cachedDataType="i2"
@@ -1505,7 +1505,7 @@ where [refTable].[Date] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">#{Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[name]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_Name]} || #{Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionID]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_RegionID]} || #{Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ElectricBikeSurchargeWaiverFlag]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_ElectricBikeSurchargeWaiverFlag]} || #{Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_RegionName]} || #{Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[Capacity]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_Capacity]} || #{Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[KioskFlag]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_KioskFlag]}</property>
+                      name="Expression">#{Package\Station Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[name]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_Name]} || #{Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionID]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_RegionID]} || #{Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[ElectricBikeSurchargeWaiverFlag]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_ElectricBikeSurchargeWaiverFlag]} || #{Package\Station Data Flow\RegionName.Outputs[Lookup Match Output].Columns[RegionName]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_RegionName]} || #{Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[Capacity]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_Capacity]} || #{Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[KioskFlag]} != #{Package\Station Data Flow\Lookup.Outputs[Lookup Match Output].Columns[Dst_KioskFlag]}</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -2043,7 +2043,7 @@ where [refTable].[StationKey] = ?</property>
                       cachedLength="50"
                       cachedName="RegionName"
                       externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
-                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]" />
+                      lineageId="Package\Station Data Flow\RegionName.Outputs[Lookup Match Output].Columns[RegionName]" />
                     <inputColumn
                       refId="Package\Station Data Flow\OLE DB DimStation.Inputs[OLE DB Destination Input].Columns[KioskFlag]"
                       cachedDataType="bool"
@@ -2318,7 +2318,7 @@ where [refTable].[StationKey] = ?</property>
                       cachedLength="50"
                       cachedName="RegionName"
                       externalMetadataColumnId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].ExternalColumns[RegionName]"
-                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionName]" />
+                      lineageId="Package\Station Data Flow\RegionName.Outputs[Lookup Match Output].Columns[RegionName]" />
                     <inputColumn
                       refId="Package\Station Data Flow\OLE DB DimStationUpdate.Inputs[OLE DB Destination Input].Columns[IsCurrent]"
                       cachedDataType="bool"
@@ -2476,6 +2476,166 @@ where [refTable].[StationKey] = ?</property>
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Station Data Flow\RegionName"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="RegionName"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[RegionData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[RegionData]) [refTable]
+where [refTable].[RegionID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="RegionID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RegionName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Station Data Flow\RegionName.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Station Data Flow\RegionName.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Station Data Flow\RegionName.Inputs[Lookup Input].Columns[RegionID]"
+                      cachedDataType="i4"
+                      cachedName="RegionID"
+                      lineageId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output].Columns[RegionID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">RegionID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Station Data Flow\RegionName.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Station Data Flow\RegionName.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Station Data Flow\RegionName.Outputs[Lookup Match Output].Columns[RegionName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Station Data Flow\RegionName.Outputs[Lookup Match Output].Columns[RegionName]"
+                      name="RegionName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">RegionName</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Station Data Flow\RegionName.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Station Data Flow\RegionName.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Station Data Flow\RegionName.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Station Data Flow\RegionName.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Station Data Flow\RegionName.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Station Data Flow\RegionName.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Station Data Flow\RegionName.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Station Data Flow\RegionName.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -2485,14 +2645,14 @@ where [refTable].[StationKey] = ?</property>
               startId="Package\Station Data Flow\Has chaned.Outputs[Changed]" />
             <path
               refId="Package\Station Data Flow.Paths[Derived Column Output]"
-              endId="Package\Station Data Flow\Lookup.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Station Data Flow.Paths[Derived Column Output1]"
               endId="Package\Station Data Flow\Date lookup.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Station Data Flow\Date setting.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Station Data Flow.Paths[Derived Column Output1]"
+              endId="Package\Station Data Flow\RegionName.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Station Data Flow\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\Station Data Flow.Paths[Flat File Source Output]"
               endId="Package\Station Data Flow\Derived Column.Inputs[Derived Column Input]"
@@ -2509,6 +2669,11 @@ where [refTable].[StationKey] = ?</property>
               name="Lookup Match Output"
               startId="Package\Station Data Flow\Date lookup.Outputs[Lookup Match Output]" />
             <path
+              refId="Package\Station Data Flow.Paths[Lookup Match Output2]"
+              endId="Package\Station Data Flow\Lookup.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Station Data Flow\RegionName.Outputs[Lookup Match Output]" />
+            <path
               refId="Package\Station Data Flow.Paths[Lookup No Match Output]"
               endId="Package\Station Data Flow\Date setting.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
@@ -2523,7 +2688,7 @@ where [refTable].[StationKey] = ?</property>
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{96271A44-1916-45CA-B38A-278ED50EDFA4}"
-      DTS:From="Package\Execute SQL Task"
+      DTS:From="Package\Create DimStationUpdate"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Station Data Flow" />
@@ -2551,6 +2716,14 @@ where [refTable].[StationKey] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Clear Update Database" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{2776402E-4218-4C81-A767-325C7CDE67C9}"
+      DTS:From="Package\Create RegionTable"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Create DimStationUpdate" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2569,9 +2742,9 @@ where [refTable].[StationKey] = ?</property>
           Id="Package\Clear Update Database"
           TopLeft="369,396" />
         <NodeLayout
-          Size="170,42"
-          Id="Package\Execute SQL Task"
-          TopLeft="360,19" />
+          Size="204,42"
+          Id="Package\Create DimStationUpdate"
+          TopLeft="319,30" />
         <NodeLayout
           Size="181,42"
           Id="Package\Insert Updates Rows"
@@ -2586,18 +2759,30 @@ where [refTable].[StationKey] = ?</property>
           TopLeft="362,98" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="445,61">
+          TopLeft="421,72">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="24,26"
               Start="0,0"
-              End="0,29.5">
+              End="24,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9"
+                    Point2="0,13"
+                    Point3="4,13" />
+                  <mssgle:LineSegment
+                    End="20,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20,13"
+                    Point2="24,13"
+                    Point3="24,17" />
+                  <mssgle:LineSegment
+                    End="24,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2696,6 +2881,32 @@ where [refTable].[StationKey] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Create RegionTable"
+          TopLeft="52,31" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="229,51.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90,0"
+              Start="0,0"
+              End="82.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="82.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2703,15 +2914,11 @@ where [refTable].[StationKey] = ?</property>
     design-time-name="Package\Station Data Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="138,42"
-          Id="Package\Station Data Flow\Date setting"
-          TopLeft="298,385" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Station Data Flow\OLE DB DimStation"
-          TopLeft="463.333333333333,570" />
+          Size="212,42"
+          Id="Package\Station Data Flow\OLE DB DimStationUpdate"
+          TopLeft="72,573" />
         <NodeLayout
           Size="156,42"
           Id="Package\Station Data Flow\Flat File Source"
@@ -2721,21 +2928,25 @@ where [refTable].[StationKey] = ?</property>
           Id="Package\Station Data Flow\Lookup"
           TopLeft="95,301" />
         <NodeLayout
-          Size="212,42"
-          Id="Package\Station Data Flow\OLE DB DimStationUpdate"
-          TopLeft="72,573" />
+          Size="138,42"
+          Id="Package\Station Data Flow\Date setting"
+          TopLeft="298,385" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Station Data Flow\Derived Column"
+          TopLeft="205,117" />
         <NodeLayout
           Size="138,42"
           Id="Package\Station Data Flow\Has chaned"
           TopLeft="71,400" />
         <NodeLayout
+          Size="176,42"
+          Id="Package\Station Data Flow\OLE DB DimStation"
+          TopLeft="463.333333333333,570" />
+        <NodeLayout
           Size="138,42"
           Id="Package\Station Data Flow\Date lookup"
           TopLeft="336,487" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Station Data Flow\Derived Column"
-          TopLeft="209,223" />
         <EdgeLayout
           Id="Package\Station Data Flow.Paths[Lookup No Match Output]"
           TopLeft="170.333333333333,343">
@@ -2768,7 +2979,7 @@ where [refTable].[StationKey] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="42.5269466145833,22.1457975986278,111.6127734375,11.609375"
+              BoundingBox="42.5269466145835,22.1457975986278,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2838,26 +3049,26 @@ where [refTable].[StationKey] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="15,164"
+              EndConnector="11,58"
               Start="0,0"
-              End="15,156.5">
+              End="11,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,78" />
+                    End="0,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,78"
-                    Point2="0,82"
-                    Point3="4,82" />
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="4,29" />
                   <mssgle:LineSegment
-                    End="11,82" />
+                    End="7,29" />
                   <mssgle:CubicBezierSegment
-                    Point1="11,82"
-                    Point2="15,82"
-                    Point3="15,86" />
+                    Point1="7,29"
+                    Point2="11,29"
+                    Point3="11,33" />
                   <mssgle:LineSegment
-                    End="15,156.5" />
+                    End="11,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2867,7 +3078,7 @@ where [refTable].[StationKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Station Data Flow.Paths[Derived Column Output1]"
+          Id="Package\Station Data Flow.Paths[Derived Column Output]"
           TopLeft="367,427">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2892,40 +3103,6 @@ where [refTable].[StationKey] = ?</property>
                     Point3="38,34" />
                   <mssgle:LineSegment
                     End="38,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Station Data Flow.Paths[Derived Column Output]"
-          TopLeft="263,265">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-110.5,36"
-              Start="0,0"
-              End="-110.5,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.6165413533835" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.6165413533835"
-                    Point2="0,14.6165413533835"
-                    Point3="-4,14.6165413533835" />
-                  <mssgle:LineSegment
-                    End="-106.5,14.6165413533835" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-106.5,14.6165413533835"
-                    Point2="-110.5,14.6165413533835"
-                    Point3="-110.5,18.6165413533835" />
-                  <mssgle:LineSegment
-                    End="-110.5,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2970,11 +3147,85 @@ where [refTable].[StationKey] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Station Data Flow\RegionName"
+          TopLeft="187,194" />
+        <EdgeLayout
+          Id="Package\Station Data Flow.Paths[Derived Column Output1]"
+          TopLeft="284,159">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-25.5,35"
+              Start="0,0"
+              End="-25.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="-4,17.5" />
+                  <mssgle:LineSegment
+                    End="-21.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5,17.5"
+                    Point2="-25.5,17.5"
+                    Point3="-25.5,21.5" />
+                  <mssgle:LineSegment
+                    End="-25.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Station Data Flow.Paths[Lookup Match Output2]"
+          TopLeft="258.5,236">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-106,65"
+              Start="0,0"
+              End="-106,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="-4,32.5" />
+                  <mssgle:LineSegment
+                    End="-102,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-102,32.5"
+                    Point2="-106,32.5"
+                    Point3="-106,36.5" />
+                  <mssgle:LineSegment
+                    End="-106,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-101.19138671875,37.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Station Data Flow\OLE DB DimStation">
+    design-time-name="Package\Station Data Flow\OLE DB DimStationUpdate">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3010,7 +3261,7 @@ where [refTable].[StationKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Station Data Flow\OLE DB DimStationUpdate">
+    design-time-name="Package\Station Data Flow\OLE DB DimStation">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3028,7 +3279,7 @@ where [refTable].[StationKey] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3039,6 +3290,29 @@ where [refTable].[StationKey] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Station Data Flow\RegionName">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[RegionData]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

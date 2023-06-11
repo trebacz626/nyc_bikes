@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{B4C20DE5-FDC8-49A1-A4B4-EE6A209B6DFC}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{86683D91-0F72-417D-A647-8B122B8116C1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1395,473 +1395,6 @@ where [refTable].[Date] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Flat File Destination 1"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="Flat File Destination 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Destination 1.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[StationStatusNoMatchWeather]"
-                  connectionManagerRefId="Package.ConnectionManagers[StationStatusNoMatchWeather]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[num_scooters_available]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="num_scooters_available"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_available]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[num_docks_disabled]"
-                      cachedDataType="i2"
-                      cachedName="num_docks_disabled"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_docks_disabled]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_disabled]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[eightd_has_available_keys]"
-                      cachedDataType="bool"
-                      cachedName="eightd_has_available_keys"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[eightd_has_available_keys]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[num_docks_available]"
-                      cachedDataType="i2"
-                      cachedName="num_docks_available"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_docks_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_available]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[station_status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="station_status"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[station_status]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_status]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[last_reported]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="last_reported"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[last_reported]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_reported]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[is_renting]"
-                      cachedDataType="bool"
-                      cachedName="is_renting"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[is_renting]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_renting]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[is_returning]"
-                      cachedDataType="bool"
-                      cachedName="is_returning"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[is_returning]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_returning]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[num_bikes_available]"
-                      cachedDataType="i2"
-                      cachedName="num_bikes_available"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_available]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[is_installed]"
-                      cachedDataType="bool"
-                      cachedName="is_installed"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[is_installed]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_installed]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[legacy_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="36"
-                      cachedName="legacy_id"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[legacy_id]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[num_ebikes_available]"
-                      cachedDataType="i2"
-                      cachedName="num_ebikes_available"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_ebikes_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_ebikes_available]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[station_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="36"
-                      cachedName="station_id"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[num_scooters_unavailable]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="num_scooters_unavailable"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_unavailable]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[num_bikes_disabled]"
-                      cachedDataType="i2"
-                      cachedName="num_bikes_disabled"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_disabled]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_disabled]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[eightd_active_station_services]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="eightd_active_station_services"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[eightd_active_station_services]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_active_station_services]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[valet off_dock_count]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="valet off_dock_count"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_count]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_count]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[valet dock_blocked_count]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="valet dock_blocked_count"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet dock_blocked_count]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[valet station_id]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="valet station_id"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet station_id]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet station_id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[valet off_dock_capacity]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="valet off_dock_capacity"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_capacity]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[valet valet_revision]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="valet valet_revision"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet valet_revision]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet valet_revision]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[valet active]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="valet active"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet active]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet active]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[valet region]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="valet region"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet region]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet region]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[time_of_scrap]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="time_of_scrap"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[time_of_scrap]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[LogDateTime]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="LogDateTime"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[LogDateTime]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogDateTime]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[LogHour]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="LogHour"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[LogHour]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogHour]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[LogDate]"
-                      cachedDataType="dbDate"
-                      cachedName="LogDate"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[LogDate]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogDate]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[LogTime]"
-                      cachedDataType="dbTime"
-                      cachedName="LogTime"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[LogTime]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogTime]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[NumScootersAvailable]"
-                      cachedDataType="i4"
-                      cachedName="NumScootersAvailable"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[NumScootersAvailable]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NumScootersAvailable]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[NumScootersUnavailable]"
-                      cachedDataType="i4"
-                      cachedName="NumScootersUnavailable"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[NumScootersUnavailable]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NumScootersUnavailable]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ValetOffDockCount]"
-                      cachedDataType="i4"
-                      cachedName="ValetOffDockCount"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ValetOffDockCount]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ValetOffDockCount]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ValetDockBlockedCount]"
-                      cachedDataType="i4"
-                      cachedName="ValetDockBlockedCount"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ValetDockBlockedCount]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ValetDockBlockedCount]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[ValetOffDockCapacity]"
-                      cachedDataType="i4"
-                      cachedName="ValetOffDockCapacity"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ValetOffDockCapacity]"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ValetOffDockCapacity]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[StationID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="36"
-                      cachedName="StationID"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[StationID]"
-                      lineageId="Package\Data Flow Task\Station Lookup.Outputs[Lookup Match Output].Columns[StationID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[IsCurrent]"
-                      cachedDataType="bool"
-                      cachedName="IsCurrent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[IsCurrent]"
-                      lineageId="Package\Data Flow Task\Station Lookup.Outputs[Lookup Match Output].Columns[IsCurrent]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].Columns[StationKey]"
-                      cachedDataType="i4"
-                      cachedName="StationKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[StationKey]"
-                      lineageId="Package\Data Flow Task\Station Lookup.Outputs[Lookup Match Output].Columns[StationKey]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_available]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="num_scooters_available" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_docks_disabled]"
-                      dataType="i2"
-                      name="num_docks_disabled" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[eightd_has_available_keys]"
-                      dataType="bool"
-                      name="eightd_has_available_keys" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_docks_available]"
-                      dataType="i2"
-                      name="num_docks_available" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[station_status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="station_status" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[last_reported]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="last_reported" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[is_renting]"
-                      dataType="bool"
-                      name="is_renting" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[is_returning]"
-                      dataType="bool"
-                      name="is_returning" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_available]"
-                      dataType="i2"
-                      name="num_bikes_available" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[is_installed]"
-                      dataType="bool"
-                      name="is_installed" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[legacy_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="36"
-                      name="legacy_id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_ebikes_available]"
-                      dataType="i2"
-                      name="num_ebikes_available" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="36"
-                      name="station_id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_unavailable]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="num_scooters_unavailable" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_disabled]"
-                      dataType="i2"
-                      name="num_bikes_disabled" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[eightd_active_station_services]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="eightd_active_station_services" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_count]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet off_dock_count" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet dock_blocked_count]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet dock_blocked_count" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet station_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet station_id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_capacity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet off_dock_capacity" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet valet_revision]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet valet_revision" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet active]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="valet active" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[valet region]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet region" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[time_of_scrap]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="time_of_scrap" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[LogDateTime]"
-                      dataType="dbTimeStamp"
-                      name="LogDateTime" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[LogHour]"
-                      dataType="dbTimeStamp"
-                      name="LogHour" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[LogDate]"
-                      dataType="dbDate"
-                      name="LogDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[LogTime]"
-                      dataType="dbTime"
-                      name="LogTime" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[NumScootersAvailable]"
-                      dataType="i4"
-                      name="NumScootersAvailable" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[NumScootersUnavailable]"
-                      dataType="i4"
-                      name="NumScootersUnavailable" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ValetOffDockCount]"
-                      dataType="i4"
-                      name="ValetOffDockCount" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ValetDockBlockedCount]"
-                      dataType="i4"
-                      name="ValetDockBlockedCount" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[ValetOffDockCapacity]"
-                      dataType="i4"
-                      name="ValetOffDockCapacity" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[StationID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="36"
-                      name="StationID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[IsCurrent]"
-                      dataType="bool"
-                      name="IsCurrent" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input].ExternalColumns[StationKey]"
-                      dataType="i4"
-                      name="StationKey" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -2563,12 +2096,12 @@ where [refTable].[Date] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\No Weather Available Yet"
+              refId="Package\Data Flow Task\NoWetatherAvailableYet"
               componentClassID="Microsoft.FlatFileDestination"
               contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Destination"
-              localeId="1045"
-              name="No Weather Available Yet"
+              localeId="1033"
+              name="NoWetatherAvailableYet"
               version="1">
               <properties>
                 <property
@@ -2587,360 +2120,444 @@ where [refTable].[Date] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\No Weather Available Yet.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[StationStatusNoMatchStation]"
-                  connectionManagerRefId="Package.ConnectionManagers[StationStatusNoMatchStation]"
+                  refId="Package\Data Flow Task\NoWetatherAvailableYet.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[StationStatusNoMatchWeather]"
+                  connectionManagerRefId="Package.ConnectionManagers[StationStatusNoMatchWeather]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input]"
+                  refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input]"
                   hasSideEffects="true"
                   name="Flat File Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[num_scooters_available]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_scooters_available]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="num_scooters_available"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_available]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_available]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_available]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[num_docks_disabled]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_docks_disabled]"
                       cachedDataType="i2"
                       cachedName="num_docks_disabled"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_docks_disabled]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_docks_disabled]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_disabled]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[eightd_has_available_keys]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[eightd_has_available_keys]"
                       cachedDataType="bool"
                       cachedName="eightd_has_available_keys"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[eightd_has_available_keys]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[eightd_has_available_keys]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[num_docks_available]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_docks_available]"
                       cachedDataType="i2"
                       cachedName="num_docks_available"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_docks_available]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_docks_available]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_available]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[station_status]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[station_status]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="station_status"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[station_status]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[station_status]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_status]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[last_reported]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[last_reported]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="last_reported"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[last_reported]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[last_reported]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_reported]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[is_renting]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[is_renting]"
                       cachedDataType="bool"
                       cachedName="is_renting"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[is_renting]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[is_renting]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_renting]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[is_returning]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[is_returning]"
                       cachedDataType="bool"
                       cachedName="is_returning"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[is_returning]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[is_returning]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_returning]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[num_bikes_available]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_bikes_available]"
                       cachedDataType="i2"
                       cachedName="num_bikes_available"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_available]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_available]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_available]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[is_installed]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[is_installed]"
                       cachedDataType="bool"
                       cachedName="is_installed"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[is_installed]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[is_installed]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_installed]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[legacy_id]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[legacy_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="36"
                       cachedName="legacy_id"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[legacy_id]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[legacy_id]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[num_ebikes_available]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_ebikes_available]"
                       cachedDataType="i2"
                       cachedName="num_ebikes_available"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_ebikes_available]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_ebikes_available]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_ebikes_available]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[station_id]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[station_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="36"
                       cachedName="station_id"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[num_scooters_unavailable]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_scooters_unavailable]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="num_scooters_unavailable"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_unavailable]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_unavailable]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[num_bikes_disabled]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_bikes_disabled]"
                       cachedDataType="i2"
                       cachedName="num_bikes_disabled"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_disabled]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_disabled]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_disabled]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[eightd_active_station_services]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[eightd_active_station_services]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="eightd_active_station_services"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[eightd_active_station_services]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[eightd_active_station_services]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_active_station_services]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[valet off_dock_count]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet off_dock_count]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="valet off_dock_count"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_count]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_count]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_count]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[valet dock_blocked_count]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet dock_blocked_count]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="valet dock_blocked_count"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet dock_blocked_count]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet dock_blocked_count]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[valet station_id]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet station_id]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="valet station_id"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet station_id]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet station_id]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet station_id]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[valet off_dock_capacity]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet off_dock_capacity]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="valet off_dock_capacity"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_capacity]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_capacity]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[valet valet_revision]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet valet_revision]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="valet valet_revision"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet valet_revision]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet valet_revision]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet valet_revision]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[valet active]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet active]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="valet active"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet active]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet active]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet active]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[valet region]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet region]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="valet region"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet region]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet region]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet region]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[time_of_scrap]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[time_of_scrap]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="time_of_scrap"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[time_of_scrap]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[time_of_scrap]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[LogDateTime]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[LogDateTime]"
                       cachedDataType="dbTimeStamp"
                       cachedName="LogDateTime"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[LogDateTime]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[LogDateTime]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogDateTime]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[LogHour]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[LogHour]"
                       cachedDataType="dbTimeStamp"
                       cachedName="LogHour"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[LogHour]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[LogHour]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogHour]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[LogDate]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[LogDate]"
                       cachedDataType="dbDate"
                       cachedName="LogDate"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[LogDate]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[LogDate]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogDate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].Columns[LogTime]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[LogTime]"
                       cachedDataType="dbTime"
                       cachedName="LogTime"
-                      externalMetadataColumnId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[LogTime]"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[LogTime]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogTime]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[NumScootersAvailable]"
+                      cachedDataType="i4"
+                      cachedName="NumScootersAvailable"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[NumScootersAvailable]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NumScootersAvailable]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[NumScootersUnavailable]"
+                      cachedDataType="i4"
+                      cachedName="NumScootersUnavailable"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[NumScootersUnavailable]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NumScootersUnavailable]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[ValetOffDockCount]"
+                      cachedDataType="i4"
+                      cachedName="ValetOffDockCount"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[ValetOffDockCount]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ValetOffDockCount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[ValetDockBlockedCount]"
+                      cachedDataType="i4"
+                      cachedName="ValetDockBlockedCount"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[ValetDockBlockedCount]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ValetDockBlockedCount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[ValetOffDockCapacity]"
+                      cachedDataType="i4"
+                      cachedName="ValetOffDockCapacity"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[ValetOffDockCapacity]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ValetOffDockCapacity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[StationID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="36"
+                      cachedName="StationID"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[StationID]"
+                      lineageId="Package\Data Flow Task\Station Lookup.Outputs[Lookup Match Output].Columns[StationID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[IsCurrent]"
+                      cachedDataType="bool"
+                      cachedName="IsCurrent"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[IsCurrent]"
+                      lineageId="Package\Data Flow Task\Station Lookup.Outputs[Lookup Match Output].Columns[IsCurrent]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[StationKey]"
+                      cachedDataType="i4"
+                      cachedName="StationKey"
+                      externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[StationKey]"
+                      lineageId="Package\Data Flow Task\Station Lookup.Outputs[Lookup Match Output].Columns[StationKey]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_available]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_available]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="num_scooters_available" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_docks_disabled]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_docks_disabled]"
                       dataType="i2"
                       name="num_docks_disabled" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[eightd_has_available_keys]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[eightd_has_available_keys]"
                       dataType="bool"
                       name="eightd_has_available_keys" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_docks_available]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_docks_available]"
                       dataType="i2"
                       name="num_docks_available" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[station_status]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[station_status]"
                       codePage="1252"
                       dataType="str"
                       length="30"
                       name="station_status" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[last_reported]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[last_reported]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="last_reported" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[is_renting]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[is_renting]"
                       dataType="bool"
                       name="is_renting" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[is_returning]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[is_returning]"
                       dataType="bool"
                       name="is_returning" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_available]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_available]"
                       dataType="i2"
                       name="num_bikes_available" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[is_installed]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[is_installed]"
                       dataType="bool"
                       name="is_installed" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[legacy_id]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[legacy_id]"
                       codePage="1252"
                       dataType="str"
                       length="36"
                       name="legacy_id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_ebikes_available]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_ebikes_available]"
                       dataType="i2"
                       name="num_ebikes_available" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
                       codePage="1252"
                       dataType="str"
                       length="36"
                       name="station_id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_unavailable]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_unavailable]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="num_scooters_unavailable" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_disabled]"
-                      dataType="bool"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_disabled]"
+                      dataType="i2"
                       name="num_bikes_disabled" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[eightd_active_station_services]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[eightd_active_station_services]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="eightd_active_station_services" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_count]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_count]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="valet off_dock_count" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet dock_blocked_count]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet dock_blocked_count]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="valet dock_blocked_count" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet station_id]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet station_id]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="valet station_id" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_capacity]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_capacity]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="valet off_dock_capacity" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet valet_revision]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet valet_revision]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="valet valet_revision" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet active]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet active]"
                       codePage="1252"
                       dataType="str"
                       length="30"
                       name="valet active" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[valet region]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet region]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="valet region" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[time_of_scrap]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[time_of_scrap]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="time_of_scrap" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[LogDateTime]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[LogDateTime]"
                       dataType="dbTimeStamp"
                       name="LogDateTime" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[LogHour]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[LogHour]"
                       dataType="dbTimeStamp"
                       name="LogHour" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[LogDate]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[LogDate]"
                       dataType="dbDate"
                       name="LogDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input].ExternalColumns[LogTime]"
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[LogTime]"
                       dataType="dbTime"
                       name="LogTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[NumScootersAvailable]"
+                      dataType="i4"
+                      name="NumScootersAvailable" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[NumScootersUnavailable]"
+                      dataType="i4"
+                      name="NumScootersUnavailable" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[ValetOffDockCount]"
+                      dataType="i4"
+                      name="ValetOffDockCount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[ValetDockBlockedCount]"
+                      dataType="i4"
+                      name="ValetDockBlockedCount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[ValetOffDockCapacity]"
+                      dataType="i4"
+                      name="ValetOffDockCapacity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[StationID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="36"
+                      name="StationID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[IsCurrent]"
+                      dataType="bool"
+                      name="IsCurrent" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[StationKey]"
+                      dataType="i4"
+                      name="StationKey" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3450,6 +3067,389 @@ where [refTable].[StationID] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\StationNotAvailable"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1045"
+              name="StationNotAvailable"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\StationNotAvailable.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[StationStatusNoMatchStation]"
+                  connectionManagerRefId="Package.ConnectionManagers[StationStatusNoMatchStation]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_scooters_available]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="num_scooters_available"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_available]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_available]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_docks_disabled]"
+                      cachedDataType="i2"
+                      cachedName="num_docks_disabled"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_docks_disabled]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_disabled]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[eightd_has_available_keys]"
+                      cachedDataType="bool"
+                      cachedName="eightd_has_available_keys"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[eightd_has_available_keys]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_docks_available]"
+                      cachedDataType="i2"
+                      cachedName="num_docks_available"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_docks_available]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_available]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[station_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="station_status"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[station_status]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_status]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[last_reported]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="last_reported"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[last_reported]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_reported]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[is_renting]"
+                      cachedDataType="bool"
+                      cachedName="is_renting"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[is_renting]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_renting]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[is_returning]"
+                      cachedDataType="bool"
+                      cachedName="is_returning"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[is_returning]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_returning]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_bikes_available]"
+                      cachedDataType="i2"
+                      cachedName="num_bikes_available"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_available]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_available]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[is_installed]"
+                      cachedDataType="bool"
+                      cachedName="is_installed"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[is_installed]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_installed]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[legacy_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="36"
+                      cachedName="legacy_id"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[legacy_id]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_ebikes_available]"
+                      cachedDataType="i2"
+                      cachedName="num_ebikes_available"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_ebikes_available]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_ebikes_available]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[station_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="36"
+                      cachedName="station_id"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_scooters_unavailable]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="num_scooters_unavailable"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_unavailable]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_bikes_disabled]"
+                      cachedDataType="i2"
+                      cachedName="num_bikes_disabled"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_disabled]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_disabled]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[eightd_active_station_services]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="eightd_active_station_services"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[eightd_active_station_services]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_active_station_services]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet off_dock_count]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="valet off_dock_count"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_count]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_count]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet dock_blocked_count]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="valet dock_blocked_count"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet dock_blocked_count]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet station_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="valet station_id"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet station_id]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet station_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet off_dock_capacity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="valet off_dock_capacity"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_capacity]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet valet_revision]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="valet valet_revision"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet valet_revision]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet valet_revision]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet active]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="valet active"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet active]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet active]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="valet region"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet region]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet region]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[time_of_scrap]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="time_of_scrap"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[time_of_scrap]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[LogDateTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LogDateTime"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[LogDateTime]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogDateTime]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[LogHour]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LogHour"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[LogHour]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogHour]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[LogDate]"
+                      cachedDataType="dbDate"
+                      cachedName="LogDate"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[LogDate]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[LogTime]"
+                      cachedDataType="dbTime"
+                      cachedName="LogTime"
+                      externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[LogTime]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogTime]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_available]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="num_scooters_available" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_docks_disabled]"
+                      dataType="i2"
+                      name="num_docks_disabled" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[eightd_has_available_keys]"
+                      dataType="bool"
+                      name="eightd_has_available_keys" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_docks_available]"
+                      dataType="i2"
+                      name="num_docks_available" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[station_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="station_status" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[last_reported]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="last_reported" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[is_renting]"
+                      dataType="bool"
+                      name="is_renting" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[is_returning]"
+                      dataType="bool"
+                      name="is_returning" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_available]"
+                      dataType="i2"
+                      name="num_bikes_available" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[is_installed]"
+                      dataType="bool"
+                      name="is_installed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[legacy_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="36"
+                      name="legacy_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_ebikes_available]"
+                      dataType="i2"
+                      name="num_ebikes_available" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="36"
+                      name="station_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_unavailable]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="num_scooters_unavailable" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_disabled]"
+                      dataType="bool"
+                      name="num_bikes_disabled" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[eightd_active_station_services]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="eightd_active_station_services" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_count]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet off_dock_count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet dock_blocked_count]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet dock_blocked_count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet station_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet station_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_capacity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet off_dock_capacity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet valet_revision]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet valet_revision" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet active]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="valet active" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[time_of_scrap]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="time_of_scrap" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[LogDateTime]"
+                      dataType="dbTimeStamp"
+                      name="LogDateTime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[LogHour]"
+                      dataType="dbTimeStamp"
+                      name="LogHour" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[LogDate]"
+                      dataType="dbDate"
+                      name="LogDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[LogTime]"
+                      dataType="dbTime"
+                      name="LogTime" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\StatusExistsLookup"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -3642,7 +3642,7 @@ where [refTable].[Time] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -3710,7 +3710,6 @@ where [refTable].[Time] = ?</property>
                 <output
                   refId="Package\Data Flow Task\WeatherLookup.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\WeatherLookup.Inputs[Lookup Input]">
@@ -3803,12 +3802,12 @@ where [refTable].[Time] = ?</property>
               startId="Package\Data Flow Task\StatusExistsLookup.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup No Match Output1]"
-              endId="Package\Data Flow Task\No Weather Available Yet.Inputs[Flat File Destination Input]"
+              endId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Station Lookup.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup No Match Output2]"
-              endId="Package\Data Flow Task\Flat File Destination 1.Inputs[Flat File Destination Input]"
+              endId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\WeatherLookup.Outputs[Lookup No Match Output]" />
           </paths>
@@ -3965,8 +3964,8 @@ where [refTable].[Time] = ?</property>
           Id="Package\Data Flow Task\DateLookup"
           TopLeft="292,524" />
         <NodeLayout
-          Size="205,42"
-          Id="Package\Data Flow Task\No Weather Available Yet"
+          Size="175,42"
+          Id="Package\Data Flow Task\StationNotAvailable"
           TopLeft="532,248" />
         <NodeLayout
           Size="152,42"
@@ -4271,8 +4270,8 @@ where [refTable].[Time] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="185,42"
-          Id="Package\Data Flow Task\Flat File Destination 1"
+          Size="199,42"
+          Id="Package\Data Flow Task\NoWetatherAvailableYet"
           TopLeft="560,501" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
@@ -4280,9 +4279,9 @@ where [refTable].[Time] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="281.166666666667,30"
+              EndConnector="288.166666666667,30"
               Start="0,0"
-              End="281.166666666667,22.5">
+              End="288.166666666667,22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4293,20 +4292,20 @@ where [refTable].[Time] = ?</property>
                     Point2="0,12.1815889029004"
                     Point3="4,12.1815889029004" />
                   <mssgle:LineSegment
-                    End="277.166666666667,12.1815889029004" />
+                    End="284.166666666667,12.1815889029004" />
                   <mssgle:CubicBezierSegment
-                    Point1="277.166666666667,12.1815889029004"
-                    Point2="281.166666666667,12.1815889029004"
-                    Point3="281.166666666667,16.1815889029004" />
+                    Point1="284.166666666667,12.1815889029004"
+                    Point2="288.166666666667,12.1815889029004"
+                    Point3="288.166666666667,16.1815889029004" />
                   <mssgle:LineSegment
-                    End="281.166666666667,22.5" />
+                    End="288.166666666667,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="84.7769466145834,17.1815889029004,111.6127734375,11.609375"
+              BoundingBox="88.2769466145834,17.1815889029004,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4319,7 +4318,7 @@ where [refTable].[Time] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
