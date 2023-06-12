@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{883A19A4-D024-4A3B-B9DB-785BA622ED2A}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{A3C94A0A-4584-4A05-945C-88B9D1FF728B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -352,8 +352,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
-          SQLTask:SqlStatementSource="IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DimStationsUpdate]&#xA;GO&#xA;&#xA;&#xA;IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NULL&#xA;CREATE TABLE [dbo].[DimStationsUpdate](&#xA;    [Name] [varchar](100) NOT NULL,&#xA;    [RegionID] [int] NOT NULL,&#xA;    [Longitude] [numeric](11, 3) NOT NULL,&#xA;    [Latitude] [numeric](11, 3) NOT NULL,&#xA;    [ElectricBikeSurchargeWaiverFlag] [bit] NOT NULL,&#xA;    [ExternalID] [char](36) NOT NULL,&#xA;    [Capacity] [smallint] NOT NULL,&#xA;    [StationType] [varchar](30) NOT NULL,&#xA;    [RegionName] [varchar](50) NOT NULL,&#xA;    [KioskFlag] [bit] NOT NULL,&#xA;    [StationKey] [varchar](7) NOT NULL,&#xA;    [ValidFrom] [bigint] NOT NULL,&#xA;    [ValidTo] [bigint] NULL,&#xA;    [IsCurrent] [bit] NOT NULL,&#xA;    [StationID][char](36) NOT NULL&#xA;)&#xA;GO&#xA;"
-          SQLTask:CodePage="1252" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DimStationsUpdate]&#xA;GO&#xA;&#xA;&#xA;IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NULL&#xA;CREATE TABLE [dbo].[DimStationsUpdate](&#xA;    [Name] [varchar](100) NOT NULL,&#xA;    [RegionID] [int] NOT NULL,&#xA;    [Longitude] [numeric](11, 3) NOT NULL,&#xA;    [Latitude] [numeric](11, 3) NOT NULL,&#xA;    [ElectricBikeSurchargeWaiverFlag] [bit] NOT NULL,&#xA;    [ExternalID] [char](36) NOT NULL,&#xA;    [Capacity] [smallint] NOT NULL,&#xA;    [StationType] [varchar](30) NOT NULL,&#xA;    [RegionName] [varchar](50) NOT NULL,&#xA;    [KioskFlag] [bit] NOT NULL,&#xA;    [StationKey] [varchar](7) NOT NULL,&#xA;    [ValidFrom] [bigint] NOT NULL,&#xA;    [ValidTo] [bigint] NULL,&#xA;    [IsCurrent] [bit] NOT NULL,&#xA;    [StationID][char](36) NOT NULL&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -369,7 +368,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
-          SQLTask:SqlStatementSource="INSERT INTO [DimStations]&#xA;(&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    [ValidFrom],&#xA;    [ValidTo],&#xA;    [IsCurrent],&#xA;    [StationID]&#xA;)&#xA;SELECT&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    [ValidFrom],&#xA;    [ValidTo],&#xA;    [IsCurrent],&#xA;    [StationID]&#xA;FROM [DimStationsUpdate];&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO [DimStations]&#xA;(&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    [ValidFrom],&#xA;    [ValidTo],&#xA;    [IsCurrent],&#xA;    [StationID]&#xA;)&#xA;SELECT&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    CONVERT(VARCHAR(8), GETDATE(), 112) AS [YYYYMMDD],&#xA;    [ValidTo],&#xA;    [IsCurrent],&#xA;    [StationID]&#xA;FROM [DimStationsUpdate];&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -596,13 +595,13 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBDATE)[GETDATE]()</property>
+                          name="Expression">(DT_DBDATE)@[$Project::WorldStartDate]</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DBDATE)GETDATE()</property>
+                          name="FriendlyExpression">(DT_DBDATE)@[$Project::WorldStartDate]</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -2705,13 +2704,9 @@ where [refTable].[StationKey] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="138,42"
-          Id="Package\Station Data Flow\Date setting"
-          TopLeft="298,385" />
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Station Data Flow\OLE DB DimStation"
-          TopLeft="463.333333333333,570" />
+          Size="212,42"
+          Id="Package\Station Data Flow\OLE DB DimStationUpdate"
+          TopLeft="72,573" />
         <NodeLayout
           Size="156,42"
           Id="Package\Station Data Flow\Flat File Source"
@@ -2721,21 +2716,25 @@ where [refTable].[StationKey] = ?</property>
           Id="Package\Station Data Flow\Lookup"
           TopLeft="95,301" />
         <NodeLayout
-          Size="212,42"
-          Id="Package\Station Data Flow\OLE DB DimStationUpdate"
-          TopLeft="72,573" />
+          Size="138,42"
+          Id="Package\Station Data Flow\Date setting"
+          TopLeft="298,385" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Station Data Flow\Derived Column"
+          TopLeft="209,223" />
         <NodeLayout
           Size="138,42"
           Id="Package\Station Data Flow\Has chaned"
           TopLeft="71,400" />
         <NodeLayout
+          Size="176,42"
+          Id="Package\Station Data Flow\OLE DB DimStation"
+          TopLeft="463.333333333333,570" />
+        <NodeLayout
           Size="138,42"
           Id="Package\Station Data Flow\Date lookup"
           TopLeft="336,487" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Station Data Flow\Derived Column"
-          TopLeft="209,223" />
         <EdgeLayout
           Id="Package\Station Data Flow.Paths[Lookup No Match Output]"
           TopLeft="170.333333333333,343">
@@ -2768,7 +2767,7 @@ where [refTable].[StationKey] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="42.5269466145833,22.1457975986278,111.6127734375,11.609375"
+              BoundingBox="42.5269466145835,22.1457975986278,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2974,7 +2973,7 @@ where [refTable].[StationKey] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Station Data Flow\OLE DB DimStation">
+    design-time-name="Package\Station Data Flow\OLE DB DimStationUpdate">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3010,7 +3009,7 @@ where [refTable].[StationKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Station Data Flow\OLE DB DimStationUpdate">
+    design-time-name="Package\Station Data Flow\OLE DB DimStation">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3028,7 +3027,7 @@ where [refTable].[StationKey] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3038,7 +3037,7 @@ where [refTable].[StationKey] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{B4C20DE5-FDC8-49A1-A4B4-EE6A209B6DFC}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{E9F983EB-79DD-4656-A579-6803A4ADC181}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -536,7 +536,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="num_scooters_available"
-              DTS:DTSID="{617177E3-3518-4040-990F-7EB77D914D68}"
+              DTS:DTSID="{B053372F-8E64-4ACE-9C4B-C7ECC0AB7847}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -544,7 +544,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="num_docks_disabled"
-              DTS:DTSID="{F3441FA6-6805-49DF-9B17-2BB8F16F1BF9}"
+              DTS:DTSID="{DF10FAA3-B936-4E49-A43A-C4E2BB189F90}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -552,7 +552,7 @@
               DTS:DataType="11"
               DTS:TextQualified="True"
               DTS:ObjectName="eightd_has_available_keys"
-              DTS:DTSID="{EF2E8DF3-3FA2-4851-95F5-2989392E4451}"
+              DTS:DTSID="{C8F3F22E-092E-478E-B9EA-FFC91DC10A2A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -560,7 +560,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="num_docks_available"
-              DTS:DTSID="{0236B1A9-BC85-46C7-B90C-DFE8B051DB0A}"
+              DTS:DTSID="{75FE26AF-2B8A-4FC5-A19D-481D107F6713}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -569,7 +569,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="station_status"
-              DTS:DTSID="{E451FCA8-3330-4079-BCCA-5A577131AD10}"
+              DTS:DTSID="{A80C4036-FF7F-484D-82D9-08B07977C853}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -578,7 +578,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="last_reported"
-              DTS:DTSID="{9E6F1733-0FE5-4EF5-9A9A-6EE16B8220B8}"
+              DTS:DTSID="{764F9636-B389-4DA5-9A2C-FCF0617E68AB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -586,7 +586,7 @@
               DTS:DataType="11"
               DTS:TextQualified="True"
               DTS:ObjectName="is_renting"
-              DTS:DTSID="{4E23D1A8-2892-4B0A-B024-D1EF7676D293}"
+              DTS:DTSID="{EDF34126-2A0A-4933-8740-1E45B1D3F23A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -594,7 +594,7 @@
               DTS:DataType="11"
               DTS:TextQualified="True"
               DTS:ObjectName="is_returning"
-              DTS:DTSID="{FC8411E1-E08C-4D92-A8F9-093A2A2809CF}"
+              DTS:DTSID="{6AE8A414-7D91-4C25-BD22-1314C3660B26}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -602,7 +602,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="num_bikes_available"
-              DTS:DTSID="{F24AF761-3143-4919-B4FE-80BE9C44C04C}"
+              DTS:DTSID="{7B7E7B93-51C1-4A08-AB2C-EF327AF0EB8A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -610,7 +610,7 @@
               DTS:DataType="11"
               DTS:TextQualified="True"
               DTS:ObjectName="is_installed"
-              DTS:DTSID="{E6E62DF8-E8C5-4720-B55C-3E31D3AECC8A}"
+              DTS:DTSID="{193B99C9-EE8E-4735-868E-0F1F43C7DBE9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -619,7 +619,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="legacy_id"
-              DTS:DTSID="{44D20F0E-CCC1-477B-90DA-775AA3047874}"
+              DTS:DTSID="{A081A756-78C9-4818-B1B2-007DB751326B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -627,7 +627,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="num_ebikes_available"
-              DTS:DTSID="{1458E715-E262-4EC8-ADA7-147C3E76168C}"
+              DTS:DTSID="{01C58D08-DA82-4040-A5FF-8FCA427CABB2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -636,7 +636,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="station_id"
-              DTS:DTSID="{E14D7BAE-6AA7-47F6-831D-ECC7C36B2EBB}"
+              DTS:DTSID="{DB285593-696C-405F-BF54-AA2268266071}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -645,7 +645,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="num_scooters_unavailable"
-              DTS:DTSID="{AF6BFE99-2769-475F-AFBE-C45935E96C31}"
+              DTS:DTSID="{84274A0D-4AEE-496A-A1E5-D7C7728DE4A7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -653,7 +653,7 @@
               DTS:DataType="2"
               DTS:TextQualified="True"
               DTS:ObjectName="num_bikes_disabled"
-              DTS:DTSID="{CACD3909-C915-4FAB-9BA5-707EC4765B62}"
+              DTS:DTSID="{5F72AA8E-FAC9-4B99-9913-D5B2B1C7E92E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -662,7 +662,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="eightd_active_station_services"
-              DTS:DTSID="{473D55B1-E0B2-467E-9F6A-4E7FB826DFF3}"
+              DTS:DTSID="{43F8F722-C06D-48CD-A492-36FD3F118CBD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -671,7 +671,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="valet off_dock_count"
-              DTS:DTSID="{E7B781C8-9ACC-409E-8A3C-C9174A665388}"
+              DTS:DTSID="{E84E7A9D-22B0-485C-9220-1E80FFDD5562}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -680,7 +680,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="valet dock_blocked_count"
-              DTS:DTSID="{82AFC2EC-39F0-4D44-ABE4-3A615ADD5A62}"
+              DTS:DTSID="{1A389500-D7E5-4591-B62F-B78211568996}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -689,7 +689,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="valet station_id"
-              DTS:DTSID="{429C7E05-370E-4B43-A000-F3035C30A59E}"
+              DTS:DTSID="{7D5D39D5-4FC5-48E6-BAE5-BE161994F0AF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -698,7 +698,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="valet off_dock_capacity"
-              DTS:DTSID="{EC1372BD-5165-4E4F-A3E2-C921B538A77C}"
+              DTS:DTSID="{7E9A58DE-1A4B-43D0-8774-EFC6A2AAEA9B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -707,7 +707,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="valet valet_revision"
-              DTS:DTSID="{5D9E7491-E15D-4D34-88DF-8B406D4E3210}"
+              DTS:DTSID="{EDFF08C6-E40E-4A0B-A0AE-5A148D956519}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -716,7 +716,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="valet active"
-              DTS:DTSID="{5E76FA2B-6F53-4B71-A61C-7F0DDAB4AD2C}"
+              DTS:DTSID="{8FA8C45E-D65F-4697-A7BA-6C46B24C4FC4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -725,7 +725,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="valet region"
-              DTS:DTSID="{9CDCE3F9-D33D-47D6-B755-1CEDA691ADD8}"
+              DTS:DTSID="{30675F2C-5E6E-4319-BDB2-BE11AB1B4942}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -734,7 +734,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="time_of_scrap"
-              DTS:DTSID="{00310FAB-0385-4038-A09F-C022ABA6DBC1}"
+              DTS:DTSID="{01B510C2-A4C4-4707-A184-6B12E9D4CDCE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -742,7 +742,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="LogDateTime"
-              DTS:DTSID="{C8070296-EA25-4D5D-AF1C-16AE4504958C}"
+              DTS:DTSID="{C2B6154F-6F13-4F97-8A50-51A587312664}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -750,7 +750,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="LogHour"
-              DTS:DTSID="{738146FD-0F14-41E6-B41B-EE06066CA1CF}"
+              DTS:DTSID="{A132CC0A-F65B-40B1-8FAE-265C4C3F86CD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -758,7 +758,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="LogDate"
-              DTS:DTSID="{1BCDED1A-C9EC-4198-ACDE-536F373FFB3E}"
+              DTS:DTSID="{A98EAF64-2232-4327-A850-0A24EF4F7126}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -766,7 +766,7 @@
               DTS:DataType="134"
               DTS:TextQualified="True"
               DTS:ObjectName="LogTime"
-              DTS:DTSID="{5F30A513-4923-4B2C-8B0C-3D9598D9E014}"
+              DTS:DTSID="{14C2837D-2EDC-47F7-AE9C-94F6641231DB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -774,7 +774,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="NumScootersAvailable"
-              DTS:DTSID="{BE9C4162-DA6C-4698-8B3B-5CA521FE3C81}"
+              DTS:DTSID="{2051D3A8-F433-40BE-9293-6E4B361CD787}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -782,7 +782,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="NumScootersUnavailable"
-              DTS:DTSID="{7784282C-9F01-4025-ACCF-E40CD1D60867}"
+              DTS:DTSID="{45D2BCD3-8096-489C-87AF-38AA4576A97E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -790,7 +790,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ValetOffDockCount"
-              DTS:DTSID="{89CEAD75-F494-47B6-8FD3-38CC354F1ABB}"
+              DTS:DTSID="{9C99D43E-DBBF-49B5-B61D-05120DA6F554}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -798,7 +798,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ValetDockBlockedCount"
-              DTS:DTSID="{7CEC2857-7402-49C5-BE3E-1A493073655B}"
+              DTS:DTSID="{E61B7DDF-EDC4-4037-B782-94DE40DAF501}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -806,7 +806,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ValetOffDockCapacity"
-              DTS:DTSID="{4BCAB8AB-1144-45DC-AF17-B175DEF65906}"
+              DTS:DTSID="{3048C121-4231-440D-B13B-F5BB67AB41F7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -815,7 +815,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="StationID"
-              DTS:DTSID="{B3B97620-F923-4E42-8DE3-A98EC06B3026}"
+              DTS:DTSID="{3EF50448-1ACC-4127-97DB-AB7BC6A5717C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -823,7 +823,7 @@
               DTS:DataType="11"
               DTS:TextQualified="True"
               DTS:ObjectName="IsCurrent"
-              DTS:DTSID="{06E23DA3-E652-4F5B-A9B0-98ABA462F9F4}"
+              DTS:DTSID="{A01AA0B4-B8FB-4B71-B94F-F54FE1D65E6F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -831,7 +831,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="StationKey"
-              DTS:DTSID="{AAC3C33A-7F86-402C-AA10-041AB2FF71E2}"
+              DTS:DTSID="{742317B1-CA7B-4576-857E-85D31C80D4C9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -3642,7 +3642,7 @@ where [refTable].[Time] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -3710,7 +3710,6 @@ where [refTable].[Time] = ?</property>
                 <output
                   refId="Package\Data Flow Task\WeatherLookup.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\WeatherLookup.Inputs[Lookup Input]">
@@ -3819,6 +3818,7 @@ where [refTable].[Time] = ?</property>
       DTS:refId="Package\Make csv"
       DTS:CreationName="Microsoft.ExecuteProcess"
       DTS:Description="Execute Process Task"
+      DTS:Disabled="True"
       DTS:DTSID="{7b2e19b9-c0b3-4783-911f-b2576465da46}"
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
@@ -3833,7 +3833,7 @@ where [refTable].[Time] = ?</property>
         DTS:Name="WorkingDirectory">@[$Project::ScriptsDirectory]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <ExecuteProcessData
-          Executable="C:\Users\Basia\AppData\Local\Programs\Python\Python311\python.exe"
+          Executable="C:\Users\kajtek-lp-win\AppData\Local\Programs\Python\Python311\python.exe"
           Arguments="combine_statuses_csv.py"
           WorkingDirectory="C:\Projects\nyc_bikes\scripts\" />
       </DTS:ObjectData>
@@ -3842,6 +3842,7 @@ where [refTable].[Time] = ?</property>
       DTS:refId="Package\Rewrite zip"
       DTS:CreationName="Microsoft.ExecuteProcess"
       DTS:Description="Execute Process Task"
+      DTS:Disabled="True"
       DTS:DTSID="{43b21e7a-afef-43bb-876a-d7dc1cc3bdac}"
       DTS:ExecutableType="Microsoft.ExecuteProcess"
       DTS:LocaleID="-1"
@@ -3856,7 +3857,7 @@ where [refTable].[Time] = ?</property>
         DTS:Name="WorkingDirectory">@[$Project::ScriptsDirectory]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <ExecuteProcessData
-          Executable="C:\Users\Basia\AppData\Local\Programs\Python\Python311\python.exe"
+          Executable="C:\Users\kajtek-lp-win\AppData\Local\Programs\Python\Python311\python.exe"
           Arguments="rewrite_zip_station_status.py"
           WorkingDirectory="C:\Projects\nyc_bikes\scripts\" />
       </DTS:ObjectData>
@@ -3957,25 +3958,29 @@ where [refTable].[Time] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157,42"
-          Id="Package\Data Flow Task\WeatherLookup"
-          TopLeft="268,429" />
-        <NodeLayout
           Size="138,42"
           Id="Package\Data Flow Task\DateLookup"
           TopLeft="292,524" />
         <NodeLayout
-          Size="205,42"
-          Id="Package\Data Flow Task\No Weather Available Yet"
-          TopLeft="532,248" />
+          Size="157,42"
+          Id="Package\Data Flow Task\WeatherLookup"
+          TopLeft="268,429" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Data Flow Task\Flat File Destination 1"
+          TopLeft="560,501" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task\StatusExistsLookup"
+          TopLeft="62,284" />
         <NodeLayout
           Size="152,42"
           Id="Package\Data Flow Task\Station Lookup"
           TopLeft="221,221" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="289,605" />
+          Size="205,42"
+          Id="Package\Data Flow Task\No Weather Available Yet"
+          TopLeft="532,248" />
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Derived Column"
@@ -3989,9 +3994,45 @@ where [refTable].[Time] = ?</property>
           Id="Package\Data Flow Task\Conditional Split"
           TopLeft="305,332" />
         <NodeLayout
-          Size="176,42"
-          Id="Package\Data Flow Task\StatusExistsLookup"
-          TopLeft="62,284" />
+          Size="177,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="289,605" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
+          TopLeft="371.333333333333,471">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="281.166666666667,30"
+              Start="0,0"
+              End="281.166666666667,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.18158890290038" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.18158890290038"
+                    Point2="0,12.1815889029004"
+                    Point3="4,12.1815889029004" />
+                  <mssgle:LineSegment
+                    End="277.166666666667,12.1815889029004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="277.166666666667,12.1815889029004"
+                    Point2="281.166666666667,12.1815889029004"
+                    Point3="281.166666666667,16.1815889029004" />
+                  <mssgle:LineSegment
+                    End="281.166666666667,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="84.7769466145835,17.1815889029004,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
           TopLeft="373,242">
@@ -4270,49 +4311,32 @@ where [refTable].[Time] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="185,42"
-          Id="Package\Data Flow Task\Flat File Destination 1"
-          TopLeft="560,501" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
-          TopLeft="371.333333333333,471">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="281.166666666667,30"
-              Start="0,0"
-              End="281.166666666667,22.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.18158890290038" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.18158890290038"
-                    Point2="0,12.1815889029004"
-                    Point3="4,12.1815889029004" />
-                  <mssgle:LineSegment
-                    End="277.166666666667,12.1815889029004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="277.166666666667,12.1815889029004"
-                    Point2="281.166666666667,12.1815889029004"
-                    Point3="281.166666666667,16.1815889029004" />
-                  <mssgle:LineSegment
-                    End="281.166666666667,22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="84.7769466145834,17.1815889029004,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\DateLookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\WeatherLookup">
     <Properties>
@@ -4337,7 +4361,7 @@ where [refTable].[Time] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\DateLookup">
+    design-time-name="Package\Data Flow Task\StatusExistsLookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -4347,7 +4371,7 @@ where [refTable].[Time] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimDate]</Value>
+          type="q3:string">[dbo].[FactStationStatus]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -4392,29 +4416,6 @@ where [refTable].[Time] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\StatusExistsLookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FactStationStatus]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{04C8EDD5-9BC9-483A-8AD5-2A215D389907}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{837A31A0-9A76-4205-9233-6BB4A5AF0481}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -237,7 +237,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;ride_id&quot;"
-              DTS:DTSID="{CBCFE937-9F23-4E2A-8C19-5702DF1D3E0A}"
+              DTS:DTSID="{DF07F0BD-6688-4340-A867-370CF632520B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -246,7 +246,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;rideable_type&quot;"
-              DTS:DTSID="{3AE8A360-6BDD-4538-AACC-3CAC7CF16806}"
+              DTS:DTSID="{1F983089-4AB4-4805-8737-CAE606563880}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -255,7 +255,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;start_station_id&quot;"
-              DTS:DTSID="{9E0BF59D-2AED-415B-AD8F-C768D887793B}"
+              DTS:DTSID="{53550008-9147-4BDA-8A6F-0076AB8AEEAB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -264,7 +264,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;end_station_id&quot;"
-              DTS:DTSID="{75D38979-068B-4E0F-A4DA-825F198A3F86}"
+              DTS:DTSID="{35359590-40C4-45CE-912F-D8DCBF27DA33}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -273,7 +273,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;member_casual&quot;"
-              DTS:DTSID="{3A2A2285-89F6-46BF-ABB6-35C68766E423}"
+              DTS:DTSID="{64FD6CCC-F195-4309-9D74-FDD1E7232EE1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -282,7 +282,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;started_at&quot;"
-              DTS:DTSID="{54217C41-7B44-4A2D-9831-D7A853323F0C}"
+              DTS:DTSID="{C9AD7F58-4951-4102-8D83-9A6693D36269}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -291,7 +291,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="&quot;ended_at&quot;"
-              DTS:DTSID="{39214D8D-81D2-4BCE-A7E4-21D8D57AE827}"
+              DTS:DTSID="{0430513B-FEC7-4AFB-98EE-EEFA52C15437}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -299,7 +299,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="StartedAtDateTime"
-              DTS:DTSID="{D63CD864-3D91-432E-85AF-43A76CE6F173}"
+              DTS:DTSID="{64406214-8E5C-41AA-8DB4-2D657F1BECB9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -307,7 +307,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="EndedAtDateTime"
-              DTS:DTSID="{E4E637E0-E360-43E4-B661-B18FBFA373A2}"
+              DTS:DTSID="{82349202-8558-485C-964D-B962BD8DC5E0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -315,7 +315,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="StartedAtDate"
-              DTS:DTSID="{86BF00F8-B011-42C5-9AA4-57912B2D00CA}"
+              DTS:DTSID="{94D8D6E9-86D7-4886-BA23-1546FFF51D75}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -323,7 +323,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="EndedAtDate"
-              DTS:DTSID="{804A5E69-7D42-47FB-8B6E-57C48B035360}"
+              DTS:DTSID="{827B0EFA-2F2F-4925-AFF7-3165BC4697CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -331,7 +331,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="StartedAtHour"
-              DTS:DTSID="{119545AB-1FB8-41E9-92EC-CA4DF5481A12}"
+              DTS:DTSID="{ACA03E1D-E6A7-4DA2-B9DB-414DE75677E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -339,7 +339,7 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="EndedAtHour"
-              DTS:DTSID="{3355D76E-C202-43F7-9808-A0E5172E92F4}"
+              DTS:DTSID="{8C745BDC-10E5-4408-ADCE-FED36A09E379}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -347,7 +347,7 @@
               DTS:DataType="134"
               DTS:TextQualified="True"
               DTS:ObjectName="StartTime"
-              DTS:DTSID="{34CCAAAD-E732-47F4-BAE3-A36DF7028190}"
+              DTS:DTSID="{9155C256-A4DB-4E8A-B4B0-730A5A3CFAAE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -355,7 +355,7 @@
               DTS:DataType="134"
               DTS:TextQualified="True"
               DTS:ObjectName="EndTime"
-              DTS:DTSID="{A7F978CD-039A-45F8-99A6-FFF990C6F9EA}"
+              DTS:DTSID="{F1297EC7-97A0-4C6A-B4E1-EF331D4673EE}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -4645,17 +4645,45 @@ where [refTable].[Time] = ?</property>
           Id="Package\Data Flow Task\EndStationLookup"
           TopLeft="252,422" />
         <NodeLayout
+          Size="156,42"
+          Id="Package\Data Flow Task\Remove quotes"
+          TopLeft="234,116" />
+        <NodeLayout
           Size="167,42"
           Id="Package\Data Flow Task\Derived Column 1"
           TopLeft="237,636" />
         <NodeLayout
           Size="156,42"
-          Id="Package\Data Flow Task\Remove quotes"
-          TopLeft="234,116" />
-        <NodeLayout
-          Size="156,42"
           Id="Package\Data Flow Task\Flat File Source"
           TopLeft="234,21" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Data Flow Task\Script Component"
+          TopLeft="342,733" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Data Flow Task\WeatherHistoryLookup"
+          TopLeft="347,812" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Data Flow Task\OLE DB Fact Trip"
+          TopLeft="235,900" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\Is Trip in Database"
+          TopLeft="454,194" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Data Flow Task\EndDateLookup"
+          TopLeft="264,562" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Data Flow Task\StartStationLookup"
+          TopLeft="284,311" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Data Flow Task\End Station Not exists"
+          TopLeft="528,485" />
         <NodeLayout
           Size="189,42"
           Id="Package\Data Flow Task\Start Station not exists"
@@ -4665,33 +4693,9 @@ where [refTable].[Time] = ?</property>
           Id="Package\Data Flow Task\StartDateLookup"
           TopLeft="253,496" />
         <NodeLayout
-          Size="165,42"
-          Id="Package\Data Flow Task\OLE DB Fact Trip"
-          TopLeft="235,900" />
-        <NodeLayout
-          Size="167,42"
-          Id="Package\Data Flow Task\Script Component"
-          TopLeft="342,733" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task\EndDateLookup"
-          TopLeft="264,562" />
-        <NodeLayout
-          Size="187,42"
-          Id="Package\Data Flow Task\End Station Not exists"
-          TopLeft="528,485" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Data Flow Task\StartStationLookup"
-          TopLeft="284,311" />
-        <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="124,242" />
-        <NodeLayout
-          Size="191,42"
-          Id="Package\Data Flow Task\WeatherHistoryLookup"
-          TopLeft="347,812" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output 0]"
           TopLeft="425.5,775">
@@ -4724,6 +4728,42 @@ where [refTable].[Time] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
+          TopLeft="454,215">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-172,48"
+              Start="0,0"
+              End="-164.5,48">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-82,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-82,0"
+                    Point2="-86,0"
+                    Point3="-86,4" />
+                  <mssgle:LineSegment
+                    End="-86,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-86,44"
+                    Point2="-86,48"
+                    Point3="-90,48" />
+                  <mssgle:LineSegment
+                    End="-164.5,48" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-141.80638671875,-17.609375,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4977,6 +5017,40 @@ where [refTable].[Time] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
+          TopLeft="312,158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="227.5,36"
+              Start="0,0"
+              End="227.5,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="4,18" />
+                  <mssgle:LineSegment
+                    End="223.5,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="223.5,18"
+                    Point2="227.5,18"
+                    Point3="227.5,22" />
+                  <mssgle:LineSegment
+                    End="227.5,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
           TopLeft="320.5,678">
           <EdgeLayout.Curve>
@@ -5044,80 +5118,6 @@ where [refTable].[Time] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\Is Trip in Database"
-          TopLeft="454,194" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output2]"
-          TopLeft="312,158">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="227.5,36"
-              Start="0,0"
-              End="227.5,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14"
-                    Point2="0,18"
-                    Point3="4,18" />
-                  <mssgle:LineSegment
-                    End="223.5,18" />
-                  <mssgle:CubicBezierSegment
-                    Point1="223.5,18"
-                    Point2="227.5,18"
-                    Point3="227.5,22" />
-                  <mssgle:LineSegment
-                    End="227.5,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
-          TopLeft="454,215">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-172,48"
-              Start="0,0"
-              End="-164.5,48">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-82,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-82,0"
-                    Point2="-86,0"
-                    Point3="-86,4" />
-                  <mssgle:LineSegment
-                    End="-86,44" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-86,44"
-                    Point2="-86,48"
-                    Point3="-90,48" />
-                  <mssgle:LineSegment
-                    End="-164.5,48" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-141.80638671875,-17.609375,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -5145,22 +5145,22 @@ where [refTable].[Time] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\StartDateLookup">
+    design-time-name="Package\Data Flow Task\WeatherHistoryLookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimDate]</Value>
+          type="q3:string">[dbo].[WeatherHistory]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5177,6 +5177,29 @@ where [refTable].[Time] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Is Trip in Database">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FactTrip]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5227,7 +5250,7 @@ where [refTable].[Time] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\WeatherHistoryLookup">
+    design-time-name="Package\Data Flow Task\StartDateLookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5237,35 +5260,12 @@ where [refTable].[Time] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[WeatherHistory]</Value>
+          type="q3:string">[dbo].[DimDate]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Is Trip in Database">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FactTrip]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

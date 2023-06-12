@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="96"
-  DTS:VersionGUID="{E49BE3A0-EAEB-447C-974F-8858A9E03CEB}">
+  DTS:VersionBuild="102"
+  DTS:VersionGUID="{68ADDD74-4368-4A25-9992-551DAF448602}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -659,8 +659,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
-          SQLTask:SqlStatementSource="DECLARE @StartDate DATE&#xA;DECLARE @EndDate DATE = CAST(GETDATE() AS DATE)&#xA;DECLARE @DateKey BIGINT&#xA;&#xA;-- Check if the table is empty&#xA;IF (SELECT COUNT(*) FROM DimDate) = 0 &#xA;BEGIN&#xA;    -- If table is empty, start from this date&#xA;    SET @StartDate = '2023-04-01' &#xA;    SET @DateKey = 20230401&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;    -- If table is not empty, start the day after the max date in the table&#xA;    SELECT @StartDate = DATEADD(day, 1, MAX([Date]))&#xA;    FROM DimDate&#xA;    SET @DateKey = CAST(CONVERT(VARCHAR(8), @StartDate, 112) AS BIGINT)&#xA;END&#xA;&#xA;-- Add dates to the DimDate table&#xA;WHILE @StartDate &lt;= @EndDate&#xA;BEGIN&#xA;    DECLARE @HolidayName VARCHAR(100)&#xA;    DECLARE @IsWeekend BIT&#xA;    DECLARE @IsHoliday BIT&#xA;&#xA;    SELECT @HolidayName = HolidayName&#xA;    FROM Holidays&#xA;    WHERE MonthNumber = MONTH(@StartDate) AND DayNumber = DAY(@StartDate)&#xA;&#xA;    IF DATEPART(WEEKDAY, @StartDate) IN (1, 7) &#xA;    BEGIN&#xA;        SET @IsWeekend = 1&#xA;    END&#xA;    ELSE &#xA;    BEGIN&#xA;        SET @IsWeekend = 0&#xA;    END&#xA;&#xA;    IF @HolidayName IS NOT NULL&#xA;    BEGIN&#xA;        SET @IsHoliday = 1&#xA;    END&#xA;    ELSE&#xA;    BEGIN&#xA;        SET @IsHoliday = 0&#xA;        SET @HolidayName = NULL&#xA;    END&#xA;&#xA;    INSERT INTO DimDate(DateKey, [Date], [Year], Month, MonthName, Week, DayOfYear, DayOfMonth, DayOfWeek, DayOfWeekName, IsWeekend, IsHoliday, HolidayName, QuarterNumber)&#xA;    VALUES (@DateKey, @StartDate, YEAR(@StartDate), MONTH(@StartDate), DATENAME(MONTH, @StartDate), DATEPART(WEEK, @StartDate),&#xA;            DATEPART(DAYOFYEAR, @StartDate), DAY(@StartDate), DATEPART(WEEKDAY, @StartDate), DATENAME(WEEKDAY, @StartDate), &#xA;            @IsWeekend, @IsHoliday, @HolidayName, DATEPART(QUARTER, @StartDate))&#xA;&#xA;    SET @StartDate = DATEADD(DAY, 1, @StartDate)&#xA;    SET @DateKey = CAST(CONVERT(VARCHAR(8), @StartDate, 112) AS BIGINT)&#xA;END&#xA;"
-          SQLTask:CodePage="1252" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DECLARE @StartDate DATE&#xA;DECLARE @EndDate DATE = '2100-12-31'&#xA;DECLARE @DateKey BIGINT&#xA;&#xA;-- Check if the table is empty&#xA;IF (SELECT COUNT(*) FROM DimDate) = 0 &#xA;BEGIN&#xA;    -- If table is empty, start from this date&#xA;    SET @StartDate = '1970-01-01' &#xA;    SET @DateKey =19700101&#xA;END&#xA;ELSE&#xA;BEGIN&#xA;    -- If table is not empty, start the day after the max date in the table&#xA;    SELECT @StartDate = DATEADD(day, 1, MAX([Date]))&#xA;    FROM DimDate&#xA;    SET @DateKey = CAST(CONVERT(VARCHAR(8), @StartDate, 112) AS BIGINT)&#xA;END&#xA;&#xA;-- Add dates to the DimDate table&#xA;WHILE @StartDate &lt;= @EndDate&#xA;BEGIN&#xA;    DECLARE @HolidayName VARCHAR(100)&#xA;    DECLARE @IsWeekend BIT&#xA;    DECLARE @IsHoliday BIT&#xA;&#xA;    SELECT @HolidayName = HolidayName&#xA;    FROM Holidays&#xA;    WHERE MonthNumber = MONTH(@StartDate) AND DayNumber = DAY(@StartDate)&#xA;&#xA;    IF DATEPART(WEEKDAY, @StartDate) IN (1, 7) &#xA;    BEGIN&#xA;        SET @IsWeekend = 1&#xA;    END&#xA;    ELSE &#xA;    BEGIN&#xA;        SET @IsWeekend = 0&#xA;    END&#xA;&#xA;    IF @HolidayName IS NOT NULL&#xA;    BEGIN&#xA;        SET @IsHoliday = 1&#xA;    END&#xA;    ELSE&#xA;    BEGIN&#xA;        SET @IsHoliday = 0&#xA;        SET @HolidayName = NULL&#xA;    END&#xA;&#xA;    INSERT INTO DimDate(DateKey, [Date], [Year], Month, MonthName, Week, DayOfYear, DayOfMonth, DayOfWeek, DayOfWeekName, IsWeekend, IsHoliday, HolidayName, QuarterNumber)&#xA;    VALUES (@DateKey, @StartDate, YEAR(@StartDate), MONTH(@StartDate), DATENAME(MONTH, @StartDate), DATEPART(WEEK, @StartDate),&#xA;            DATEPART(DAYOFYEAR, @StartDate), DAY(@StartDate), DATEPART(WEEKDAY, @StartDate), DATENAME(WEEKDAY, @StartDate), &#xA;            @IsWeekend, @IsHoliday, @HolidayName, DATEPART(QUARTER, @StartDate))&#xA;&#xA;    SET @StartDate = DATEADD(DAY, 1, @StartDate)&#xA;    SET @DateKey = CAST(CONVERT(VARCHAR(8), @StartDate, 112) AS BIGINT)&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -952,6 +951,38 @@
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Foreach Loop Container\Trips Data Flow\DataReaderDest"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Exposes data in a data flow to other applications by using the ADO.NET DataReader interface. For example, send data to a custom application, written in C#, that requires a DataReader interface.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Exposes data in a data flow to other applications by using the ADO.NET DataReader interface. For example, send data to a custom application, written in C#, that requires a DataReader interface."
+                  name="DataReaderDest">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the number of milliseconds before the component times out."
+                      name="ReadTimeout">30000</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies an object that implements the IDataReader interface."
+                      name="DataReader" />
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the component fails when a read time-out occurs."
+                      name="FailOnTimeout">false</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.DataReaderDestinationAdapter</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Trips Data Flow\DataReaderDest.Inputs[DataReader Destination Input]"
+                      hasSideEffects="true"
+                      name="DataReader Destination Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                </component>
+                <component
                   refId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source"
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -987,12 +1018,12 @@
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ride_id&quot;]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[RideID]"
                           name="RideID"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -1009,12 +1040,12 @@
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;rideable_type&quot;]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[RideableTypeName]"
                           name="RideableTypeName"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -1031,12 +1062,12 @@
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;started_at&quot;]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[StartTime]"
                           name="StartTime"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -1053,12 +1084,12 @@
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;ended_at&quot;]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[EndTime]"
                           name="EndTime"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -1075,12 +1106,12 @@
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;start_station_id&quot;]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;start_station_id&quot;]"
                           name="&quot;start_station_id&quot;"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -1097,12 +1128,12 @@
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;end_station_id&quot;]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;end_station_id&quot;]"
                           name="&quot;end_station_id&quot;"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -1119,12 +1150,12 @@
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;member_casual&quot;]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Output].Columns[&quot;RiderType&quot;]"
                           name="&quot;RiderType&quot;"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -1251,6 +1282,11 @@
               </components>
               <paths>
                 <path
+                  refId="Package\Foreach Loop Container\Trips Data Flow.Paths[Flat File Source Error Output]"
+                  endId="Package\Foreach Loop Container\Trips Data Flow\DataReaderDest.Inputs[DataReader Destination Input]"
+                  name="Flat File Source Error Output"
+                  startId="Package\Foreach Loop Container\Trips Data Flow\Flat File Source.Outputs[Flat File Source Error Output]" />
+                <path
                   refId="Package\Foreach Loop Container\Trips Data Flow.Paths[Flat File Source Output]"
                   endId="Package\Foreach Loop Container\Trips Data Flow\Data Conversion.Inputs[Data Conversion Input]"
                   name="Flat File Source Output"
@@ -1263,8 +1299,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{99FDA1E4-1196-4979-AE43-D6E4F033A754}"
-          DTS:ObjectName="{99FDA1E4-1196-4979-AE43-D6E4F033A754}"
+          DTS:DTSID="{15D1BD4F-4075-44A1-A81D-52F272F31F49}"
+          DTS:ObjectName="{15D1BD4F-4075-44A1-A81D-52F272F31F49}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::VarFilePath" />
       </DTS:ForEachVariableMappings>
@@ -1287,7 +1323,7 @@
           Id="Package\CreateDates"
           TopLeft="694,193" />
         <NodeLayout
-          Size="153,42"
+          Size="156,42"
           Id="Package\Foreach Loop Container\Trips Data Flow"
           TopLeft="20.5,15.5" />
         <ContainerLayout
@@ -1304,48 +1340,86 @@
     design-time-name="Package\Foreach Loop Container\Trips Data Flow">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="161,42"
           Id="Package\Foreach Loop Container\Trips Data Flow\Data Conversion"
-          TopLeft="87,76" />
+          TopLeft="60,159" />
         <NodeLayout
           Size="151,42"
           Id="Package\Foreach Loop Container\Trips Data Flow\Flat File Source"
-          TopLeft="6.5,5.5" />
+          TopLeft="121.5,45.5" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Trips Data Flow.Paths[Flat File Source Output]"
-          TopLeft="82,47.5">
+          TopLeft="197,87.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="85.5,28.5"
+              EndConnector="-56.5,71.5"
               Start="0,0"
-              End="85.5,21">
+              End="-56.5,64">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10.25" />
+                    End="0,31.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,10.25"
-                    Point2="0,14.25"
-                    Point3="4,14.25" />
+                    Point1="0,31.75"
+                    Point2="0,35.75"
+                    Point3="-4,35.75" />
                   <mssgle:LineSegment
-                    End="81.5,14.25" />
+                    End="-52.5,35.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="81.5,14.25"
-                    Point2="85.5,14.25"
-                    Point3="85.5,18.25" />
+                    Point1="-52.5,35.75"
+                    Point2="-56.5,35.75"
+                    Point3="-56.5,39.75" />
                   <mssgle:LineSegment
-                    End="85.5,21" />
+                    End="-56.5,64" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Foreach Loop Container\Trips Data Flow\DataReaderDest"
+          TopLeft="358,196" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Trips Data Flow.Paths[Flat File Source Error Output]"
+          TopLeft="220.833333333333,87.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="217.666666666667,108.5"
+              Start="0,0"
+              End="217.666666666667,101">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.0825688073395" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.0825688073395"
+                    Point2="0,44.0825688073395"
+                    Point3="4,44.0825688073395" />
+                  <mssgle:LineSegment
+                    End="213.666666666667,44.0825688073395" />
+                  <mssgle:CubicBezierSegment
+                    Point1="213.666666666667,44.0825688073395"
+                    Point2="217.666666666667,44.0825688073395"
+                    Point3="217.666666666667,48.0825688073395" />
+                  <mssgle:LineSegment
+                    End="217.666666666667,101" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="36.3382942708334,49.0825688073395,144.990078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
