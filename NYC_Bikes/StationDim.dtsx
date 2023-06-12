@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{F2FECD24-2E69-4C6C-ACA7-10D591FB7C08}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{A4A93099-2DB0-4173-8EA8-E0EA436D55CF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -352,8 +352,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
-          SQLTask:SqlStatementSource="IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DimStationsUpdate]&#xA;GO&#xA;&#xA;&#xA;IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NULL&#xA;CREATE TABLE [dbo].[DimStationsUpdate](&#xA;    [Name] [varchar](100) NOT NULL,&#xA;    [RegionID] [int] NOT NULL,&#xA;    [Longitude] [numeric](11, 3) NOT NULL,&#xA;    [Latitude] [numeric](11, 3) NOT NULL,&#xA;    [ElectricBikeSurchargeWaiverFlag] [bit] NOT NULL,&#xA;    [ExternalID] [char](36) NOT NULL,&#xA;    [Capacity] [smallint] NOT NULL,&#xA;    [StationType] [varchar](30) NOT NULL,&#xA;    [RegionName] [varchar](50) NOT NULL,&#xA;    [KioskFlag] [bit] NOT NULL,&#xA;    [StationKey] [varchar](7) NOT NULL,&#xA;    [ValidFrom] [bigint] NOT NULL,&#xA;    [ValidTo] [bigint] NULL,&#xA;    [IsCurrent] [bit] NOT NULL,&#xA;    [StationID][char](36) NOT NULL&#xA;)&#xA;GO&#xA;"
-          SQLTask:CodePage="1252" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NOT NULL&#xA;    DELETE FROM [dbo].[DimStationsUpdate]&#xA;GO&#xA;&#xA;&#xA;IF OBJECT_ID('[dbo].[DimStationsUpdate]', 'U') IS NULL&#xA;CREATE TABLE [dbo].[DimStationsUpdate](&#xA;    [Name] [varchar](100) NOT NULL,&#xA;    [RegionID] [int] NOT NULL,&#xA;    [Longitude] [numeric](11, 3) NOT NULL,&#xA;    [Latitude] [numeric](11, 3) NOT NULL,&#xA;    [ElectricBikeSurchargeWaiverFlag] [bit] NOT NULL,&#xA;    [ExternalID] [char](36) NOT NULL,&#xA;    [Capacity] [smallint] NOT NULL,&#xA;    [StationType] [varchar](30) NOT NULL,&#xA;    [RegionName] [varchar](50) NOT NULL,&#xA;    [KioskFlag] [bit] NOT NULL,&#xA;    [StationKey] [varchar](7) NOT NULL,&#xA;    [ValidFrom] [bigint] NOT NULL,&#xA;    [ValidTo] [bigint] NULL,&#xA;    [IsCurrent] [bit] NOT NULL,&#xA;    [StationID][char](36) NOT NULL&#xA;)&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -385,7 +384,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F2E2A080-16F5-4DBE-AD84-01D82074C16A}"
-          SQLTask:SqlStatementSource="INSERT INTO [DimStations]&#xA;(&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    [ValidFrom],&#xA;    [ValidTo],&#xA;    [IsCurrent],&#xA;    [StationID]&#xA;)&#xA;SELECT&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    [ValidFrom],&#xA;    [ValidTo],&#xA;    [IsCurrent],&#xA;    [StationID]&#xA;FROM [DimStationsUpdate];&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO [DimStations]&#xA;(&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;    [ValidFrom],&#xA;    [ValidTo],&#xA;    [IsCurrent],&#xA;    [StationID]&#xA;)&#xA;SELECT&#xA;    [Name],&#xA;    [RegionID],&#xA;    [Longitude],&#xA;    [Latitude],&#xA;    [ElectricBikeSurchargeWaiverFlag],&#xA;    [ExternalID],&#xA;    [Capacity],&#xA;    [StationType],&#xA;    [RegionName],&#xA;    [KioskFlag],&#xA;    [StationKey],&#xA;CONVERT(VARCHAR(8), GETDATE(), 112) AS [YYYYMMDD],&#xA;    [ValidTo],&#xA;    [IsCurrent],&#xA;    [StationID]&#xA;FROM [DimStationsUpdate];&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2746,6 +2745,10 @@ where [refTable].[RegionID] = ?</property>
           Id="Package\Create DimStationUpdate"
           TopLeft="319,30" />
         <NodeLayout
+          Size="177,42"
+          Id="Package\Create RegionTable"
+          TopLeft="52,31" />
+        <NodeLayout
           Size="181,42"
           Id="Package\Insert Updates Rows"
           TopLeft="381,282" />
@@ -2881,10 +2884,6 @@ where [refTable].[RegionID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Create RegionTable"
-          TopLeft="52,31" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="229,51.5">
@@ -3279,7 +3278,7 @@ where [refTable].[RegionID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3302,7 +3301,7 @@ where [refTable].[RegionID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3312,7 +3311,7 @@ where [refTable].[RegionID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
