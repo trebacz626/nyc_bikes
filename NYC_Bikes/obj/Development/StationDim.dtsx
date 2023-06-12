@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{F2FECD24-2E69-4C6C-ACA7-10D591FB7C08}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{2C8A0EC6-1CDB-4631-B9A4-6447BC0FC54D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2740,49 +2740,41 @@ where [refTable].[RegionID] = ?</property>
         <NodeLayout
           Size="194,42"
           Id="Package\Clear Update Database"
-          TopLeft="369,396" />
+          TopLeft="84,156" />
         <NodeLayout
           Size="204,42"
           Id="Package\Create DimStationUpdate"
           TopLeft="319,30" />
         <NodeLayout
+          Size="177,42"
+          Id="Package\Create RegionTable"
+          TopLeft="52,31" />
+        <NodeLayout
           Size="181,42"
           Id="Package\Insert Updates Rows"
-          TopLeft="381,282" />
+          TopLeft="320,148" />
         <NodeLayout
           Size="221,42"
           Id="Package\Make previous rows obsolete"
-          TopLeft="353,190" />
+          TopLeft="547,140" />
         <NodeLayout
           Size="166,42"
           Id="Package\Station Data Flow"
-          TopLeft="362,98" />
+          TopLeft="601,24" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="421,72">
+          TopLeft="523,48">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="24,26"
+              EndConnector="78,0"
               Start="0,0"
-              End="24,18.5">
+              End="70.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
-                  <mssgle:LineSegment
-                    End="20,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="20,13"
-                    Point2="24,13"
-                    Point3="24,17" />
-                  <mssgle:LineSegment
-                    End="24,18.5" />
+                    End="70.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2793,30 +2785,30 @@ where [refTable].[RegionID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="445,140">
+          TopLeft="684,66">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="18.5,50"
+              EndConnector="-26.5,74"
               Start="0,0"
-              End="18.5,42.5">
+              End="-26.5,66.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21" />
+                    End="0,33" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21"
-                    Point2="0,25"
-                    Point3="4,25" />
+                    Point1="0,33"
+                    Point2="0,37"
+                    Point3="-4,37" />
                   <mssgle:LineSegment
-                    End="14.5,25" />
+                    End="-22.5,37" />
                   <mssgle:CubicBezierSegment
-                    Point1="14.5,25"
-                    Point2="18.5,25"
-                    Point3="18.5,29" />
+                    Point1="-22.5,37"
+                    Point2="-26.5,37"
+                    Point3="-26.5,41" />
                   <mssgle:LineSegment
-                    End="18.5,42.5" />
+                    End="-26.5,66.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2827,30 +2819,30 @@ where [refTable].[RegionID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="463.5,232">
+          TopLeft="547,161">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8,50"
+              EndConnector="-46,8"
               Start="0,0"
-              End="8,42.5">
+              End="-38.5,8">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21" />
+                    End="-19,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,21"
-                    Point2="0,25"
-                    Point3="4,25" />
+                    Point1="-19,0"
+                    Point2="-23,0"
+                    Point3="-23,4" />
                   <mssgle:LineSegment
-                    End="4,25" />
+                    End="-23,4" />
                   <mssgle:CubicBezierSegment
-                    Point1="4,25"
-                    Point2="8,25"
-                    Point3="8,29" />
+                    Point1="-23,4"
+                    Point2="-23,8"
+                    Point3="-27,8" />
                   <mssgle:LineSegment
-                    End="8,42.5" />
+                    End="-38.5,8" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2861,18 +2853,30 @@ where [refTable].[RegionID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="468.75,324">
+          TopLeft="320,169">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,72"
+              EndConnector="-42,8"
               Start="0,0"
-              End="0,64.5">
+              End="-34.5,8">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,64.5" />
+                    End="-17,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17,0"
+                    Point2="-21,0"
+                    Point3="-21,4" />
+                  <mssgle:LineSegment
+                    End="-21,4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21,4"
+                    Point2="-21,8"
+                    Point3="-25,8" />
+                  <mssgle:LineSegment
+                    End="-34.5,8" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2881,10 +2885,6 @@ where [refTable].[RegionID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Create RegionTable"
-          TopLeft="52,31" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="229,51.5">
@@ -2924,29 +2924,33 @@ where [refTable].[RegionID] = ?</property>
           Id="Package\Station Data Flow\Flat File Source"
           TopLeft="195,17" />
         <NodeLayout
-          Size="115,42"
-          Id="Package\Station Data Flow\Lookup"
-          TopLeft="95,301" />
-        <NodeLayout
           Size="138,42"
           Id="Package\Station Data Flow\Date setting"
           TopLeft="298,385" />
         <NodeLayout
+          Size="115,42"
+          Id="Package\Station Data Flow\Lookup"
+          TopLeft="95,301" />
+        <NodeLayout
           Size="158,42"
           Id="Package\Station Data Flow\Derived Column"
           TopLeft="205,117" />
-        <NodeLayout
-          Size="138,42"
-          Id="Package\Station Data Flow\Has chaned"
-          TopLeft="71,400" />
         <NodeLayout
           Size="176,42"
           Id="Package\Station Data Flow\OLE DB DimStation"
           TopLeft="463.333333333333,570" />
         <NodeLayout
           Size="138,42"
+          Id="Package\Station Data Flow\Has chaned"
+          TopLeft="71,400" />
+        <NodeLayout
+          Size="138,42"
           Id="Package\Station Data Flow\Date lookup"
           TopLeft="336,487" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Station Data Flow\RegionName"
+          TopLeft="187,194" />
         <EdgeLayout
           Id="Package\Station Data Flow.Paths[Lookup No Match Output]"
           TopLeft="170.333333333333,343">
@@ -2980,6 +2984,42 @@ where [refTable].[RegionID] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="42.5269466145835,22.1457975986278,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Station Data Flow.Paths[Lookup Match Output2]"
+          TopLeft="258.5,236">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-106,65"
+              Start="0,0"
+              End="-106,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5"
+                    Point2="0,32.5"
+                    Point3="-4,32.5" />
+                  <mssgle:LineSegment
+                    End="-102,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-102,32.5"
+                    Point2="-106,32.5"
+                    Point3="-106,36.5" />
+                  <mssgle:LineSegment
+                    End="-106,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-101.19138671875,37.5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3078,6 +3118,40 @@ where [refTable].[RegionID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Station Data Flow.Paths[Derived Column Output1]"
+          TopLeft="284,159">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-25.5,35"
+              Start="0,0"
+              End="-25.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="-4,17.5" />
+                  <mssgle:LineSegment
+                    End="-21.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5,17.5"
+                    Point2="-25.5,17.5"
+                    Point3="-25.5,21.5" />
+                  <mssgle:LineSegment
+                    End="-25.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Station Data Flow.Paths[Derived Column Output]"
           TopLeft="367,427">
           <EdgeLayout.Curve>
@@ -3147,80 +3221,6 @@ where [refTable].[RegionID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="143,42"
-          Id="Package\Station Data Flow\RegionName"
-          TopLeft="187,194" />
-        <EdgeLayout
-          Id="Package\Station Data Flow.Paths[Derived Column Output1]"
-          TopLeft="284,159">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-25.5,35"
-              Start="0,0"
-              End="-25.5,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.5"
-                    Point2="0,17.5"
-                    Point3="-4,17.5" />
-                  <mssgle:LineSegment
-                    End="-21.5,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.5,17.5"
-                    Point2="-25.5,17.5"
-                    Point3="-25.5,21.5" />
-                  <mssgle:LineSegment
-                    End="-25.5,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Station Data Flow.Paths[Lookup Match Output2]"
-          TopLeft="258.5,236">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-106,65"
-              Start="0,0"
-              End="-106,57.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.5"
-                    Point2="0,32.5"
-                    Point3="-4,32.5" />
-                  <mssgle:LineSegment
-                    End="-102,32.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-102,32.5"
-                    Point2="-106,32.5"
-                    Point3="-106,36.5" />
-                  <mssgle:LineSegment
-                    End="-106,57.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-101.19138671875,37.5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -3279,7 +3279,7 @@ where [refTable].[RegionID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3302,7 +3302,7 @@ where [refTable].[RegionID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3312,7 +3312,7 @@ where [refTable].[RegionID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

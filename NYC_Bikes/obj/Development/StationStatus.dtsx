@@ -12,8 +12,8 @@
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{86683D91-0F72-417D-A647-8B122B8116C1}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{470F99DE-637C-4994-A64B-FED54C3BBB39}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1120,42 +1120,42 @@ where [refTable].[Date] = ?</property>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="time_of_scrap"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[time_of_scrap]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[num_scooters_available]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="num_scooters_available"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_available]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_available]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[num_scooters_unavailable]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="num_scooters_unavailable"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[valet off_dock_count]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="valet off_dock_count"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_count]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_count]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[valet dock_blocked_count]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="valet dock_blocked_count"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[valet off_dock_capacity]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="valet off_dock_capacity"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1181,7 +1181,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]}</property>
+                          name="Expression">(DT_DBTIMESTAMP)#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[time_of_scrap]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1203,7 +1203,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIMESTAMP)[DATEADD]("hh",[DATEPART]("hh",(DT_DBTIMESTAMP)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]}),(DT_DBDATE)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]})</property>
+                          name="Expression">(DT_DBTIMESTAMP)[DATEADD]("hh",[DATEPART]("hh",(DT_DBTIMESTAMP)#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[time_of_scrap]}),(DT_DBDATE)#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[time_of_scrap]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1225,7 +1225,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBDATE)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]}</property>
+                          name="Expression">(DT_DBDATE)#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[time_of_scrap]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1247,7 +1247,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DBTIME)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]}</property>
+                          name="Expression">(DT_DBTIME)#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[time_of_scrap]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1269,7 +1269,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[LEN](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_available]}) &gt; 0 ? (DT_I2)[REPLACE](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_available]},".","") : 0</property>
+                          name="Expression">[LEN](#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_available]}) &gt; 0 ? (DT_I2)[REPLACE](#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_available]},".","") : 0</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1291,7 +1291,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[LEN](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]}) &gt; 0 ? (DT_I2)[REPLACE](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]},".","") : 0</property>
+                          name="Expression">[LEN](#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]}) &gt; 0 ? (DT_I2)[REPLACE](#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]},".","") : 0</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1313,7 +1313,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[LEN](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_count]}) &gt; 0 ? (DT_I2)[REPLACE](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_count]},".","") : 0</property>
+                          name="Expression">[LEN](#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_count]}) &gt; 0 ? (DT_I2)[REPLACE](#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_count]},".","") : 0</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1335,7 +1335,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[LEN](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]}) &gt; 0 ? (DT_I2)[REPLACE](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]},".","") : 0</property>
+                          name="Expression">[LEN](#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]}) &gt; 0 ? (DT_I2)[REPLACE](#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]},".","") : 0</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1357,7 +1357,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[LEN](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]}) &gt; 0 ? (DT_I2)[REPLACE](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]},".","") : 0</property>
+                          name="Expression">[LEN](#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]}) &gt; 0 ? (DT_I2)[REPLACE](#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]},".","") : 0</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1387,707 +1387,6 @@ where [refTable].[Date] = ?</property>
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Flat File Source"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1045"
-              name="Flat File Source"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[StationStatusFile]"
-                  connectionManagerRefId="Package.ConnectionManagers[StationStatusFile]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_available]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_scooters_available]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_available]"
-                      name="num_scooters_available"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_disabled]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_docks_disabled]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_disabled]"
-                      name="num_docks_disabled"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eightd_has_available_keys]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]"
-                      name="eightd_has_available_keys"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_available]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_docks_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_available]"
-                      name="num_docks_available"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_status]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_status]"
-                      length="30"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_status]"
-                      name="station_status"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_reported]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_reported]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_reported]"
-                      name="last_reported"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_renting]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[is_renting]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_renting]"
-                      name="is_renting"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_returning]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[is_returning]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_returning]"
-                      name="is_returning"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_available]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_bikes_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_available]"
-                      name="num_bikes_available"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_installed]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[is_installed]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_installed]"
-                      name="is_installed"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[legacy_id]"
-                      length="36"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]"
-                      name="legacy_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_ebikes_available]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_ebikes_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_ebikes_available]"
-                      name="num_ebikes_available"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_id]"
-                      length="36"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]"
-                      name="station_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_scooters_unavailable]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]"
-                      name="num_scooters_unavailable"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_disabled]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_bikes_disabled]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_disabled]"
-                      name="num_bikes_disabled"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_active_station_services]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eightd_active_station_services]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_active_station_services]"
-                      name="eightd_active_station_services"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_count]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet off_dock_count]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_count]"
-                      name="valet off_dock_count"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet dock_blocked_count]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]"
-                      name="valet dock_blocked_count"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet station_id]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet station_id]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet station_id]"
-                      name="valet station_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet off_dock_capacity]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]"
-                      name="valet off_dock_capacity"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet valet_revision]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet valet_revision]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet valet_revision]"
-                      name="valet valet_revision"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet active]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet active]"
-                      length="30"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet active]"
-                      name="valet active"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet region]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet region]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet region]"
-                      name="valet region"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[time_of_scrap]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]"
-                      name="time_of_scrap"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_scooters_available]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="num_scooters_available" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_docks_disabled]"
-                      dataType="i2"
-                      name="num_docks_disabled" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eightd_has_available_keys]"
-                      dataType="bool"
-                      name="eightd_has_available_keys" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_docks_available]"
-                      dataType="i2"
-                      name="num_docks_available" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="station_status" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_reported]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="last_reported" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[is_renting]"
-                      dataType="bool"
-                      name="is_renting" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[is_returning]"
-                      dataType="bool"
-                      name="is_returning" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_bikes_available]"
-                      dataType="i2"
-                      name="num_bikes_available" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[is_installed]"
-                      dataType="bool"
-                      name="is_installed" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[legacy_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="36"
-                      name="legacy_id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_ebikes_available]"
-                      dataType="i2"
-                      name="num_ebikes_available" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[station_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="36"
-                      name="station_id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_scooters_unavailable]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="num_scooters_unavailable" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[num_bikes_disabled]"
-                      dataType="i2"
-                      name="num_bikes_disabled" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[eightd_active_station_services]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="eightd_active_station_services" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet off_dock_count]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet off_dock_count" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet dock_blocked_count]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet dock_blocked_count" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet station_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet station_id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet off_dock_capacity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet off_dock_capacity" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet valet_revision]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet valet_revision" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet active]"
-                      codePage="1252"
-                      dataType="str"
-                      length="30"
-                      name="valet active" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[valet region]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="valet region" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[time_of_scrap]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="time_of_scrap" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1250"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2138,25 +1437,25 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="num_scooters_available"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_available]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_available]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_docks_disabled]"
                       cachedDataType="i2"
                       cachedName="num_docks_disabled"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_docks_disabled]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_disabled]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_docks_disabled]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[eightd_has_available_keys]"
                       cachedDataType="bool"
                       cachedName="eightd_has_available_keys"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[eightd_has_available_keys]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_docks_available]"
                       cachedDataType="i2"
                       cachedName="num_docks_available"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_docks_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_available]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_docks_available]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[station_status]"
                       cachedCodepage="1252"
@@ -2164,7 +1463,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="30"
                       cachedName="station_status"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[station_status]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_status]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_status]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[last_reported]"
                       cachedCodepage="1252"
@@ -2172,31 +1471,31 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="last_reported"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[last_reported]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_reported]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[last_reported]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[is_renting]"
                       cachedDataType="bool"
                       cachedName="is_renting"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[is_renting]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_renting]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_renting]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[is_returning]"
                       cachedDataType="bool"
                       cachedName="is_returning"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[is_returning]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_returning]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_returning]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_bikes_available]"
                       cachedDataType="i2"
                       cachedName="num_bikes_available"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_available]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_bikes_available]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[is_installed]"
                       cachedDataType="bool"
                       cachedName="is_installed"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[is_installed]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_installed]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_installed]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[legacy_id]"
                       cachedCodepage="1252"
@@ -2204,13 +1503,13 @@ where [refTable].[Date] = ?</property>
                       cachedLength="36"
                       cachedName="legacy_id"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[legacy_id]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[legacy_id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_ebikes_available]"
                       cachedDataType="i2"
                       cachedName="num_ebikes_available"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_ebikes_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_ebikes_available]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_ebikes_available]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[station_id]"
                       cachedCodepage="1252"
@@ -2218,7 +1517,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="36"
                       cachedName="station_id"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_scooters_unavailable]"
                       cachedCodepage="1252"
@@ -2226,13 +1525,13 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="num_scooters_unavailable"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_unavailable]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[num_bikes_disabled]"
                       cachedDataType="i2"
                       cachedName="num_bikes_disabled"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_disabled]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_disabled]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_bikes_disabled]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[eightd_active_station_services]"
                       cachedCodepage="1252"
@@ -2240,7 +1539,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="eightd_active_station_services"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[eightd_active_station_services]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_active_station_services]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[eightd_active_station_services]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet off_dock_count]"
                       cachedCodepage="1252"
@@ -2248,7 +1547,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="valet off_dock_count"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_count]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_count]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_count]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet dock_blocked_count]"
                       cachedCodepage="1252"
@@ -2256,7 +1555,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="valet dock_blocked_count"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet dock_blocked_count]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet station_id]"
                       cachedCodepage="1252"
@@ -2264,7 +1563,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="valet station_id"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet station_id]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet station_id]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet station_id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet off_dock_capacity]"
                       cachedCodepage="1252"
@@ -2272,7 +1571,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="valet off_dock_capacity"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_capacity]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet valet_revision]"
                       cachedCodepage="1252"
@@ -2280,7 +1579,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="valet valet_revision"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet valet_revision]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet valet_revision]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet valet_revision]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet active]"
                       cachedCodepage="1252"
@@ -2288,7 +1587,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="30"
                       cachedName="valet active"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet active]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet active]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet active]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[valet region]"
                       cachedCodepage="1252"
@@ -2296,7 +1595,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="valet region"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[valet region]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet region]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet region]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[time_of_scrap]"
                       cachedCodepage="1252"
@@ -2304,7 +1603,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="time_of_scrap"
                       externalMetadataColumnId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].ExternalColumns[time_of_scrap]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[time_of_scrap]" />
                     <inputColumn
                       refId="Package\Data Flow Task\NoWetatherAvailableYet.Inputs[Flat File Destination Input].Columns[LogDateTime]"
                       cachedDataType="dbTimeStamp"
@@ -2563,11 +1862,11 @@ where [refTable].[Date] = ?</property>
               </inputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Data Flow Task\OLE DB FactStationStatus"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="OLE DB FactStationStatus"
               usesDispositions="true"
               version="4">
               <properties>
@@ -2620,7 +1919,7 @@ where [refTable].[Date] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\OLE DB FactStationStatus.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.NYCBikes_dwh]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2628,225 +1927,225 @@ where [refTable].[Date] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WeatherKey]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[WeatherKey]"
                       cachedDataType="i8"
                       cachedName="WeatherKey"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherKey]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[WeatherKey]"
                       lineageId="Package\Data Flow Task\WeatherLookup.Outputs[Lookup Match Output].Columns[WeatherKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[DateKey]"
                       cachedDataType="i8"
                       cachedName="DateKey"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
                       lineageId="Package\Data Flow Task\DateLookup.Outputs[Lookup Match Output].Columns[DateKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LogTime]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[LogTime]"
                       cachedDataType="dbTime"
                       cachedName="LogTime"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReportTime]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ReportTime]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogTime]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StationKey]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[StationKey]"
                       cachedDataType="i4"
                       cachedName="StationKey"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
                       lineageId="Package\Data Flow Task\Station Lookup.Outputs[Lookup Match Output].Columns[StationKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LogDateTime]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[LogDateTime]"
                       cachedDataType="dbTimeStamp"
                       cachedName="LogDateTime"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReportDateTime]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ReportDateTime]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[LogDateTime]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[eightd_has_available_keys]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[eightd_has_available_keys]"
                       cachedDataType="bool"
                       cachedName="eightd_has_available_keys"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HasAvailableKeysFlag]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[HasAvailableKeysFlag]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[is_installed]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[is_installed]"
                       cachedDataType="bool"
                       cachedName="is_installed"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InstalledFlag]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_installed]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[InstalledFlag]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_installed]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[station_status]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[station_status]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="station_status"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationStatus]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_status]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[StationStatus]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_status]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[is_returning]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[is_returning]"
                       cachedDataType="bool"
                       cachedName="is_returning"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReturningFlag]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_returning]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ReturningFlag]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_returning]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[num_docks_available]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[num_docks_available]"
                       cachedDataType="i2"
                       cachedName="num_docks_available"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DocksAvailableNumber]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_available]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[DocksAvailableNumber]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_docks_available]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[num_bikes_available]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[num_bikes_available]"
                       cachedDataType="i2"
                       cachedName="num_bikes_available"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BikesAvailableNumber]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_available]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[BikesAvailableNumber]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_bikes_available]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[num_bikes_disabled]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[num_bikes_disabled]"
                       cachedDataType="i2"
                       cachedName="num_bikes_disabled"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BikesDisabledNumber]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_disabled]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[BikesDisabledNumber]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_bikes_disabled]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[num_ebikes_available]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[num_ebikes_available]"
                       cachedDataType="i2"
                       cachedName="num_ebikes_available"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EbikesAvailableNumber]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_ebikes_available]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[EbikesAvailableNumber]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_ebikes_available]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[is_renting]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[is_renting]"
                       cachedDataType="bool"
                       cachedName="is_renting"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RentingFlag]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_renting]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[RentingFlag]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_renting]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[valet active]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[valet active]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="valet active"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValetStatus]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet active]" />
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ValetStatus]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet active]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NumScootersAvailable]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[NumScootersAvailable]"
                       cachedDataType="i4"
                       cachedName="NumScootersAvailable"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ScootersAvailableNumber]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ScootersAvailableNumber]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NumScootersAvailable]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ValetOffDockCount]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[ValetOffDockCount]"
                       cachedDataType="i4"
                       cachedName="ValetOffDockCount"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValetOffDockCount]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ValetOffDockCount]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ValetOffDockCount]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ValetDockBlockedCount]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[ValetDockBlockedCount]"
                       cachedDataType="i4"
                       cachedName="ValetDockBlockedCount"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValetBlockedDocksNumber]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ValetBlockedDocksNumber]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ValetDockBlockedCount]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ValetOffDockCapacity]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[ValetOffDockCapacity]"
                       cachedDataType="i4"
                       cachedName="ValetOffDockCapacity"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValetOffDockCapacity]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ValetOffDockCapacity]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ValetOffDockCapacity]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NumScootersUnavailable]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].Columns[NumScootersUnavailable]"
                       cachedDataType="i4"
                       cachedName="NumScootersUnavailable"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ScootersUnavailableNumber]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ScootersUnavailableNumber]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[NumScootersUnavailable]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationStatusKey]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[StationStatusKey]"
                       dataType="i8"
                       name="StationStatusKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[StationKey]"
                       dataType="i4"
                       name="StationKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
                       dataType="i8"
                       name="DateKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReportTime]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ReportTime]"
                       dataType="dbTime2"
                       name="ReportTime" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReportDateTime]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ReportDateTime]"
                       dataType="dbTimeStamp"
                       name="ReportDateTime" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HasAvailableKeysFlag]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[HasAvailableKeysFlag]"
                       dataType="bool"
                       name="HasAvailableKeysFlag" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InstalledFlag]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[InstalledFlag]"
                       dataType="bool"
                       name="InstalledFlag" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StationStatus]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[StationStatus]"
                       codePage="1252"
                       dataType="str"
                       length="30"
                       name="StationStatus" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ReturningFlag]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ReturningFlag]"
                       dataType="bool"
                       name="ReturningFlag" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ScootersAvailableNumber]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ScootersAvailableNumber]"
                       dataType="i2"
                       name="ScootersAvailableNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ScootersUnavailableNumber]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ScootersUnavailableNumber]"
                       dataType="i2"
                       name="ScootersUnavailableNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DocksAvailableNumber]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[DocksAvailableNumber]"
                       dataType="i2"
                       name="DocksAvailableNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BikesDisabledNumber]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[BikesDisabledNumber]"
                       dataType="i2"
                       name="BikesDisabledNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BikesAvailableNumber]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[BikesAvailableNumber]"
                       dataType="i2"
                       name="BikesAvailableNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EbikesAvailableNumber]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[EbikesAvailableNumber]"
                       dataType="i2"
                       name="EbikesAvailableNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RentingFlag]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[RentingFlag]"
                       dataType="bool"
                       name="RentingFlag" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValetStatus]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ValetStatus]"
                       codePage="1252"
                       dataType="str"
                       length="30"
                       name="ValetStatus" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValetBlockedDocksNumber]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ValetBlockedDocksNumber]"
                       dataType="i2"
                       name="ValetBlockedDocksNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValetOffDockCount]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ValetOffDockCount]"
                       dataType="i2"
                       name="ValetOffDockCount" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValetOffDockCapacity]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[ValetOffDockCapacity]"
                       dataType="i2"
                       name="ValetOffDockCapacity" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherKey]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input].ExternalColumns[WeatherKey]"
                       dataType="i8"
                       name="WeatherKey" />
                   </externalMetadataColumns>
@@ -2854,22 +2153,723 @@ where [refTable].[Date] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task\OLE DB FactStationStatus.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\OLE DB FactStationStatus.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\OLE DB FactStationStatus.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\OLE DB FactStationStatus.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\RawStatusData"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="RawStatusData"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\RawStatusData.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[StationStatusFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[StationStatusFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_available]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_scooters_available]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_available]"
+                      name="num_scooters_available"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_docks_disabled]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_docks_disabled]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_docks_disabled]"
+                      name="num_docks_disabled"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[eightd_has_available_keys]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]"
+                      name="eightd_has_available_keys"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_docks_available]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_docks_available]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_docks_available]"
+                      name="num_docks_available"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[station_status]"
+                      length="30"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_status]"
+                      name="station_status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[last_reported]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[last_reported]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[last_reported]"
+                      name="last_reported"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_renting]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[is_renting]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_renting]"
+                      name="is_renting"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_returning]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[is_returning]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_returning]"
+                      name="is_returning"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_bikes_available]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_bikes_available]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_bikes_available]"
+                      name="num_bikes_available"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_installed]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[is_installed]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_installed]"
+                      name="is_installed"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[legacy_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[legacy_id]"
+                      length="36"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[legacy_id]"
+                      name="legacy_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_ebikes_available]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_ebikes_available]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_ebikes_available]"
+                      name="num_ebikes_available"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[station_id]"
+                      length="36"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_id]"
+                      name="station_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_scooters_unavailable]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]"
+                      name="num_scooters_unavailable"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_bikes_disabled]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_bikes_disabled]"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_bikes_disabled]"
+                      name="num_bikes_disabled"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[eightd_active_station_services]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[eightd_active_station_services]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[eightd_active_station_services]"
+                      name="eightd_active_station_services"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_count]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet off_dock_count]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_count]"
+                      name="valet off_dock_count"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet dock_blocked_count]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]"
+                      name="valet dock_blocked_count"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet station_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet station_id]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet station_id]"
+                      name="valet station_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet off_dock_capacity]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]"
+                      name="valet off_dock_capacity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet valet_revision]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet valet_revision]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet valet_revision]"
+                      name="valet valet_revision"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet active]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet active]"
+                      length="30"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet active]"
+                      name="valet active"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet region]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet region]"
+                      name="valet region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[time_of_scrap]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[time_of_scrap]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[time_of_scrap]"
+                      name="time_of_scrap"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_scooters_available]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="num_scooters_available" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_docks_disabled]"
+                      dataType="i2"
+                      name="num_docks_disabled" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[eightd_has_available_keys]"
+                      dataType="bool"
+                      name="eightd_has_available_keys" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_docks_available]"
+                      dataType="i2"
+                      name="num_docks_available" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[station_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="station_status" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[last_reported]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="last_reported" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[is_renting]"
+                      dataType="bool"
+                      name="is_renting" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[is_returning]"
+                      dataType="bool"
+                      name="is_returning" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_bikes_available]"
+                      dataType="i2"
+                      name="num_bikes_available" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[is_installed]"
+                      dataType="bool"
+                      name="is_installed" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[legacy_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="36"
+                      name="legacy_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_ebikes_available]"
+                      dataType="i2"
+                      name="num_ebikes_available" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[station_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="36"
+                      name="station_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_scooters_unavailable]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="num_scooters_unavailable" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[num_bikes_disabled]"
+                      dataType="i2"
+                      name="num_bikes_disabled" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[eightd_active_station_services]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="eightd_active_station_services" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet off_dock_count]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet off_dock_count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet dock_blocked_count]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet dock_blocked_count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet station_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet station_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet off_dock_capacity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet off_dock_capacity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet valet_revision]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet valet_revision" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet active]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="valet active" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[valet region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="valet region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].ExternalColumns[time_of_scrap]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="time_of_scrap" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2934,7 +2934,7 @@ where [refTable].[StationID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_id]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2963,7 +2963,7 @@ where [refTable].[StationID] = ?</property>
                       cachedDataType="str"
                       cachedLength="36"
                       cachedName="station_id"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]">
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_id]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3109,25 +3109,25 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="num_scooters_available"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_available]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_available]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_docks_disabled]"
                       cachedDataType="i2"
                       cachedName="num_docks_disabled"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_docks_disabled]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_disabled]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_docks_disabled]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[eightd_has_available_keys]"
                       cachedDataType="bool"
                       cachedName="eightd_has_available_keys"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[eightd_has_available_keys]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[eightd_has_available_keys]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_docks_available]"
                       cachedDataType="i2"
                       cachedName="num_docks_available"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_docks_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_docks_available]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_docks_available]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[station_status]"
                       cachedCodepage="1252"
@@ -3135,7 +3135,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="30"
                       cachedName="station_status"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[station_status]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_status]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_status]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[last_reported]"
                       cachedCodepage="1252"
@@ -3143,31 +3143,31 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="last_reported"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[last_reported]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[last_reported]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[last_reported]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[is_renting]"
                       cachedDataType="bool"
                       cachedName="is_renting"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[is_renting]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_renting]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_renting]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[is_returning]"
                       cachedDataType="bool"
                       cachedName="is_returning"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[is_returning]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_returning]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_returning]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_bikes_available]"
                       cachedDataType="i2"
                       cachedName="num_bikes_available"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_available]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_bikes_available]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[is_installed]"
                       cachedDataType="bool"
                       cachedName="is_installed"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[is_installed]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[is_installed]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[is_installed]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[legacy_id]"
                       cachedCodepage="1252"
@@ -3175,13 +3175,13 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="36"
                       cachedName="legacy_id"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[legacy_id]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[legacy_id]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[legacy_id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_ebikes_available]"
                       cachedDataType="i2"
                       cachedName="num_ebikes_available"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_ebikes_available]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_ebikes_available]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_ebikes_available]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[station_id]"
                       cachedCodepage="1252"
@@ -3189,7 +3189,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="36"
                       cachedName="station_id"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[station_id]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[station_id]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[station_id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_scooters_unavailable]"
                       cachedCodepage="1252"
@@ -3197,13 +3197,13 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="num_scooters_unavailable"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_scooters_unavailable]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_scooters_unavailable]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[num_bikes_disabled]"
                       cachedDataType="i2"
                       cachedName="num_bikes_disabled"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[num_bikes_disabled]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[num_bikes_disabled]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[num_bikes_disabled]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[eightd_active_station_services]"
                       cachedCodepage="1252"
@@ -3211,7 +3211,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="eightd_active_station_services"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[eightd_active_station_services]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[eightd_active_station_services]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[eightd_active_station_services]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet off_dock_count]"
                       cachedCodepage="1252"
@@ -3219,7 +3219,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="valet off_dock_count"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_count]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_count]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_count]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet dock_blocked_count]"
                       cachedCodepage="1252"
@@ -3227,7 +3227,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="valet dock_blocked_count"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet dock_blocked_count]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet dock_blocked_count]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet station_id]"
                       cachedCodepage="1252"
@@ -3235,7 +3235,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="valet station_id"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet station_id]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet station_id]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet station_id]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet off_dock_capacity]"
                       cachedCodepage="1252"
@@ -3243,7 +3243,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="valet off_dock_capacity"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet off_dock_capacity]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet off_dock_capacity]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet valet_revision]"
                       cachedCodepage="1252"
@@ -3251,7 +3251,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="valet valet_revision"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet valet_revision]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet valet_revision]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet valet_revision]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet active]"
                       cachedCodepage="1252"
@@ -3259,7 +3259,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="30"
                       cachedName="valet active"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet active]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet active]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet active]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[valet region]"
                       cachedCodepage="1252"
@@ -3267,7 +3267,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="valet region"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[valet region]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[valet region]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[valet region]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[time_of_scrap]"
                       cachedCodepage="1252"
@@ -3275,7 +3275,7 @@ where [refTable].[StationID] = ?</property>
                       cachedLength="50"
                       cachedName="time_of_scrap"
                       externalMetadataColumnId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].ExternalColumns[time_of_scrap]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[time_of_scrap]" />
+                      lineageId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output].Columns[time_of_scrap]" />
                     <inputColumn
                       refId="Package\Data Flow Task\StationNotAvailable.Inputs[Flat File Destination Input].Columns[LogDateTime]"
                       cachedDataType="dbTimeStamp"
@@ -3779,7 +3779,7 @@ where [refTable].[Time] = ?</property>
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
               endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Data Flow Task\RawStatusData.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output]"
               endId="Package\Data Flow Task\DateLookup.Inputs[Lookup Input]"
@@ -3787,7 +3787,7 @@ where [refTable].[Time] = ?</property>
               startId="Package\Data Flow Task\WeatherLookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output1]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\OLE DB FactStationStatus.Inputs[OLE DB Destination Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\DateLookup.Outputs[Lookup Match Output]" />
             <path
@@ -3958,239 +3958,225 @@ where [refTable].[Time] = ?</property>
         <NodeLayout
           Size="157,42"
           Id="Package\Data Flow Task\WeatherLookup"
-          TopLeft="268,429" />
+          TopLeft="373,208" />
         <NodeLayout
           Size="138,42"
           Id="Package\Data Flow Task\DateLookup"
-          TopLeft="292,524" />
+          TopLeft="365,290" />
         <NodeLayout
-          Size="175,42"
-          Id="Package\Data Flow Task\StationNotAvailable"
-          TopLeft="532,248" />
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Data Flow Task\Station Lookup"
-          TopLeft="221,221" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="289,605" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="188,148" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="197,60" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Data Flow Task\Conditional Split"
-          TopLeft="305,332" />
+          Size="199,42"
+          Id="Package\Data Flow Task\NoWetatherAvailableYet"
+          TopLeft="581,210" />
         <NodeLayout
           Size="176,42"
           Id="Package\Data Flow Task\StatusExistsLookup"
-          TopLeft="62,284" />
+          TopLeft="122,130" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task\RawStatusData"
+          TopLeft="197,60" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Data Flow Task\Station Lookup"
+          TopLeft="390,131" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Data Flow Task\OLE DB FactStationStatus"
+          TopLeft="336,377" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="401,59" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Data Flow Task\StationNotAvailable"
+          TopLeft="585,132" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Data Flow Task\Conditional Split"
+          TopLeft="152,201" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
-          TopLeft="373,242">
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
+          TopLeft="530,230">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="159,27"
+              EndConnector="51,0"
               Start="0,0"
-              End="151.5,27">
+              End="43.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="75.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="75.5,0"
-                    Point2="79.5,0"
-                    Point3="79.5,4" />
-                  <mssgle:LineSegment
-                    End="79.5,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="79.5,23"
-                    Point2="79.5,27"
-                    Point3="83.5,27" />
-                  <mssgle:LineSegment
-                    End="151.5,27" />
+                    End="43.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="23.69361328125,-17.609375,111.6127734375,11.609375"
+              BoundingBox="-34.05638671875,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
+          TopLeft="542,152.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="43,0"
+              Start="0,0"
+              End="35.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="35.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-38.05638671875,5,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="238,305">
+          TopLeft="210,172">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="67,48"
+              EndConnector="21.5,29"
               Start="0,0"
-              End="59.5,48">
+              End="21.5,21.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="29.5,0" />
+                    End="0,10.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="29.5,0"
-                    Point2="33.5,0"
-                    Point3="33.5,4" />
+                    Point1="0,10.5"
+                    Point2="0,14.5"
+                    Point3="4,14.5" />
                   <mssgle:LineSegment
-                    End="33.5,44" />
+                    End="17.5,14.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="33.5,44"
-                    Point2="33.5,48"
-                    Point3="37.5,48" />
+                    Point1="17.5,14.5"
+                    Point2="21.5,14.5"
+                    Point3="21.5,18.5" />
                   <mssgle:LineSegment
-                    End="59.5,48" />
+                    End="21.5,21.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-22.30638671875,-17.609375,111.6127734375,11.609375"
+              BoundingBox="-45.05638671875,19.5,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
-          TopLeft="221,242">
+          TopLeft="390,151.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-71,42"
+              EndConnector="-92,0"
               Start="0,0"
-              End="-71,34.5">
+              End="-84.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-67,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-67,0"
-                    Point2="-71,0"
-                    Point3="-71,4" />
-                  <mssgle:LineSegment
-                    End="-71,34.5" />
+                    End="-84.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-119.19138671875,-17.609375,96.3827734375,11.609375"
+              BoundingBox="-90.44138671875,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
-          TopLeft="361,566">
+          TopLeft="437.25,332">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="16.5,39"
+              EndConnector="0,45"
               Start="0,0"
-              End="16.5,31.5">
+              End="0,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.5"
-                    Point2="0,19.5"
-                    Point3="4,19.5" />
-                  <mssgle:LineSegment
-                    End="12.5,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="12.5,19.5"
-                    Point2="16.5,19.5"
-                    Point3="16.5,23.5" />
-                  <mssgle:LineSegment
-                    End="16.5,31.5" />
+                    End="0,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-39.94138671875,24.5,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,12.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="346.5,471">
+          TopLeft="451.5,250">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="14.5,53"
+              EndConnector="-17.5,40"
               Start="0,0"
-              End="14.5,45.5">
+              End="-17.5,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.5" />
+                    End="0,16" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.5"
-                    Point2="0,26.5"
-                    Point3="4,26.5" />
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="-4,20" />
                   <mssgle:LineSegment
-                    End="10.5,26.5" />
+                    End="-13.5,20" />
                   <mssgle:CubicBezierSegment
-                    Point1="10.5,26.5"
-                    Point2="14.5,26.5"
-                    Point3="14.5,30.5" />
+                    Point1="-13.5,20"
+                    Point2="-17.5,20"
+                    Point3="-17.5,24" />
                   <mssgle:LineSegment
-                    End="14.5,45.5" />
+                    End="-17.5,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-40.94138671875,31.5,96.3827734375,11.609375"
+              BoundingBox="-56.94138671875,25,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="275,102">
+          TopLeft="352,80.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8,46"
+              EndConnector="49,0"
               Start="0,0"
-              End="-8,38.5">
+              End="41.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19"
-                    Point2="0,23"
-                    Point3="-4,23" />
-                  <mssgle:LineSegment
-                    End="-4,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4,23"
-                    Point2="-8,23"
-                    Point3="-8,27" />
-                  <mssgle:LineSegment
-                    End="-8,38.5" />
+                    End="41.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4201,30 +4187,30 @@ where [refTable].[Time] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="267,190">
+          TopLeft="480,101">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="30,31"
+              EndConnector="-14,30"
               Start="0,0"
-              End="30,23.5">
+              End="-14,22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.5" />
+                    End="0,11" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="4,15.5" />
+                    Point1="0,11"
+                    Point2="0,15"
+                    Point3="-4,15" />
                   <mssgle:LineSegment
-                    End="26,15.5" />
+                    End="-10,15" />
                   <mssgle:CubicBezierSegment
-                    Point1="26,15.5"
-                    Point2="30,15.5"
-                    Point3="30,19.5" />
+                    Point1="-10,15"
+                    Point2="-14,15"
+                    Point3="-14,19" />
                   <mssgle:LineSegment
-                    End="30,23.5" />
+                    End="-14,22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4235,77 +4221,25 @@ where [refTable].[Time] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Current]"
-          TopLeft="384.5,374">
+          TopLeft="311,225.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-38,55"
+              EndConnector="62,0"
               Start="0,0"
-              End="-38,47.5">
+              End="54.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.5"
-                    Point2="0,27.5"
-                    Point3="-4,27.5" />
-                  <mssgle:LineSegment
-                    End="-34,27.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-34,27.5"
-                    Point2="-38,27.5"
-                    Point3="-38,31.5" />
-                  <mssgle:LineSegment
-                    End="-38,47.5" />
+                    End="54.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-36.31890625,32.5,34.6378125,9.5537109375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="199,42"
-          Id="Package\Data Flow Task\NoWetatherAvailableYet"
-          TopLeft="560,501" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output2]"
-          TopLeft="371.333333333333,471">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="288.166666666667,30"
-              Start="0,0"
-              End="288.166666666667,22.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.18158890290038" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.18158890290038"
-                    Point2="0,12.1815889029004"
-                    Point3="4,12.1815889029004" />
-                  <mssgle:LineSegment
-                    End="284.166666666667,12.1815889029004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="284.166666666667,12.1815889029004"
-                    Point2="288.166666666667,12.1815889029004"
-                    Point3="288.166666666667,16.1815889029004" />
-                  <mssgle:LineSegment
-                    End="288.166666666667,22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="88.2769466145834,17.1815889029004,111.6127734375,11.609375"
+              BoundingBox="9.93109375,5,34.6378125,9.5537109375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4318,7 +4252,7 @@ where [refTable].[Time] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4359,6 +4293,29 @@ where [refTable].[Time] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\StatusExistsLookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FactStationStatus]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Station Lookup">
     <Properties>
       <Property>
@@ -4382,7 +4339,7 @@ where [refTable].[Time] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\OLE DB FactStationStatus">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4391,29 +4348,6 @@ where [refTable].[Time] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\StatusExistsLookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FactStationStatus]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

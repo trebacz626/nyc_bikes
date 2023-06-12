@@ -12,8 +12,8 @@
   DTS:ObjectName="Bikes_Weather_Better"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="124"
-  DTS:VersionGUID="{371BB332-B501-4664-B328-5088EBF0FCCB}">
+  DTS:VersionBuild="127"
+  DTS:VersionGUID="{141F39DB-9B00-4418-AA4C-8C4DF6141F92}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4161,45 +4161,33 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
         <NodeLayout
           Size="165,42"
           Id="Package\Clear Unmatched"
-          TopLeft="445,375" />
+          TopLeft="228,369" />
         <NodeLayout
           Size="242,42"
           Id="Package\Download temporary weather csv"
-          TopLeft="408,80" />
+          TopLeft="202,74" />
         <NodeLayout
           Size="152,42"
           Id="Package\Fill Unmatched"
-          TopLeft="468,293" />
+          TopLeft="240,273" />
         <NodeLayout
           Size="286,42"
           Id="Package\Load temporary weather csv into database"
-          TopLeft="417,191" />
+          TopLeft="175,183" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="529,122">
+          TopLeft="320.5,116">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="31,69"
+              EndConnector="0,67"
               Start="0,0"
-              End="31,61.5">
+              End="0,59.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.5"
-                    Point2="0,34.5"
-                    Point3="4,34.5" />
-                  <mssgle:LineSegment
-                    End="27,34.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27,34.5"
-                    Point2="31,34.5"
-                    Point3="31,38.5" />
-                  <mssgle:LineSegment
-                    End="31,61.5" />
+                    End="0,59.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4210,30 +4198,18 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="560,233">
+          TopLeft="317,225">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-16,60"
+              EndConnector="0,48"
               Start="0,0"
-              End="-16,52.5">
+              End="0,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="-4,30" />
-                  <mssgle:LineSegment
-                    End="-12,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12,30"
-                    Point2="-16,30"
-                    Point3="-16,34" />
-                  <mssgle:LineSegment
-                    End="-16,52.5" />
+                    End="0,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4244,30 +4220,18 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="544,335">
+          TopLeft="313.25,315">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-16.5,40"
+              EndConnector="0,54"
               Start="0,0"
-              End="-16.5,32.5">
+              End="0,46.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16"
-                    Point2="0,20"
-                    Point3="-4,20" />
-                  <mssgle:LineSegment
-                    End="-12.5,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12.5,20"
-                    Point2="-16.5,20"
-                    Point3="-16.5,24" />
-                  <mssgle:LineSegment
-                    End="-16.5,32.5" />
+                    End="0,46.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4287,7 +4251,7 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
         <NodeLayout
           Size="177,42"
           Id="Package\Fill Unmatched\OLE DB Destination"
-          TopLeft="245,317" />
+          TopLeft="295,203" />
         <NodeLayout
           Size="157,42"
           Id="Package\Fill Unmatched\OLE DB Source"
@@ -4295,76 +4259,50 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
         <NodeLayout
           Size="188,43"
           Id="Package\Fill Unmatched\Lookup"
-          TopLeft="277,231" />
+          TopLeft="297,120" />
         <EdgeLayout
           Id="Package\Fill Unmatched.Paths[OLE DB Source Output]"
-          TopLeft="385.5,93">
+          TopLeft="388.25,93">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-14.5,138"
+              EndConnector="0,27"
               Start="0,0"
-              End="-14.5,130.5">
+              End="0,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,65" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,65"
-                    Point2="0,69"
-                    Point3="-4,69" />
-                  <mssgle:LineSegment
-                    End="-10.5,69" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-10.5,69"
-                    Point2="-14.5,69"
-                    Point3="-14.5,73" />
-                  <mssgle:LineSegment
-                    End="-14.5,130.5" />
+                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fill Unmatched.Paths[Lookup Match Output]"
-          TopLeft="371,274">
+          TopLeft="387.25,163">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-37.5,43"
+              EndConnector="0,40"
               Start="0,0"
-              End="-37.5,35.5">
+              End="0,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.5"
-                    Point2="0,21.5"
-                    Point3="-4,21.5" />
-                  <mssgle:LineSegment
-                    End="-33.5,21.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-33.5,21.5"
-                    Point2="-37.5,21.5"
-                    Point3="-37.5,25.5" />
-                  <mssgle:LineSegment
-                    End="-37.5,35.5" />
+                    End="0,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-66.94138671875,26.5,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,10.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4426,263 +4364,123 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="123,42"
-          Id="Package\Load temporary weather csv into database\Multicast"
-          TopLeft="701,641" />
-        <NodeLayout
-          Size="181,42"
-          Id="Package\Load temporary weather csv into database\Change snowfall unit"
-          TopLeft="337,332" />
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Load temporary weather csv into database\Date Conversion"
-          TopLeft="345,257" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Load temporary weather csv into database\Weather codes lookup"
-          TopLeft="343,506" />
-        <NodeLayout
           Size="183,42"
           Id="Package\Load temporary weather csv into database\Weather state lookup"
-          TopLeft="455.5,604.508797653959" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Load temporary weather csv into database\Identify new rows"
-          TopLeft="350,414" />
+          TopLeft="545.5,318.794511939673" />
         <NodeLayout
           Size="174,42"
           Id="Package\Load temporary weather csv into database\Weather state table"
-          TopLeft="514,805" />
+          TopLeft="455.428571428571,530.714285714286" />
         <NodeLayout
-          Size="183,42"
-          Id="Package\Load temporary weather csv into database\Weather history table"
-          TopLeft="294.5,741.5" />
+          Size="123,42"
+          Id="Package\Load temporary weather csv into database\Multicast"
+          TopLeft="611,405.285714285714" />
         <NodeLayout
-          Size="147,42"
-          Id="Package\Load temporary weather csv into database\Select distinct"
-          TopLeft="593,715" />
+          Size="181,42"
+          Id="Package\Load temporary weather csv into database\Change snowfall unit"
+          TopLeft="549.857142857143,250.571428571429" />
         <NodeLayout
           Size="240,42"
           Id="Package\Load temporary weather csv into database\Weather history table unmatched"
-          TopLeft="704,864.991202346041" />
+          TopLeft="679.714285714286,493.56263091747" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Load temporary weather csv into database\Date Conversion"
+          TopLeft="573.571428571429,177" />
         <NodeLayout
           Size="191,42"
           Id="Package\Load temporary weather csv into database\Temporary weather file"
           TopLeft="329.5,180.5" />
-        <EdgeLayout
-          Id="Package\Load temporary weather csv into database.Paths[Multicast Output 2]"
-          TopLeft="781.666666666667,683">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="42.3333333333334,181.991202346041"
-              Start="0,0"
-              End="42.3333333333334,174.491202346041">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,70.19866034654" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,70.19866034654"
-                    Point2="0,74.19866034654"
-                    Point3="4,74.19866034654" />
-                  <mssgle:LineSegment
-                    End="38.3333333333334,74.19866034654" />
-                  <mssgle:CubicBezierSegment
-                    Point1="38.3333333333334,74.19866034654"
-                    Point2="42.3333333333334,74.19866034654"
-                    Point3="42.3333333333334,78.19866034654" />
-                  <mssgle:LineSegment
-                    End="42.3333333333334,174.491202346041" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load temporary weather csv into database.Paths[Multicast Output 1]"
-          TopLeft="743.333333333333,683">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-76.8333333333334,32"
-              Start="0,0"
-              End="-76.8333333333334,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.04654895666132" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.04654895666132"
-                    Point2="0,13.0465489566613"
-                    Point3="-4,13.0465489566613" />
-                  <mssgle:LineSegment
-                    End="-72.8333333333334,13.0465489566613" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-72.8333333333334,13.0465489566613"
-                    Point2="-76.8333333333334,13.0465489566613"
-                    Point3="-76.8333333333334,17.0465489566613" />
-                  <mssgle:LineSegment
-                    End="-76.8333333333334,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load temporary weather csv into database.Paths[Lookup No Match Output1]"
-          TopLeft="638.5,625.508797653959">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="62.5,36.4912023460411"
-              Start="0,0"
-              End="55,36.4912023460411">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="27.25,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27.25,0"
-                    Point2="31.25,0"
-                    Point3="31.25,4" />
-                  <mssgle:LineSegment
-                    End="31.25,32.4912023460411" />
-                  <mssgle:CubicBezierSegment
-                    Point1="31.25,32.4912023460411"
-                    Point2="31.25,36.4912023460411"
-                    Point3="35.25,36.4912023460411" />
-                  <mssgle:LineSegment
-                    End="55,36.4912023460411" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-24.55638671875,-17.609375,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load temporary weather csv into database.Paths[Lookup No Match Output]"
-          TopLeft="434.5,456">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50"
-              Start="0,0"
-              End="0,42.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,15.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Load temporary weather csv into database\Identify new rows"
+          TopLeft="340,258.285714285714" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Load temporary weather csv into database\Weather history table"
+          TopLeft="334.5,395.785714285714" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Load temporary weather csv into database\Weather codes lookup"
+          TopLeft="333,321.714285714286" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Load temporary weather csv into database\Select distinct"
+          TopLeft="475.857142857143,477.857142857143" />
         <EdgeLayout
           Id="Package\Load temporary weather csv into database.Paths[Lookup Match Output1]"
-          TopLeft="547,646.508797653959">
+          TopLeft="607.833333333333,360.794511939673">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-161,94.9912023460411"
+              EndConnector="-181.833333333333,34.9912023460408"
               Start="0,0"
-              End="-161,87.4912023460411">
+              End="-181.833333333333,27.4912023460408">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.4956011730205" />
+                    End="0,10.1784503547338" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,43.4956011730205"
-                    Point2="0,47.4956011730205"
-                    Point3="-4,47.4956011730205" />
+                    Point1="0,10.1784503547338"
+                    Point2="0,14.1784503547338"
+                    Point3="-4,14.1784503547338" />
                   <mssgle:LineSegment
-                    End="-157,47.4956011730205" />
+                    End="-177.833333333333,14.1784503547338" />
                   <mssgle:CubicBezierSegment
-                    Point1="-157,47.4956011730205"
-                    Point2="-161,47.4956011730205"
-                    Point3="-161,51.4956011730205" />
+                    Point1="-177.833333333333,14.1784503547338"
+                    Point2="-181.833333333333,14.1784503547338"
+                    Point3="-181.833333333333,18.1784503547338" />
                   <mssgle:LineSegment
-                    End="-161,87.4912023460411" />
+                    End="-181.833333333333,27.4912023460408" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-128.69138671875,52.4956011730205,96.3827734375,11.609375"
+              BoundingBox="-139.108053385417,19.1784503547338,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load temporary weather csv into database.Paths[Lookup Match Output]"
-          TopLeft="437,548">
+          TopLeft="521,341.25439882698">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="110,56.5087976539589"
+              EndConnector="24.5,0"
               Start="0,0"
-              End="110,49.0087976539589">
+              End="17,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.2543988269795" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.2543988269795"
-                    Point2="0,28.2543988269795"
-                    Point3="4,28.2543988269795" />
-                  <mssgle:LineSegment
-                    End="106,28.2543988269795" />
-                  <mssgle:CubicBezierSegment
-                    Point1="106,28.2543988269795"
-                    Point2="110,28.2543988269795"
-                    Point3="110,32.2543988269795" />
-                  <mssgle:LineSegment
-                    End="110,49.0087976539589" />
+                    End="17,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="6.80861328125,33.2543988269795,96.3827734375,11.609375"
+              BoundingBox="-39.69138671875,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load temporary weather csv into database.Paths[Flat File Source Output]"
-          TopLeft="425.25,222.5">
+          TopLeft="520.5,199.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,34.5"
+              EndConnector="53.0714285714287,0"
               Start="0,0"
-              End="0,27">
+              End="45.5714285714287,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27" />
+                    End="45.5714285714287,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4693,18 +4491,18 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load temporary weather csv into database.Paths[Derived Column Output]"
-          TopLeft="429.75,374">
+          TopLeft="549.857142857143,275.428571428571">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40"
+              EndConnector="-45.8571428571429,0"
               Start="0,0"
-              End="0,32.5">
+              End="-38.3571428571429,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5" />
+                    End="-38.3571428571429,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4715,18 +4513,30 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load temporary weather csv into database.Paths[Data Conversion Output]"
-          TopLeft="426.5,299">
+          TopLeft="654.071428571429,219">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33"
+              EndConnector="-13.7142857142858,31.5714285714286"
               Start="0,0"
-              End="0,25.5">
+              End="-13.7142857142858,24.0714285714286">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="0,11.7857142857143" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.7857142857143"
+                    Point2="0,15.7857142857143"
+                    Point3="-4,15.7857142857143" />
+                  <mssgle:LineSegment
+                    End="-9.71428571428578,15.7857142857143" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.71428571428578,15.7857142857143"
+                    Point2="-13.7142857142858,15.7857142857143"
+                    Point3="-13.7142857142858,19.7857142857143" />
+                  <mssgle:LineSegment
+                    End="-13.7142857142858,24.0714285714286" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4737,36 +4547,164 @@ where [refTable].[Temperature] = ? and [refTable].[Relativehumidity] = ? and [re
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load temporary weather csv into database.Paths[Aggregate Output 1]"
-          TopLeft="666.5,757">
+          TopLeft="622.857142857143,498.857142857143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-65.5,48"
+              EndConnector="6.57142857142844,52.8571428571429"
               Start="0,0"
-              End="-65.5,40.5">
+              End="14.0714285714284,52.8571428571429">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20" />
+                    End="25.0714285714284,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20"
-                    Point2="0,24"
-                    Point3="-4,24" />
+                    Point1="25.0714285714284,0"
+                    Point2="29.0714285714284,0"
+                    Point3="29.0714285714284,4" />
                   <mssgle:LineSegment
-                    End="-61.5,24" />
+                    End="29.0714285714284,48.8571428571429" />
                   <mssgle:CubicBezierSegment
-                    Point1="-61.5,24"
-                    Point2="-65.5,24"
-                    Point3="-65.5,28" />
+                    Point1="29.0714285714284,48.8571428571429"
+                    Point2="29.0714285714284,52.8571428571429"
+                    Point3="25.0714285714284,52.8571428571429" />
                   <mssgle:LineSegment
-                    End="-65.5,40.5" />
+                    End="14.0714285714284,52.8571428571429" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load temporary weather csv into database.Paths[Multicast Output 2]"
+          TopLeft="691.666666666667,447.285714285714">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.047619047619,46.2769166317553"
+              Start="0,0"
+              End="108.047619047619,38.7769166317553">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.8673143249853" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.8673143249853"
+                    Point2="0,18.8673143249853"
+                    Point3="4,18.8673143249853" />
+                  <mssgle:LineSegment
+                    End="104.047619047619,18.8673143249853" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104.047619047619,18.8673143249853"
+                    Point2="108.047619047619,18.8673143249853"
+                    Point3="108.047619047619,22.8673143249853" />
+                  <mssgle:LineSegment
+                    End="108.047619047619,38.7769166317553" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load temporary weather csv into database.Paths[Multicast Output 1]"
+          TopLeft="653.333333333333,447.285714285714">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-103.97619047619,30.5714285714286"
+              Start="0,0"
+              End="-103.97619047619,23.0714285714286">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.46411373538179" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.46411373538179"
+                    Point2="0,12.4641137353818"
+                    Point3="-4,12.4641137353818" />
+                  <mssgle:LineSegment
+                    End="-99.9761904761905,12.4641137353818" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-99.9761904761905,12.4641137353818"
+                    Point2="-103.97619047619,12.4641137353818"
+                    Point3="-103.97619047619,16.4641137353818" />
+                  <mssgle:LineSegment
+                    End="-103.97619047619,23.0714285714286" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load temporary weather csv into database.Paths[Lookup No Match Output1]"
+          TopLeft="669.333333333333,360.794511939673">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.491202346041"
+              Start="0,0"
+              End="0,36.991202346041">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.991202346041" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,12.6909136730205,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load temporary weather csv into database.Paths[Lookup No Match Output]"
+          TopLeft="340,279.285714285714">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-7,63.4285714285714"
+              Start="0,0"
+              End="-14.5,63.4285714285714">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-25.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-25.5,0"
+                    Point2="-29.5,0"
+                    Point3="-29.5,4" />
+                  <mssgle:LineSegment
+                    End="-29.5,59.4285714285714" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-29.5,59.4285714285714"
+                    Point2="-29.5,63.4285714285714"
+                    Point3="-25.5,63.4285714285714" />
+                  <mssgle:LineSegment
+                    End="-14.5,63.4285714285714" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-85.30638671875,-17.609375,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
